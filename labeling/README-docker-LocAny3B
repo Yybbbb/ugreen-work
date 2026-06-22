@@ -1,0 +1,75 @@
+# LocateAnything Docker
+
+Build the reusable serving image once:
+
+```bash
+docker build -t locateanything-openai:3b /data0/work/LuoWeiXing/LocateAnything
+```
+
+If `vllm/vllm-openai:v0.13.0` already exists locally, it can also be used as
+the base image:
+
+```bash
+docker build \
+  --build-arg BASE_IMAGE=vllm/vllm-openai:v0.13.0 \
+  -t locateanything-openai:3b \
+  /data0/work/LuoWeiXing/LocateAnything
+```
+
+Start a server. Users usually only need to change `--name`, `--gpus`, `-p`,
+`-v`, and `SERVED_MODEL_NAME`.
+
+```bash
+docker run -d \
+  --name locateanything-3b \
+  --gpus '"device=0"' \
+  --shm-size 16g \
+  -p 8010:8000 \
+  -v /data0/work/LuoWeiXing/LocateAnything:/model:ro \
+  -e SERVED_MODEL_NAME=locateanything-3b \
+  -e MODEL_PATH=/model \
+  -e DEVICE=cuda \
+  -e DTYPE=bfloat16 \
+  -e GENERATION_MODE=hybrid \
+  -e MAX_NEW_TOKENS=8192 \
+  locateanything-openai:3b
+```
+
+Stop and remove:
+
+```bash
+docker stop locateanything-3b && docker rm locateanything-3b
+```
+
+Health check:
+
+```bash
+curl http://127.0.0.1:8010/health
+```
+
+Multipart prediction:
+
+```bash
+curl http://127.0.0.1:8010/predict \
+  -F image=@example.jpg \
+  -F task=ground_multi \
+  -F text='people wearing red shirts'
+```
+
+OpenAI-style multimodal call:
+
+```bash
+IMAGE_B64=$(base64 -w 0 example.jpg)
+curl http://127.0.0.1:8010/v1/chat/completions \
+  -H 'Content-Type: application/json' \
+  -d '{
+    "model": "locateanything-3b",
+    "messages": [{
+      "role": "user",
+      "content": [
+        {"type": "text", "text": "Locate all the instances that match the following description: person."},
+        {"type": "image_url", "image_url": {"url": "data:image/jpeg;base64,'"$IMAGE_B64"'"}}
+      ]
+    }]
+  }'
+```

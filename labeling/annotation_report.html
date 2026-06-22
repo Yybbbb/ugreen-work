@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>服装颜色标注数据分析报告</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f5f6fa;
+    --card-bg: #ffffff;
+    --text: #2d3436;
+    --muted: #636e72;
+    --accent: #6c5ce7;
+    --accent2: #00b894;
+    --border: #e0e0e0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
+
+  .header {
+    background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%);
+    color: #fff;
+    padding: 44px 40px;
+    border-radius: 16px;
+    margin-bottom: 32px;
+    box-shadow: 0 8px 32px rgba(108, 92, 231, 0.25);
+  }
+  .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 6px; }
+  .header .subtitle { font-size: 14px; opacity: 0.85; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 20px; margin-bottom: 32px; }
+  .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+  .card .value { font-size: 36px; font-weight: 800; color: var(--accent); }
+  .card .label { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+  .section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 32px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .section h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--accent);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section h2 .icon { font-size: 24px; }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+  .chart-wrap { position: relative; }
+  .chart-wrap canvas { max-height: 380px; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 10px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+  th { font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+  tr:hover td { background: #f8f9ff; }
+
+  .bar-cell { position: relative; }
+  .bar-fill {
+    position: absolute; left: 0; top: 10%; height: 80%;
+    background: linear-gradient(90deg, rgba(108,92,231,.15), rgba(108,92,231,.3));
+    border-radius: 0 4px 4px 0;
+    z-index: 0;
+  }
+  .bar-cell span { position: relative; z-index: 1; }
+
+  .insight-box {
+    background: linear-gradient(135deg, #dfe6e9 0%, #b2bec3 100%);
+    border-radius: 10px;
+    padding: 24px;
+    margin-top: 20px;
+  }
+  .insight-box h4 { font-size: 15px; margin-bottom: 8px; }
+  .insight-box ul { padding-left: 20px; font-size: 14px; }
+  .insight-box li { margin-bottom: 4px; }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .tag-crawled { background: #ffeaa7; color: #d68910; }
+  .tag-self { background: #81ecec; color: #00796b; }
+  .tag-stock { background: #fd79a8; color: #c44569; }
+
+  .swatch {
+    display: inline-block;
+    width: 14px; height: 14px;
+    border-radius: 3px;
+    vertical-align: middle;
+    margin-right: 6px;
+    border: 1px solid rgba(0,0,0,0.1);
+  }
+  .note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header">
+    <h1>👕 服装颜色标注数据分析报告</h1>
+    <div class="subtitle">
+      原始图片库共 <strong>89,221</strong> 张（LIP + IPC + 自采），从中选取 <strong>53,269</strong> 张进行颜色标注<br>
+      以下所有分析均基于这 53,269 条标注结果
+    </div>
+  </div>
+
+  <!-- ===== SUMMARY CARDS ===== -->
+  <div class="cards">
+    <div class="card">
+      <div class="value">53,269</div>
+      <div class="label">标注总量</div>
+    </div>
+    <div class="card">
+      <div class="value">3</div>
+      <div class="label">数据来源</div>
+    </div>
+    <div class="card">
+      <div class="value">12</div>
+      <div class="label">标准颜色标签</div>
+    </div>
+    <div class="card">
+      <div class="value">17.6%</div>
+      <div class="label">多色标注比例<br><small style="color:var(--muted);">（至少一个部位多色）</small></div>
+    </div>
+    <div class="card">
+      <div class="value">102 条</div>
+      <div class="label">非标准标签<br><small style="color:var(--muted);">（占比 0.1%）</small></div>
+    </div>
+  </div>
+
+  <!-- ===== 1. DATA SOURCE ===== -->
+  <div class="section">
+    <h2><span class="icon">📦</span> 一、标注数据来源构成（53,269 条）</h2>
+
+    <div class="grid-2">
+      <div>
+        <div class="chart-wrap">
+          <canvas id="chartSource"></canvas>
+        </div>
+      </div>
+      <div>
+        <table>
+          <thead><tr><th>子类</th><th>采集方式</th><th style="text-align:right;">数量</th><th style="text-align:right;">占比</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>LIP 公开数据集</td>
+              <td><span class="tag tag-crawled">公开数据集</span></td>
+              <td style="text-align:right;">21,228</td>
+              <td style="text-align:right;"><strong>39.9%</strong></td>
+            </tr>
+            <tr>
+              <td>IPC 爬虫图片</td>
+              <td><span class="tag tag-crawled">网络爬虫</span></td>
+              <td style="text-align:right;">19,526</td>
+              <td style="text-align:right;"><strong>36.6%</strong></td>
+            </tr>
+            <tr>
+              <td>自采监控视频帧</td>
+              <td><span class="tag tag-self">自采</span></td>
+              <td style="text-align:right;">10,441</td>
+              <td style="text-align:right;">19.6%</td>
+            </tr>
+            <tr>
+              <td>爬虫 (hash-32)</td>
+              <td><span class="tag tag-crawled">网络爬虫</span></td>
+              <td style="text-align:right;">1,200</td>
+              <td style="text-align:right;">2.3%</td>
+            </tr>
+            <tr>
+              <td>IPC 视频帧</td>
+              <td><span class="tag tag-self">视频帧提取</span></td>
+              <td style="text-align:right;">388</td>
+              <td style="text-align:right;">0.7%</td>
+            </tr>
+            <tr>
+              <td>VCG 视觉中国</td>
+              <td><span class="tag tag-stock">商业图库</span></td>
+              <td style="text-align:right;">273</td>
+              <td style="text-align:right;">0.5%</td>
+            </tr>
+            <tr>
+              <td>视频帧 (export)</td>
+              <td><span class="tag tag-self">视频帧提取</span></td>
+              <td style="text-align:right;">212</td>
+              <td style="text-align:right;">0.4%</td>
+            </tr>
+            <tr style="background:#f8f9ff;font-weight:700;">
+              <td>合计</td><td></td><td style="text-align:right;">53,269</td><td style="text-align:right;">100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <h4>💡 关键发现</h4>
+      <ul>
+        <li><strong>爬虫/公开数据集合计占 78.9%</strong>（LIP 39.9% + IPC 36.6% + 爬虫hash 2.3%），为标注数据主体</li>
+        <li><strong>自采数据占 20.7%</strong>（监控视频帧 + IPC视频帧 + export视频帧），三个来源分布较均匀</li>
+        <li><strong>商业图库（VCG）仅占 0.5%</strong>，量级很小</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 2. LABEL DISTRIBUTION ===== -->
+  <div class="section">
+    <h2><span class="icon">🎨</span> 二、标签分布（每图每部位取最高置信度标签）</h2>
+
+    <div class="grid-2">
+      <div>
+        <h4 style="margin-bottom:8px;color:var(--muted);">Upper（上装）— 53,140 条</h4>
+        <div class="chart-wrap"><canvas id="chartUpper"></canvas></div>
+      </div>
+      <div>
+        <h4 style="margin-bottom:8px;color:var(--muted);">Lower（下装）— 53,269 条</h4>
+        <div class="chart-wrap"><canvas id="chartLower"></canvas></div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:24px;">
+      <div>
+        <table>
+          <thead><tr><th>标签</th><th style="text-align:right;">数量</th><th style="text-align:right;">占比</th></tr></thead>
+          <tbody>
+            <tr><td><span class="swatch" style="background:#2d3436;"></span>black 黑色</td><td class="bar-cell"><span>14,420</span><div class="bar-fill" style="width:100%;"></div></td><td style="text-align:right;">27.1%</td></tr>
+            <tr><td><span class="swatch" style="background:#dfe6e9;"></span>white 白色</td><td class="bar-cell"><span>12,655</span><div class="bar-fill" style="width:87%;"></div></td><td style="text-align:right;">23.8%</td></tr>
+            <tr><td><span class="swatch" style="background:#b2bec3;"></span>gray 灰色</td><td class="bar-cell"><span>8,428</span><div class="bar-fill" style="width:58%;"></div></td><td style="text-align:right;">15.9%</td></tr>
+            <tr><td><span class="swatch" style="background:#0984e3;"></span>blue 蓝色</td><td class="bar-cell"><span>5,989</span><div class="bar-fill" style="width:41%;"></div></td><td style="text-align:right;">11.3%</td></tr>
+            <tr><td><span class="swatch" style="background:#d63031;"></span>red 红色</td><td class="bar-cell"><span>2,965</span><div class="bar-fill" style="width:20%;"></div></td><td style="text-align:right;">5.6%</td></tr>
+            <tr><td><span class="swatch" style="background:#00b894;"></span>green 绿色</td><td class="bar-cell"><span>2,378</span><div class="bar-fill" style="width:16%;"></div></td><td style="text-align:right;">4.5%</td></tr>
+            <tr><td><span class="swatch" style="background:#8B5129;"></span>brown 棕色</td><td class="bar-cell"><span>2,078</span><div class="bar-fill" style="width:14%;"></div></td><td style="text-align:right;">3.9%</td></tr>
+            <tr><td><span class="swatch" style="background:#fdcb6e;"></span>yellow 黄色</td><td class="bar-cell"><span>1,426</span><div class="bar-fill" style="width:10%;"></div></td><td style="text-align:right;">2.7%</td></tr>
+            <tr><td><span class="swatch" style="background:#fd79a8;"></span>pink 粉色</td><td class="bar-cell"><span>934</span></td><td style="text-align:right;">1.8%</td></tr>
+            <tr><td><span class="swatch" style="background:#6c5ce7;"></span>purple 紫色</td><td class="bar-cell"><span>777</span></td><td style="text-align:right;">1.5%</td></tr>
+            <tr><td><span class="swatch" style="background:#e17055;"></span>orange 橙色</td><td class="bar-cell"><span>772</span></td><td style="text-align:right;">1.5%</td></tr>
+            <tr><td><span class="swatch" style="background:#636e72;"></span>unknown 未知</td><td class="bar-cell"><span>283</span></td><td style="text-align:right;">0.5%</td></tr>
+            <tr style="background:#f8f9ff;font-weight:600;"><td>合计（12 标准色）</td><td style="text-align:right;">53,105</td><td style="text-align:right;">99.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <table>
+          <thead><tr><th>标签</th><th style="text-align:right;">数量</th><th style="text-align:right;">占比</th></tr></thead>
+          <tbody>
+            <tr><td><span class="swatch" style="background:#2d3436;"></span>black 黑色</td><td class="bar-cell"><span>22,331</span><div class="bar-fill" style="width:100%;"></div></td><td style="text-align:right;">41.9%</td></tr>
+            <tr><td><span class="swatch" style="background:#0984e3;"></span>blue 蓝色</td><td class="bar-cell"><span>13,351</span><div class="bar-fill" style="width:60%;"></div></td><td style="text-align:right;">25.1%</td></tr>
+            <tr><td><span class="swatch" style="background:#b2bec3;"></span>gray 灰色</td><td class="bar-cell"><span>5,880</span><div class="bar-fill" style="width:26%;"></div></td><td style="text-align:right;">11.0%</td></tr>
+            <tr><td><span class="swatch" style="background:#dfe6e9;"></span>white 白色</td><td class="bar-cell"><span>5,560</span><div class="bar-fill" style="width:25%;"></div></td><td style="text-align:right;">10.4%</td></tr>
+            <tr><td><span class="swatch" style="background:#8B5129;"></span>brown 棕色</td><td class="bar-cell"><span>3,244</span><div class="bar-fill" style="width:14%;"></div></td><td style="text-align:right;">6.1%</td></tr>
+            <tr><td><span class="swatch" style="background:#d63031;"></span>red 红色</td><td class="bar-cell"><span>883</span></td><td style="text-align:right;">1.7%</td></tr>
+            <tr><td><span class="swatch" style="background:#00b894;"></span>green 绿色</td><td class="bar-cell"><span>857</span></td><td style="text-align:right;">1.6%</td></tr>
+            <tr><td><span class="swatch" style="background:#fd79a8;"></span>pink 粉色</td><td class="bar-cell"><span>398</span></td><td style="text-align:right;">0.8%</td></tr>
+            <tr><td><span class="swatch" style="background:#6c5ce7;"></span>purple 紫色</td><td class="bar-cell"><span>239</span></td><td style="text-align:right;">0.4%</td></tr>
+            <tr><td><span class="swatch" style="background:#fdcb6e;"></span>yellow 黄色</td><td class="bar-cell"><span>215</span></td><td style="text-align:right;">0.4%</td></tr>
+            <tr><td><span class="swatch" style="background:#e17055;"></span>orange 橙色</td><td class="bar-cell"><span>171</span></td><td style="text-align:right;">0.3%</td></tr>
+            <tr><td><span class="swatch" style="background:#636e72;"></span>unknown 未知</td><td class="bar-cell"><span>73</span></td><td style="text-align:right;">0.1%</td></tr>
+            <tr style="background:#f8f9ff;font-weight:600;"><td>合计（12 标准色）</td><td style="text-align:right;">53,202</td><td style="text-align:right;">99.9%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <h4>💡 关键发现</h4>
+      <ul>
+        <li><strong>黑色是绝对主导色</strong>：上装 27.1%，下装 41.9%，合计占全部标注的 34.6%</li>
+        <li><strong>上装颜色更分散</strong>：前四色（黑白灰蓝）占 78.1%，其余分散在红绿棕黄等</li>
+        <li><strong>下装高度集中</strong>：黑+蓝占 66.9%，前五色（黑蓝灰白棕）占 94.5%</li>
+        <li><strong>多色标注</strong>：9,374 张图片至少一个部位输出了多色（17.6%），其中上装多色 8,449 个，下装多色仅 1,601 个——上装明显更容易出现花纹/拼色</li>
+        <li>color schema 定义了 <strong>12 种颜色</strong>（含 unknown），上装 + 下装各出现 12 种，覆盖完整</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 3. COMPARISON ===== -->
+  <div class="section">
+    <h2><span class="icon">📊</span> 三、上下装标签对比</h2>
+    <div class="chart-wrap" style="max-width:800px;margin:0 auto;">
+      <canvas id="chartCompare" style="max-height:450px;"></canvas>
+    </div>
+    <div class="insight-box" style="margin-top:20px;">
+      <h4>💡 上下装颜色差异分析</h4>
+      <ul>
+        <li><strong>白色上装 >> 白色下装</strong>（23.8% vs 10.4%）：白衬衫/T恤远多于白裤子</li>
+        <li><strong>蓝色下装 >> 蓝色上装</strong>（25.1% vs 11.3%）：牛仔裤/蓝裤子极为普遍</li>
+        <li><strong>黑色下装 >> 黑色上装</strong>（41.9% vs 27.1%）：黑裤子/裙子远多于黑色上装</li>
+        <li>暖色系（red/yellow/orange/pink/brown）上装合计 14.3%，下装合计 9.4%，上装暖色更丰富</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== 4. NON-STANDARD LABELS ===== -->
+  <div class="section">
+    <h2><span class="icon">⚠️</span> 四、非标准标签（schema 外）</h2>
+    <p style="margin-bottom:16px;color:var(--muted);">
+      Color schema 仅定义了 12 种标签：black / white / gray / red / yellow / green / blue / purple / pink / orange / brown / unknown。以下 6 种为模型自行输出的非标准标签：</p>
+    <table style="max-width:500px;">
+      <thead><tr><th>标签</th><th style="text-align:right;">Upper</th><th style="text-align:right;">Lower</th><th style="text-align:right;">合计</th></tr></thead>
+      <tbody>
+        <tr><td>beige</td><td style="text-align:right;">23</td><td style="text-align:right;">50</td><td style="text-align:right;">73</td></tr>
+        <tr><td>maroon</td><td style="text-align:right;">9</td><td style="text-align:right;">3</td><td style="text-align:right;">12</td></tr>
+        <tr><td>khaki</td><td style="text-align:right;">0</td><td style="text-align:right;">10</td><td style="text-align:right;">10</td></tr>
+        <tr><td>silver</td><td style="text-align:right;">2</td><td style="text-align:right;">2</td><td style="text-align:right;">4</td></tr>
+        <tr><td>tan</td><td style="text-align:right;">1</td><td style="text-align:right;">1</td><td style="text-align:right;">2</td></tr>
+        <tr><td>gold</td><td style="text-align:right;">0</td><td style="text-align:right;">1</td><td style="text-align:right;">1</td></tr>
+        <tr style="font-weight:600;background:#fff3f3;"><td>非标准标签合计</td><td style="text-align:right;">35</td><td style="text-align:right;">67</td><td style="text-align:right;">102</td></tr>
+      </tbody>
+    </table>
+    <div class="insight-box" style="margin-top:16px;">
+      <h4>💡 结论</h4>
+      <ul>
+        <li>非标准标签仅 <strong>102 条 / 0.1%</strong>，对整体数据质量影响极小</li>
+        <li>建议后续在 prompt 中强化 "Use ONLY label values from the allowed color schema" 约束，或后处理时做标签映射（beige→brown, maroon→red, khaki→brown, silver→gray, tan→brown, gold→yellow）</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===== CHARTS ===== -->
+<script>
+const COLORS = {
+  black:  '#2d3436', white: '#dfe6e9', gray: '#b2bec3', blue: '#0984e3',
+  red:    '#d63031', green: '#00b894', brown: '#8B5129', yellow:'#fdcb6e',
+  pink:   '#fd79a8', purple:'#6c5ce7', orange:'#e17055', unknown:'#636e72',
+};
+
+// --- Chart: Source distribution (annotated only) ---
+new Chart(document.getElementById('chartSource'), {
+  type: 'doughnut',
+  data: {
+    labels: ['LIP 公开数据集','IPC 爬虫图片','自采监控视频帧','爬虫 (hash-32)','IPC 视频帧','VCG','视频帧 (export)'],
+    datasets: [{
+      data: [21228, 19526, 10441, 1200, 388, 273, 212],
+      backgroundColor: ['#6c5ce7','#a29bfe','#00b894','#ffeaa7','#81ecec','#fd79a8','#74b9ff'],
+      borderWidth: 2, borderColor: '#fff',
+    }]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'bottom', labels: { padding: 16, usePointStyle: true } },
+      tooltip: {
+        callbacks: {
+          label: ctx => ` ${ctx.label}: ${ctx.raw.toLocaleString()} (${(ctx.raw/53269*100).toFixed(1)}%)`
+        }
+      }
+    }
+  }
+});
+
+// --- Upper bar chart ---
+const upperLabels = ['black','white','gray','blue','red','green','brown','yellow','pink','purple','orange','unknown'];
+const upperData   = [14420,12655,8428,5989,2965,2378,2078,1426,934,777,772,283];
+new Chart(document.getElementById('chartUpper'), {
+  type: 'bar',
+  data: {
+    labels: upperLabels,
+    datasets: [{
+      label: '数量',
+      data: upperData,
+      backgroundColor: upperLabels.map(l => COLORS[l] || '#b2bec3'),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.raw.toLocaleString()} (${(ctx.raw/53140*100).toFixed(1)}%)` } }
+    },
+    scales: { x: { title: { display: true, text: '数量' } } }
+  }
+});
+
+// --- Lower bar chart ---
+const lowerLabels = ['black','blue','gray','white','brown','red','green','pink','purple','yellow','orange','unknown'];
+const lowerData   = [22331,13351,5880,5560,3244,883,857,398,239,215,171,73];
+new Chart(document.getElementById('chartLower'), {
+  type: 'bar',
+  data: {
+    labels: lowerLabels,
+    datasets: [{
+      label: '数量',
+      data: lowerData,
+      backgroundColor: lowerLabels.map(l => COLORS[l] || '#b2bec3'),
+      borderRadius: 4,
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.raw.toLocaleString()} (${(ctx.raw/53269*100).toFixed(1)}%)` } }
+    },
+    scales: { x: { title: { display: true, text: '数量' } } }
+  }
+});
+
+// --- Upper vs Lower comparison ---
+const cmpLabels = ['black','blue','gray','white','brown','red','green','yellow','pink','purple','orange'];
+const upperPct  = [27.14, 11.27, 15.86, 23.81, 3.91, 5.58, 4.47, 2.68, 1.76, 1.46, 1.45];
+const lowerPct  = [41.92, 25.06, 11.04, 10.44, 6.09, 1.66, 1.61, 0.40, 0.75, 0.45, 0.32];
+new Chart(document.getElementById('chartCompare'), {
+  type: 'bar',
+  data: {
+    labels: cmpLabels,
+    datasets: [
+      { label: 'Upper 上装', data: upperPct, backgroundColor: '#6c5ce7', borderRadius: 4 },
+      { label: 'Lower 下装', data: lowerPct, backgroundColor: '#00b894', borderRadius: 4 },
+    ]
+  },
+  options: {
+    responsive: true,
+    plugins: {
+      legend: { position: 'top' },
+      tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.raw.toFixed(1)}%` } }
+    },
+    scales: { y: { title: { display: true, text: '占比 (%)' }, beginAtZero: true } }
+  }
+});
+</script>
+
+</body>
+</html>

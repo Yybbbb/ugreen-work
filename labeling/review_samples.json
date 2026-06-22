@@ -1,0 +1,314 @@
+[
+  {
+    "image_name": "objects365_v1_00005621__p003.jpg",
+    "upper": [
+      {
+        "label": "blue",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "blue",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00012413_2025-11-26_07-44-39_frame_11440_person_1.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00002851_2025-11-26_07-57-14_frame_1870_person_1.jpg",
+    "upper": [
+      {
+        "label": "gray",
+        "confidence": 0.95
+      },
+      {
+        "label": "pink",
+        "confidence": 0.85
+      }
+    ],
+    "lower": [
+      {
+        "label": "blue",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "objects365_v1_00043454__p003.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "gray",
+        "confidence": 0.9
+      }
+    ]
+  },
+  {
+    "image_name": "2025-11-26_08-24-53_frame_5220__p002.jpg",
+    "upper": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "187007_431038.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "153380_200979.jpg",
+    "upper": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "blue",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00015581_2025-11-26_08-16-34_frame_30_person_0.jpg",
+    "upper": [
+      {
+        "label": "gray",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "objects365_v1_00041577__p001.jpg",
+    "upper": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00011440_2025-11-26_07-57-14_frame_1560_person_2.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      },
+      {
+        "label": "white",
+        "confidence": 0.85
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "objects365_v1_00018605__p000.jpg",
+    "upper": [
+      {
+        "label": "red",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "blue",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "objects365_v1_00043062__p001.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95,
+        "inferred": true
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95,
+        "inferred": true
+      }
+    ]
+  },
+  {
+    "image_name": "6646fed141ab291943577512cb6a51e1_0140__p001.jpg",
+    "upper": [
+      {
+        "label": "gray",
+        "confidence": 0.9,
+        "inferred": true
+      }
+    ],
+    "lower": [
+      {
+        "label": "gray",
+        "confidence": 0.9,
+        "inferred": true
+      }
+    ]
+  },
+  {
+    "image_name": "00009683_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0010_person_0.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "b6d0863fd9a488b08ba96d2bf90a9cc3_0040__p001.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "402083_423930.jpg",
+    "upper": [
+      {
+        "label": "green",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "green",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00003601_2025-11-26_07-57-49_frame_2640_person_1.jpg",
+    "upper": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00003399_2025-11-26_07-44-39_frame_11270_person_2.jpg",
+    "upper": [
+      {
+        "label": "white",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "00010430_2025-11-26_07-48-05_frame_9360_person_1.jpg",
+    "upper": [
+      {
+        "label": "gray",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  },
+  {
+    "image_name": "145685_193428.jpg",
+    "upper": [
+      {
+        "label": "gray",
+        "confidence": 0.95
+      }
+    ],
+    "lower": [
+      {
+        "label": "black",
+        "confidence": 0.95
+      }
+    ]
+  }
+]
