@@ -3,15 +3,11 @@ a person in white with glasses was spotted
 人体属性图像分割+上下衣颜色分类 根据人物crop图
 pplite-seg
 加头 解冻 全训练 低语义和高语义
-
 纯分类
 3个模型 最好的更好
-
 数据
 81000+8900
 类别不均衡 但是影响不大
-
-
 难点
 颜色数据不均衡
 颜色混淆
@@ -19,5 +15,7 @@ pplite-seg
 数据标注不一致 吗
 受限容量的模型能力
 
-
-trick
+openclaw的运营和维护
+维护多agent 为每个任务配置单独的agent和工作区
+自己实现视频清洗的工作流 并包装为skill 可以直接使用
+解决openclaw的日常bug
