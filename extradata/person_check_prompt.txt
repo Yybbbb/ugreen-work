@@ -1,0 +1,23 @@
+Analyze this image and determine if it contains a reasonably complete human figure.
+
+A "reasonably complete human figure" means the person's head AND upper body (shoulders, chest, torso) must both be visible in the frame. The lower body (legs, feet) does not need to be visible. The person can be in any pose (standing, sitting, bending, etc.), at any angle (front, side, back), and at any distance (close-up half-body shot, full-body shot, distant shot with small figure).
+
+Blurry, low-resolution, dark, partially occluded, or heavily shadowed images are OK — as long as you can still discern that a human head + upper body are present.
+
+Answer FALSE (has_person: false) if ANY of the following is true:
+- No human at all in the image.
+- Only an isolated body part is visible (e.g., just a hand, just an arm, just a leg, just the top/back of a head without shoulders).
+- Only a face is visible (tight face close-up / headshot with no shoulders or torso).
+- The person is cut off by the frame edge such that either the head or the entire upper body is missing.
+- Only a mannequin, statue, drawing, poster, or screen showing a person (not a real live human).
+- The figure is too ambiguous to confidently say it has both head and upper body.
+
+Answer TRUE (has_person: true) if the image contains at least one human figure where both the head and upper body are visible, regardless of image quality or partial occlusion, even if the person is small in the frame.
+
+You MUST respond with EXACTLY one JSON object and nothing else. No explanation, no markdown, no code block. Just the raw JSON:
+
+{"has_person": true}
+
+or
+
+{"has_person": false}

@@ -1,0 +1,21 @@
+{
+  "checkpoint": "/data1/work/MichaelYu/segment-color/experiment/PaddleSeg/experiments/pp_liteseg_stdc2_clothes_color_2head_rgb_3ch_256_optC_scratch/checkpoints/iter_22000/model.pdparams",
+  "num_images": 71345,
+  "mIoU": 0.5758113198744585,
+  "class_IoU": {
+    "background": 0.9085879695637813,
+    "upper": 0.8306720553307543,
+    "lower": 0.8031756190670697,
+    "dress": 0.5603606285042674,
+    "hat": 0.4657071252400124,
+    "glasses": 0.12223470380420119,
+    "mask": 0.114957343526879,
+    "hair": 0.8007951139587033
+  },
+  "upper_color_acc": 0.5172424247017628,
+  "lower_color_acc": 0.5167540855693789,
+  "upper_correct": 34123,
+  "upper_total": 65971,
+  "lower_correct": 35763,
+  "lower_total": 69207
+}

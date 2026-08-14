@@ -1,3 +1,9 @@
+# ============================================================
+# segment-color — 仅提交代码,数据/权重一律走共享存储
+#
+# 数据集内容与恢复方式见 DATASET_REPORT.md(该文件必须入库)
+# ============================================================
+
 # Python
 __pycache__/
 *.py[cod]
@@ -7,19 +13,66 @@ __pycache__/
 # Logs
 *.log
 
-# Dataset (68G) - manage separately (NFS, shared storage, etc.)
+# ------------------------------------------------------------
+# 主数据集 (78G) - manage separately (NFS, shared storage, etc.)
+# ------------------------------------------------------------
 data/
 
-# PaddleSeg - clone separately on target server
+# ------------------------------------------------------------
+# PaddleSeg (15G) - clone separately on target server
 # cd experiment && git clone https://github.com/PaddlePaddle/PaddleSeg.git
+# 其中 output/ experiments/ onnx/ 为训练权重与导出模型,一并排除
+# ------------------------------------------------------------
 experiment/PaddleSeg/
 
-# Model outputs & checkpoints - use separate artifact storage or Git LFS
-# experiment/PaddleSeg/output/
-# experiment/PaddleSeg/experiments/
+# ------------------------------------------------------------
+# YOLO11n-pose 权重 (6.0M) - 从 ultralytics 官方下载
+# ------------------------------------------------------------
+yolo11n-pose.pt
+*.pt
+*.pdparams
+*.onnx
 
-# ONNX exported models
-# experiment/PaddleSeg/onnx/
+# ------------------------------------------------------------
+# 标注产物 (627M / 5.3万文件) - too many files for git
+# Use rsync or shared storage to sync between servers
+# ------------------------------------------------------------
+labeling/annotation/
+labeling/review_results/
+labeling/images/
+labeling/org_annotation/
+
+# ------------------------------------------------------------
+# UPAR 外部数据集 (1.2G / 18.7万文件) - 原始数据集,单独获取
+# 保留 extradata/upar-dataset/scripts/ 下的抽取脚本
+# ------------------------------------------------------------
+extradata/upar-dataset/data/
+extradata/upar-dataset/rare_color_check/
+extradata/upar-dataset/other_color_samples/
+extradata/upar-dataset/multi_color_check/
+extradata/upar-dataset/rare_color_samples.txt
+
+# 标注/清洗生成的结果文件(可由脚本重新生成)
+extradata/*.html
+extradata/*.json
+extradata/*.xlsx
+
+# ------------------------------------------------------------
+# 拒答策略实验的样本图与推理结果 (76M) - 保留 .py/.md/.html
+# 逐图预测记录 (7.1万行/6.6M) 由 infer_train_rgb.py 重新生成,
+# 结论已固化在 global_metrics.json 与 size_performance_analysis.html
+# ------------------------------------------------------------
+refuse-answer/**/*.jpg
+refuse-answer/**/*.png
+refuse-answer/**/*.jsonl
+refuse-answer/smallcrop/infer_train_rgb/pred_upper.txt
+refuse-answer/smallcrop/infer_train_rgb/pred_lower.txt
+
+# ------------------------------------------------------------
+# 推理统计的原始产物 (32M) - 保留 .py/.md 与 HTML 报告
+# ------------------------------------------------------------
+statistics/*.csv
+statistics/badcase/
 
 # IDE
 .vscode/
@@ -29,9 +82,7 @@ experiment/PaddleSeg/
 .DS_Store
 Thumbs.db
 
-# Annotation outputs (53K+ files, 620MB) - too many files for git
-# Use rsync or shared storage to sync between servers
-labeling/annotation/
-labeling/review_results/
-labeling/images/
-labeling/org_annotation/
+# ------------------------------------------------------------
+# 数据集总结报告必须入库(防止被上面的 *.md / 通配规则误伤)
+# ------------------------------------------------------------
+!DATASET_REPORT.md

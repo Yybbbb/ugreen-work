@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>图片尺寸 vs 模型性能分析 — PP-LiteSeg STDC2 RGB-Only 256px · iter_22000 · train.txt</title>
+<style>
+/* ── Token System ── */
+:root {
+  --bg: #080b11;
+  --bg-card: #0f131e;
+  --bg-card-alt: #141926;
+  --bg-table-header: #1a1f30;
+  --text: #e2e6ef;
+  --text-secondary: #8893a8;
+  --text-muted: #545e73;
+  --accent: #f0b429;
+  --accent-dim: rgba(240,180,41,0.15);
+  --cyan: #22d3ee;
+  --red: #f87171;
+  --green: #4ade80;
+  --border: #1e2535;
+  --border-light: #2a3145;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --font-display: 'Georgia', 'Noto Serif SC', 'Songti SC', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-mono: 'SF Mono', 'JetBrains Mono', 'Consolas', 'Cascadia Code', 'Source Code Pro', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 15px; background: var(--bg); color: var(--text); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+body { min-height: 100vh; line-height: 1.6; }
+.container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.hero { padding: 72px 0 56px; border-bottom: 1px solid var(--border); position: relative; }
+.hero::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 120px; height: 3px; background: var(--accent); border-radius: 3px 3px 0 0; }
+.hero-label { font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--text-muted); margin-bottom: 16px; }
+.hero h1 { font-family: var(--font-display); font-size: 2.6rem; font-weight: 400; line-height: 1.25; color: var(--text); margin-bottom: 12px; letter-spacing: -0.02em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .subtitle { font-size: 1.05rem; color: var(--text-secondary); max-width: 680px; }
+.stat-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); margin: 48px 0; border-radius: var(--radius); overflow: hidden; }
+.stat-item { background: var(--bg-card); padding: 24px 28px; text-align: center; }
+.stat-value { font-family: var(--font-display); font-size: 2rem; color: var(--accent); line-height: 1.1; margin-bottom: 4px; }
+.stat-label { font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+.section { margin: 56px 0; }
+.section-header { margin-bottom: 32px; }
+.section-number { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); letter-spacing: 0.15em; margin-bottom: 8px; }
+.section-header h2 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 400; color: var(--text); margin-bottom: 8px; letter-spacing: -0.01em; }
+.section-header p { color: var(--text-secondary); font-size: 0.95rem; max-width: 640px; }
+.card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 24px; }
+.card-header { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.card-header h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 400; color: var(--text); }
+.card-badge { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent); background: var(--accent-dim); padding: 3px 10px; border-radius: 100px; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; font-variant-numeric: tabular-nums; }
+thead th { font-family: var(--font-mono); font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); text-align: right; padding: 10px 10px; background: var(--bg-table-header); border-bottom: 2px solid var(--border); white-space: nowrap; }
+thead th:first-child { text-align: left; }
+thead th.col-ctr { text-align: center; }
+tbody td { padding: 9px 10px; text-align: right; border-bottom: 1px solid var(--border); font-family: var(--font-body); white-space: nowrap; }
+tbody td:first-child { text-align: left; font-family: var(--font-mono); color: var(--text-secondary); font-size: 0.78rem; }
+tbody tr:hover { background: var(--bg-card-alt); }
+tbody tr:last-child td { border-bottom: none; }
+.dist-bar-wrap { display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
+.dist-bar { height: 8px; border-radius: 4px; transition: width 0.4s; }
+.dist-pct { font-size: 0.75rem; min-width: 48px; text-align: right; font-weight: 500; }
+.perf-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.perf-excellent { background: var(--green); box-shadow: 0 0 6px rgba(74,222,128,0.4); }
+.perf-good { background: #22c55e; }
+.perf-fair { background: var(--accent); box-shadow: 0 0 6px rgba(240,180,41,0.4); }
+.perf-poor { background: #fb923c; }
+.perf-bad { background: var(--red); box-shadow: 0 0 6px rgba(248,113,113,0.4); }
+.mini-bar { display: inline-block; height: 6px; border-radius: 3px; vertical-align: middle; margin-right: 6px; }
+.bar-high { background: var(--green); }
+.bar-mid { background: var(--accent); }
+.bar-low { background: var(--red); }
+.color-tag { display: inline-block; padding: 1px 8px; border-radius: 100px; font-size: 0.72rem; font-weight: 500; border: 1px solid; }
+.color-black { color: #e2e8f0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
+.color-white { color: #e2e8f0; background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); }
+.color-gray { color: #9ca3af; background: rgba(156,163,175,0.12); border-color: rgba(156,163,175,0.2); }
+.color-red { color: #f87171; background: rgba(248,113,113,0.1); border-color: rgba(248,113,113,0.2); }
+.color-yellow { color: #facc15; background: rgba(250,204,21,0.1); border-color: rgba(250,204,21,0.2); }
+.color-green { color: #4ade80; background: rgba(74,222,128,0.1); border-color: rgba(74,222,128,0.2); }
+.color-blue { color: #60a5fa; background: rgba(96,165,250,0.1); border-color: rgba(96,165,250,0.2); }
+.color-purple { color: #c084fc; background: rgba(192,132,252,0.1); border-color: rgba(192,132,252,0.2); }
+.color-pink { color: #f472b6; background: rgba(244,114,182,0.1); border-color: rgba(244,114,182,0.2); }
+.color-orange { color: #fb923c; background: rgba(251,146,60,0.1); border-color: rgba(251,146,60,0.2); }
+.color-brown { color: #a78b6f; background: rgba(167,139,111,0.1); border-color: rgba(167,139,111,0.2); }
+.deg-chart { display: flex; align-items: flex-end; gap: 4px; height: 150px; padding: 0 8px; margin: 20px 0; }
+.deg-bar { flex: 1; border-radius: 3px 3px 0 0; position: relative; cursor: default; min-width: 20px; transition: opacity 0.2s; }
+.deg-bar:hover { opacity: 0.85; }
+.deg-bar .bar-val { position: absolute; top: -16px; left: 50%; transform: translateX(-50%); font-family: var(--font-body); font-size: 0.62rem; font-weight: 700; white-space: nowrap; }
+.deg-bar .bar-lbl { position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%); font-family: var(--font-mono); font-size: 0.6rem; color: var(--text-muted); }
+.threshold-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+.th-card { background: var(--bg-card-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; position: relative; overflow: hidden; transition: border-color 0.2s; }
+.th-card:hover { border-color: var(--border-light); }
+.th-card.recommended { border-color: var(--accent); border-width: 1.5px; }
+.th-card.recommended::before { content: '推荐'; position: absolute; top: 14px; right: 14px; font-family: var(--font-mono); font-size: 0.65rem; background: var(--accent); color: var(--bg); padding: 2px 10px; border-radius: 100px; font-weight: 600; letter-spacing: 0.06em; }
+.th-card h4 { font-family: var(--font-display); font-size: 1rem; font-weight: 400; color: var(--text); margin-bottom: 16px; }
+.th-rule { font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan); margin-bottom: 6px; padding: 6px 10px; background: rgba(34,211,238,0.06); border-radius: var(--radius-sm); }
+.th-stat { display: flex; justify-content: space-between; font-size: 0.8rem; padding: 6px 0; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+.th-stat:last-child { border-bottom: none; }
+.th-stat .val { color: var(--text); font-family: var(--font-body); font-weight: 600; }
+.reco-box { background: var(--accent-dim); border: 1px solid rgba(240,180,41,0.25); border-radius: var(--radius); padding: 24px 28px; margin-top: 32px; }
+.reco-box h4 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 400; color: var(--accent); margin-bottom: 12px; }
+.reco-box p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; }
+.reco-box code { font-family: var(--font-mono); font-size: 0.82rem; color: var(--cyan); background: rgba(34,211,238,0.08); padding: 1px 6px; border-radius: 3px; }
+.callout { background: var(--bg-card-alt); border-left: 3px solid var(--cyan); padding: 16px 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin-bottom: 20px; }
+.callout p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
+.callout strong { color: var(--text); }
+.kv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.kv-card { background: var(--bg-card-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+.kv-card .kv-val { font-family: var(--font-display); font-size: 1.6rem; color: var(--accent); line-height: 1.2; margin-bottom: 4px; }
+.kv-card .kv-lbl { font-size: 0.75rem; color: var(--text-muted); }
+.footer { margin-top: 72px; padding: 32px 0; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.8rem; display: flex; justify-content: space-between; }
+.footer span { font-family: var(--font-mono); }
+thead th.sep-col { background: var(--border); padding: 0 !important; width: 2px; min-width: 2px; }
+@media (max-width: 768px) { .hero h1 { font-size: 1.8rem; } .stat-strip { grid-template-columns: repeat(2, 1fr); } .threshold-grid { grid-template-columns: 1fr; } .section-header h2 { font-size: 1.35rem; } .card { padding: 18px; } .kv-grid { grid-template-columns: repeat(2, 1fr); } }
+@media print { :root { --bg: #fff; --bg-card: #fff; --bg-card-alt: #f8f9fa; --text: #111; --text-secondary: #444; } .hero::after { background: #000; } }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-label">Analysis Report · 2026-06-26</div>
+  <h1>图片尺寸如何影响<em>分割与颜色分类</em>性能</h1>
+  <p class="subtitle">
+    基于 PP-LiteSeg STDC2 RGB-Only 双头模型（3ch·256px 输入·iter_22000）在 71,345 张训练集上的推理结果，
+    系统分析图片像素尺寸与模型效果之间的定量关系，并给出摄像头部署时的属性预测<strong>尺寸准入阈值</strong>建议。
+  </p>
+</header>
+
+<!-- KEY STATS -->
+<div class="stat-strip">
+  <div class="stat-item"><div class="stat-value">71,345</div><div class="stat-label">训练集总量</div></div>
+  <div class="stat-item"><div class="stat-value">80.5%</div><div class="stat-label">图片需上采样</div></div>
+  <div class="stat-item"><div class="stat-value">0.43</div><div class="stat-label">最佳 mIoU（大图）</div></div>
+  <div class="stat-item"><div class="stat-value">+9%</div><div class="stat-label">mIoU 尺寸增益</div></div>
+</div>
+
+<!-- PART 0: DATASET SIZE STATISTICS -->
+<section class="section" id="dataset-stats">
+  <div class="section-header">
+    <div class="section-number">PART 0</div>
+    <h2>数据集图片尺寸统计</h2>
+    <p>对 train.txt 中全部 71,345 张图片的像素尺寸进行全面统计。</p>
+  </div>
+
+  <div class="kv-grid">
+    <div class="kv-card"><div class="kv-val">177 px</div><div class="kv-lbl">均值宽度</div></div>
+    <div class="kv-card"><div class="kv-val">383 px</div><div class="kv-lbl">均值高度</div></div>
+    <div class="kv-card"><div class="kv-val">35.6 kpx</div><div class="kv-lbl">中位数面积 (≈ 123×280)</div></div>
+    <div class="kv-card"><div class="kv-val">123 px</div><div class="kv-lbl">中位数短边</div></div>
+    <div class="kv-card"><div class="kv-val">0.410</div><div class="kv-lbl">中位数宽高比 (≈ 1:2.4 竖长)</div></div>
+    <div class="kv-card"><div class="kv-val">43,732 种</div><div class="kv-lbl">独特 (W,H) 组合</div></div>
+  </div>
+
+  <!-- Distribution tables -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>宽度分布</h3><span class="card-badge">每 50px 一档</span></div>
+      <div class="table-wrap"><table><thead><tr><th>档位</th><th>数量</th><th class="col-ctr">占比</th></tr></thead><tbody id="width-dist"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>高度分布</h3><span class="card-badge">每 50px 一档</span></div>
+      <div class="table-wrap"><table><thead><tr><th>档位</th><th>数量</th><th class="col-ctr">占比</th></tr></thead><tbody id="height-dist"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>面积分布</h3><span class="card-badge">kpx</span></div>
+      <div class="table-wrap"><table><thead><tr><th>档位</th><th>数量</th><th class="col-ctr">占比</th></tr></thead><tbody id="area-dist"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>宽高比分布</h3><span class="card-badge">W/H</span></div>
+      <div class="table-wrap"><table><thead><tr><th>档位</th><th>数量</th><th class="col-ctr">占比</th></tr></thead><tbody id="aspect-dist"></tbody></table></div>
+    </div>
+  </div>
+
+  <!-- Area percentiles -->
+  <div class="card" style="margin-top:24px;">
+    <div class="card-header"><h3>面积百分位数</h3><span class="card-badge">kpx</span></div>
+    <div class="kv-grid"><div class="kv-card"><div class="kv-val">4.1 k</div><div class="kv-lbl">P1</div></div><div class="kv-card"><div class="kv-val">8.2 k</div><div class="kv-lbl">P10</div></div><div class="kv-card"><div class="kv-val">13.8 k</div><div class="kv-lbl">P25</div></div><div class="kv-card"><div class="kv-val">35.6 k</div><div class="kv-lbl">P50</div></div><div class="kv-card"><div class="kv-val">95.3 k</div><div class="kv-lbl">P75</div></div><div class="kv-card"><div class="kv-val">247.2 k</div><div class="kv-lbl">P90</div></div><div class="kv-card"><div class="kv-val">515.6 k</div><div class="kv-lbl">P95</div></div><div class="kv-card"><div class="kv-val">1.2k</div><div class="kv-lbl">P99</div></div></div>
+  </div>
+</section>
+
+<!-- PART 1: PERCENTILE TABLE -->
+<section class="section" id="percentile-table">
+  <div class="section-header">
+    <div class="section-number">PART 1</div>
+    <h2>面积百分位 vs. 模型性能（Precision 视角）</h2>
+    <p>将训练集按图片面积 (kpx) 从低到高排序后分档。<strong>Precision（精确率）= 正确预测数 / 总预测数</strong>。每种颜色至少需 5 次预测才计入 Top-3 排名。</p>
+  </div>
+  <div class="callout"><p><strong>为什么用 Precision？</strong> 在摄像头部署场景中，Precision 直接回答「这次预测可信吗？」。低 Precision 意味着大量错误预测，比低 Recall 的影响更直接。</p></div>
+
+  <div class="card">
+    <div class="card-header"><h3>面积分档详细指标（Precision）</h3><span class="card-badge">N = 71,345</span></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>面积分位</th><th class="col-ctr">N</th><th>均值面积</th><th>均值尺寸</th><th>mIoU</th><th>上衣 Prec</th><th>下衣 Prec</th><th>总色 Prec</th><th style="min-width:280px">上衣 Top-3 颜色 (Prec)</th></tr></thead>
+        <tbody id="buckets-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px;">
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>全局上衣颜色 Precision 排名</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>颜色</th><th>Precision</th><th>预测次数</th></tr></thead><tbody id="global-upper-prec"></tbody></table></div>
+    </div>
+    <div class="card" style="margin-bottom:0;">
+      <div class="card-header"><h3>全局下衣颜色 Precision 排名</h3></div>
+      <div class="table-wrap"><table><thead><tr><th>颜色</th><th>Precision</th><th>预测次数</th></tr></thead><tbody id="global-lower-prec"></tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- PART 2: DEGRADATION CURVES -->
+<section class="section" id="degradation">
+  <div class="section-header"><div class="section-number">PART 2</div><h2>性能退化曲线</h2><p>面积从极小到大，mIoU 和颜色 Precision 的单调递增趋势。</p></div>
+  <div class="card">
+    <div class="card-header"><h3>mIoU 按面积分位</h3><span class="card-badge">面积越大 → 分割越好</span></div>
+    <div class="deg-chart" id="chart-mIoU"></div>
+    <div style="display:flex;justify-content:space-between;padding:28px 8px 0;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono);">
+      <span>← 极小图 7 kpx</span><span>中位数 36 kpx</span><span>大图 641 kpx →</span>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3>颜色 Precision 按面积分位</h3><span class="card-badge">颜色对尺寸更敏感</span></div>
+    <div class="deg-chart" id="chart-prec"></div>
+    <div style="display:flex;justify-content:space-between;padding:28px 8px 0;font-size:0.7rem;color:var(--text-muted);font-family:var(--font-mono);">
+      <span>← 极小图 7 kpx</span><span>中位数 36 kpx</span><span>大图 641 kpx →</span>
+    </div>
+  </div>
+</section>
+
+<!-- PART 3: DEPLOYMENT THRESHOLDS -->
+<section class="section" id="thresholds">
+  <div class="section-header"><div class="section-number">PART 3</div><h2>部署阈值建议（Precision 基准）</h2><p>基于 Precision 给出<strong>短边、总面积</strong>二维度的准入阈值。</p></div>
+
+  <div class="card">
+    <div class="card-header"><h3>短边 (min(W,H)) 阈值扫描</h3><span class="card-badge">核心维度：决定上采样倍数</span></div>
+    <div class="table-wrap"><table><thead><tr><th>短边阈值</th><th colspan="3" style="text-align:center;color:var(--red);">过滤掉 (&lt; 阈值)</th><th class="sep-col"></th><th colspan="3" style="text-align:center;color:var(--green);">保留 (≥ 阈值)</th></tr><tr><th></th><th>占比</th><th>N</th><th>总色 Prec</th><th class="sep-col"></th><th>占比</th><th>N</th><th>总色 Prec</th></tr></thead><tbody id="short-tbody"></tbody></table></div>
+  </div>
+  <div class="card">
+    <div class="card-header"><h3>总面积 (kpx) 阈值扫描</h3><span class="card-badge">综合维度</span></div>
+    <div class="table-wrap"><table><thead><tr><th>面积阈值</th><th colspan="3" style="text-align:center;color:var(--red);">过滤掉 (&lt; 阈值)</th><th class="sep-col"></th><th colspan="3" style="text-align:center;color:var(--green);">保留 (≥ 阈值)</th></tr><tr><th></th><th>占比</th><th>N</th><th>总色 Prec</th><th class="sep-col"></th><th>占比</th><th>N</th><th>总色 Prec</th></tr></thead><tbody id="area-tbody"></tbody></table></div>
+  </div>
+
+  <div class="section-header" style="margin-top:40px;"><h2>推荐阈值方案</h2><p>综合短边、面积和 Precision 拐点分析，提供三级阈值。推荐使用<strong>平衡方案</strong>作为默认。</p></div>
+  <div class="threshold-grid" id="thresh-cards"></div>
+
+  <div class="reco-box">
+    <h4>💡 实施建议</h4>
+    <p>1. <strong>默认使用平衡方案</strong>：当 crop 的 <code>short &lt; 96 px</code> <strong>且</strong> <code>area &lt; 25 kpx</code> 时，跳过颜色属性预测。<br>
+    2. <strong>短边是最强的单一判据</strong>——它直接决定上采样倍数。短边 &lt; 64px 时上采样 &ge; 4×，Precision 显著下降。<br>
+    3. 过滤后，剩余图片维持正常属性预测通路。<br>
+    4. <strong>⚠️ 本报告基于训练集 (train.txt) 推理</strong>，模型见过这些数据，指标偏高；实际部署应以验证集评估为准。</p>
+  </div>
+</section>
+
+<!-- APPENDIX -->
+<section class="section" id="notes">
+  <div class="section-header"><div class="section-number">APPENDIX</div><h2>指标说明与方法备注</h2></div>
+  <div class="callout"><p><strong>Precision 计算方式</strong>：<code>Precision = 正确预测数 / 总预测数</code>。对每张图片，模型对上衣和下衣各输出一个颜色预测。</p></div>
+  <div class="callout"><p><strong>模型输入配置</strong>：PP-LiteSeg STDC2 · 双线性插值 resize 至 256×256 · 3 通道 RGB only · 双头输出（分割 8 类 + 颜色 12 类 × 2）· iter_22000 · optC 从头训练。</p></div>
+  <div class="callout"><p><strong>⚠️ 本报告基于训练集</strong>：推理在 train.txt (71,345 张) 上进行。各项指标可能显著高于验证集真实表现。本分析旨在揭示尺寸与性能的趋势关系，具体阈值数值应使用验证集重新校准。约 38.9% 图片短边 &lt; 96px，上采样 &ge; 2.7×。</p></div>
+</section>
+
+<div class="footer">
+  <span>PP-LiteSeg STDC2 RGB-Only · iter_22000 · train.txt</span>
+  <span>Generated 2026-06-26</span>
+</div>
+
+</div>
+
+<script>
+var D = {"buckets": [{"label": "P0–P10", "N": 7134, "mean_area": 6.9, "mean_w": 55, "mean_h": 125, "mIoU": 0.3395, "iou_upper": 0.5684, "iou_lower": 0.5528, "upper_precision": 0.377, "lower_precision": 0.45, "overall_precision": 0.415, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.785, "n": 964}, {"color": "black", "color_zh": "黑", "prec": 0.773, "n": 810}, {"color": "green", "color_zh": "绿", "prec": 0.445, "n": 659}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.835, "n": 2103}, {"color": "white", "color_zh": "白", "prec": 0.748, "n": 441}, {"color": "pink", "color_zh": "粉", "prec": 0.486, "n": 74}]}, {"label": "P10–P25", "N": 10702, "mean_area": 10.6, "mean_w": 65, "mean_h": 165, "mIoU": 0.3628, "iou_upper": 0.5994, "iou_lower": 0.6271, "upper_precision": 0.395, "lower_precision": 0.451, "overall_precision": 0.424, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.762, "n": 1244}, {"color": "black", "color_zh": "黑", "prec": 0.694, "n": 1150}, {"color": "pink", "color_zh": "粉", "prec": 0.494, "n": 419}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.864, "n": 3617}, {"color": "white", "color_zh": "白", "prec": 0.74, "n": 431}, {"color": "pink", "color_zh": "粉", "prec": 0.59, "n": 100}]}, {"label": "P25–P50", "N": 17836, "mean_area": 22.8, "mean_w": 97, "mean_h": 238, "mIoU": 0.3568, "iou_upper": 0.6226, "iou_lower": 0.6167, "upper_precision": 0.468, "lower_precision": 0.487, "overall_precision": 0.478, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.839, "n": 2870}, {"color": "black", "color_zh": "黑", "prec": 0.815, "n": 2959}, {"color": "green", "color_zh": "绿", "prec": 0.587, "n": 973}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.852, "n": 6480}, {"color": "white", "color_zh": "白", "prec": 0.802, "n": 1108}, {"color": "green", "color_zh": "绿", "prec": 0.533, "n": 411}]}, {"label": "P50–P75", "N": 17836, "mean_area": 60.2, "mean_w": 173, "mean_h": 356, "mIoU": 0.3493, "iou_upper": 0.6072, "iou_lower": 0.5906, "upper_precision": 0.53, "lower_precision": 0.52, "overall_precision": 0.525, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.876, "n": 3233}, {"color": "black", "color_zh": "黑", "prec": 0.863, "n": 4173}, {"color": "green", "color_zh": "绿", "prec": 0.778, "n": 711}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.864, "n": 6477}, {"color": "white", "color_zh": "白", "prec": 0.845, "n": 1455}, {"color": "green", "color_zh": "绿", "prec": 0.606, "n": 353}]}, {"label": "P75–P90", "N": 10702, "mean_area": 148.2, "mean_w": 288, "mean_h": 535, "mIoU": 0.3636, "iou_upper": 0.6699, "iou_lower": 0.6302, "upper_precision": 0.605, "lower_precision": 0.582, "overall_precision": 0.594, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.92, "n": 2520}, {"color": "black", "color_zh": "黑", "prec": 0.892, "n": 2838}, {"color": "green", "color_zh": "绿", "prec": 0.835, "n": 242}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.874, "n": 4819}, {"color": "white", "color_zh": "白", "prec": 0.772, "n": 937}, {"color": "gray", "color_zh": "灰", "prec": 0.527, "n": 1257}]}, {"label": "P90–P100", "N": 7135, "mean_area": 640.7, "mean_w": 515, "mean_h": 1179, "mIoU": 0.4293, "iou_upper": 0.8346, "iou_lower": 0.8168, "upper_precision": 0.746, "lower_precision": 0.64, "overall_precision": 0.693, "upper_top3": [{"color": "white", "color_zh": "白", "prec": 0.963, "n": 2320}, {"color": "gray", "color_zh": "灰", "prec": 0.931, "n": 1878}, {"color": "black", "color_zh": "黑", "prec": 0.876, "n": 1147}], "lower_top3": [{"color": "black", "color_zh": "黑", "prec": 0.9, "n": 3570}, {"color": "white", "color_zh": "白", "prec": 0.791, "n": 869}, {"color": "gray", "color_zh": "灰", "prec": 0.582, "n": 850}]}], "short_thr": [{"t": 32, "below_pct": 0.5, "below_N": 359, "below_op": 0.548, "above_pct": 99.5, "above_N": 70986, "above_op": 0.517}, {"t": 48, "below_pct": 2.1, "below_N": 1533, "below_op": 0.495, "above_pct": 97.9, "above_N": 69812, "above_op": 0.518}, {"t": 64, "below_pct": 12.1, "below_N": 8662, "below_op": 0.461, "above_pct": 87.9, "above_N": 62683, "above_op": 0.524}, {"t": 80, "below_pct": 30.3, "below_N": 21595, "below_op": 0.433, "above_pct": 69.7, "above_N": 49750, "above_op": 0.551}, {"t": 96, "below_pct": 38.9, "below_N": 27749, "below_op": 0.437, "above_pct": 61.1, "above_N": 43596, "above_op": 0.564}, {"t": 112, "below_pct": 45.6, "below_N": 32525, "below_op": 0.443, "above_pct": 54.4, "above_N": 38820, "above_op": 0.575}, {"t": 128, "below_pct": 51.5, "below_N": 36727, "below_op": 0.448, "above_pct": 48.5, "above_N": 34618, "above_op": 0.586}, {"t": 160, "below_pct": 61.4, "below_N": 43828, "below_op": 0.461, "above_pct": 38.6, "above_N": 27517, "above_op": 0.601}, {"t": 192, "below_pct": 69.3, "below_N": 49453, "below_op": 0.473, "above_pct": 30.7, "above_N": 21892, "above_op": 0.611}, {"t": 224, "below_pct": 75.7, "below_N": 53980, "below_op": 0.482, "above_pct": 24.3, "above_N": 17365, "above_op": 0.619}, {"t": 256, "below_pct": 80.5, "below_N": 57410, "below_op": 0.488, "above_pct": 19.5, "above_N": 13935, "above_op": 0.628}], "area_thr": [{"t": 5, "below_pct": 1.5, "below_N": 1072, "below_op": 0.497, "above_pct": 98.5, "above_N": 70273, "above_op": 0.517}, {"t": 10, "below_pct": 16.4, "below_N": 11708, "below_op": 0.401, "above_pct": 83.6, "above_N": 59637, "above_op": 0.538}, {"t": 15, "below_pct": 27.4, "below_N": 19522, "below_op": 0.427, "above_pct": 72.6, "above_N": 51823, "above_op": 0.549}, {"t": 20, "below_pct": 35.3, "below_N": 25159, "below_op": 0.435, "above_pct": 64.7, "above_N": 46186, "above_op": 0.559}, {"t": 25, "below_pct": 40.9, "below_N": 29155, "below_op": 0.439, "above_pct": 59.1, "above_N": 42190, "above_op": 0.567}, {"t": 30, "below_pct": 45.5, "below_N": 32495, "below_op": 0.444, "above_pct": 54.5, "above_N": 38850, "above_op": 0.574}, {"t": 40, "below_pct": 53.0, "below_N": 37814, "below_op": 0.452, "above_pct": 47.0, "above_N": 33531, "above_op": 0.586}, {"t": 50, "below_pct": 58.7, "below_N": 41849, "below_op": 0.457, "above_pct": 41.3, "above_N": 29496, "above_op": 0.597}, {"t": 75, "below_pct": 69.2, "below_N": 49349, "below_op": 0.468, "above_pct": 30.8, "above_N": 21996, "above_op": 0.62}, {"t": 100, "below_pct": 76.1, "below_N": 54318, "below_op": 0.477, "above_pct": 23.9, "above_N": 17027, "above_op": 0.637}, {"t": 150, "below_pct": 83.8, "below_N": 59788, "below_op": 0.487, "above_pct": 16.2, "above_N": 11557, "above_op": 0.665}, {"t": 200, "below_pct": 87.8, "below_N": 62670, "below_op": 0.493, "above_pct": 12.2, "above_N": 8675, "above_op": 0.678}], "global_prec": {"upper": [{"color": "white", "color_zh": "白", "prec": 0.874, "n_pred": 13151}, {"color": "black", "color_zh": "黑", "prec": 0.839, "n_pred": 13077}, {"color": "gray", "color_zh": "灰", "prec": 0.681, "n_pred": 6996}, {"color": "green", "color_zh": "绿", "prec": 0.593, "n_pred": 3709}, {"color": "pink", "color_zh": "粉", "prec": 0.523, "n_pred": 1977}, {"color": "purple", "color_zh": "紫", "prec": 0.263, "n_pred": 5195}, {"color": "brown", "color_zh": "棕", "prec": 0.175, "n_pred": 8345}, {"color": "red", "color_zh": "红", "prec": 0.09, "n_pred": 2972}, {"color": "yellow", "color_zh": "黄", "prec": 0.071, "n_pred": 2119}, {"color": "blue", "color_zh": "蓝", "prec": 0.061, "n_pred": 6313}, {"color": "orange", "color_zh": "橙", "prec": 0.02, "n_pred": 1113}, {"color": "unknown", "color_zh": "未知", "prec": 0.0, "n_pred": 1004}], "lower": [{"color": "black", "color_zh": "黑", "prec": 0.865, "n_pred": 27066}, {"color": "white", "color_zh": "白", "prec": 0.797, "n_pred": 5241}, {"color": "gray", "color_zh": "灰", "prec": 0.507, "n_pred": 8972}, {"color": "green", "color_zh": "绿", "prec": 0.494, "n_pred": 1366}, {"color": "pink", "color_zh": "粉", "prec": 0.442, "n_pred": 554}, {"color": "purple", "color_zh": "紫", "prec": 0.3, "n_pred": 430}, {"color": "blue", "color_zh": "蓝", "prec": 0.2, "n_pred": 8467}, {"color": "brown", "color_zh": "棕", "prec": 0.057, "n_pred": 14567}, {"color": "yellow", "color_zh": "黄", "prec": 0.047, "n_pred": 279}, {"color": "red", "color_zh": "红", "prec": 0.02, "n_pred": 1152}, {"color": "orange", "color_zh": "橙", "prec": 0.018, "n_pred": 169}, {"color": "unknown", "color_zh": "未知", "prec": 0.0, "n_pred": 944}]}};
+
+function cPill(c, v, n) {
+  return '<span class="color-tag color-'+c+'">'+c+'</span>&nbsp;<span style="font-size:0.78rem;font-weight:600;">'+(v*100).toFixed(1)+'%</span>&nbsp;<span style="font-size:0.65rem;color:var(--text-muted);">n='+n+'</span>';
+}
+
+// Buckets table
+(function(){
+  var tbody = document.getElementById('buckets-tbody');
+  var rows = D.buckets.map(function(b){
+    var dotC = b.mIoU >= 0.55 ? 'perf-excellent' : b.mIoU >= 0.48 ? 'perf-good' : b.mIoU >= 0.40 ? 'perf-fair' : b.mIoU >= 0.33 ? 'perf-poor' : 'perf-bad';
+    return '<tr><td><span class="perf-dot '+dotC+'"></span>'+b.label+'</td><td style="text-align:center">'+b.N+'</td><td>'+b.mean_area+' kpx</td><td>'+b.mean_w+'×'+b.mean_h+'</td><td><strong>'+b.mIoU.toFixed(4)+'</strong></td><td>'+b.upper_precision.toFixed(3)+'</td><td>'+b.lower_precision.toFixed(3)+'</td><td><strong>'+b.overall_precision.toFixed(3)+'</strong></td><td style="font-size:0.75rem;">'+b.upper_top3.map(function(c){return cPill(c.color,c.prec,c.n);}).join('<br>')+'</td></tr>';
+  }).join('');
+  tbody.innerHTML = rows;
+})();
+
+// Threshold tables
+function thrTab(id, data, unit) {
+  var h = data.map(function(r){
+    var clsB = r.below_op >= 0.55 ? 'color:var(--green)' : r.below_op >= 0.52 ? 'color:var(--accent)' : 'color:var(--red)';
+    var clsA = r.above_op >= 0.55 ? 'color:var(--green)' : r.above_op >= 0.52 ? 'color:var(--accent)' : 'color:var(--red)';
+    return '<tr><td>&lt; '+r.t+' '+unit+'</td><td>'+r.below_pct+'%</td><td>'+r.below_N+'</td><td><strong style="'+clsB+'">'+(r.below_op*100).toFixed(1)+'%</strong></td><td class="sep-col"></td><td>'+r.above_pct+'%</td><td>'+r.above_N+'</td><td><strong style="'+clsA+'">'+(r.above_op*100).toFixed(1)+'%</strong></td></tr>';
+  }).join('');
+  document.getElementById(id).innerHTML = h;
+}
+thrTab('short-tbody', D.short_thr, 'px');
+thrTab('area-tbody', D.area_thr, 'kpx');
+
+// Global precision tables
+(function(){
+  var hu = D.global_prec.upper.map(function(c,i){
+    var dot = i<3 ? 'perf-excellent' : i<6 ? 'perf-good' : i<9 ? 'perf-fair' : 'perf-bad';
+    return '<tr><td><span class="perf-dot '+dot+'"></span><span class="color-tag color-'+c.color+'">'+c.color_zh+'</span></td><td><strong>'+(c.prec*100).toFixed(1)+'%</strong></td><td>'+c.n_pred+'</td></tr>';
+  }).join('');
+  document.getElementById('global-upper-prec').innerHTML = hu;
+  var hl = D.global_prec.lower.map(function(c,i){
+    var dot = i<3 ? 'perf-excellent' : i<6 ? 'perf-good' : i<9 ? 'perf-fair' : 'perf-bad';
+    return '<tr><td><span class="perf-dot '+dot+'"></span><span class="color-tag color-'+c.color+'">'+c.color_zh+'</span></td><td><strong>'+(c.prec*100).toFixed(1)+'%</strong></td><td>'+c.n_pred+'</td></tr>';
+  }).join('');
+  document.getElementById('global-lower-prec').innerHTML = hl;
+})();
+
+// Degradation charts
+(function(){
+  var colors = ['#f87171','#fb923c','#fbbf24','#fbbf24','#a3e635','#4ade80'];
+  var mH = 135;
+  var cm = document.getElementById('chart-mIoU');
+  D.buckets.forEach(function(b,i){
+    var fullRange = D.buckets[5].mIoU - D.buckets[0].mIoU;
+    var h = Math.round((b.mIoU - D.buckets[0].mIoU) / Math.max(fullRange, 0.001) * mH);
+    var bar = document.createElement('div');
+    bar.className = 'deg-bar';
+    bar.style.height = Math.max(h,8)+'px';
+    bar.style.background = 'linear-gradient(180deg, '+colors[i]+', '+colors[i]+'88)';
+    bar.title = b.label+': mIoU = '+b.mIoU.toFixed(4);
+    bar.innerHTML = '<span class="bar-val" style="color:'+colors[i]+'">'+b.mIoU.toFixed(3)+'</span><span class="bar-lbl">'+b.label+'</span>';
+    cm.appendChild(bar);
+  });
+  var cp = document.getElementById('chart-prec');
+  D.buckets.forEach(function(b,i){
+    var fullRange = D.buckets[5].overall_precision - D.buckets[0].overall_precision;
+    var h = Math.round((b.overall_precision - D.buckets[0].overall_precision) / Math.max(fullRange, 0.001) * mH);
+    var bar = document.createElement('div');
+    bar.className = 'deg-bar';
+    bar.style.height = Math.max(h,8)+'px';
+    bar.style.background = 'linear-gradient(180deg, '+colors[i]+', '+colors[i]+'88)';
+    bar.title = b.label+': Precision = '+(b.overall_precision*100).toFixed(1)+'%';
+    bar.innerHTML = '<span class="bar-val" style="color:'+colors[i]+'">'+(b.overall_precision*100).toFixed(0)+'%</span><span class="bar-lbl">'+b.label+'</span>';
+    cp.appendChild(bar);
+  });
+})();
+
+// Size distribution tables
+(function(){
+  var wd = [["0–49 px", 1864, 2.6], ["50–99 px", 27098, 38.0], ["100–149 px", 12633, 17.7], ["150–199 px", 8682, 12.2], ["200–249 px", 5906, 8.3], ["250–299 px", 4152, 5.8], ["300–349 px", 2908, 4.1], ["350–399 px", 2091, 2.9], ["400–449 px", 1419, 2.0], ["450–499 px", 1208, 1.7], ["500–549 px", 759, 1.1], ["550–599 px", 571, 0.8], ["600–649 px", 627, 0.9], ["650–699 px", 343, 0.5], ["700–749 px", 302, 0.4], ["750–799 px", 222, 0.3], ["800–849 px", 136, 0.2], ["850–899 px", 121, 0.2], ["900–949 px", 100, 0.1], ["950–999 px", 73, 0.1]];
+  var maxNw = Math.max.apply(null, wd.map(function(r){return r[1];}));
+  document.getElementById('width-dist').innerHTML = wd.map(function(r){
+    return '<tr><td>'+r[0]+'</td><td>'+r[1].toLocaleString()+'</td><td class="col-ctr"><div class="dist-bar-wrap"><div class="dist-bar" style="width:'+(r[1]/maxNw*120)+'px;background:var(--accent);"></div><span class="dist-pct">'+r[2].toFixed(1)+'%</span></div></td></tr>';
+  }).join('');
+
+  var hd = [["0–49 px", 20, 0.0], ["50–99 px", 782, 1.1], ["100–149 px", 9416, 13.2], ["150–199 px", 10035, 14.1], ["200–249 px", 10358, 14.5], ["250–299 px", 8002, 11.2], ["300–349 px", 6405, 9.0], ["350–399 px", 5289, 7.4], ["400–449 px", 4419, 6.2], ["450–499 px", 2784, 3.9], ["500–549 px", 1983, 2.8], ["550–599 px", 1594, 2.2], ["600–649 px", 1313, 1.8], ["650–699 px", 664, 0.9], ["700–799 px", 1378, 1.9], ["800–899 px", 1155, 1.6], ["900–999 px", 857, 1.2], ["1000–1199 px", 1803, 2.5], ["1200–1399 px", 1312, 1.8], ["1400–1599 px", 816, 1.1], ["1600–1799 px", 673, 0.9], ["1800–1999 px", 254, 0.4]];
+  var maxNh = Math.max.apply(null, hd.map(function(r){return r[1];}));
+  document.getElementById('height-dist').innerHTML = hd.map(function(r){
+    return '<tr><td>'+r[0]+'</td><td>'+r[1].toLocaleString()+'</td><td class="col-ctr"><div class="dist-bar-wrap"><div class="dist-bar" style="width:'+(r[1]/maxNh*120)+'px;background:var(--cyan);"></div><span class="dist-pct">'+r[2].toFixed(1)+'%</span></div></td></tr>';
+  }).join('');
+
+  var ad = [["0–49k", 41849, 58.7], ["50–99k", 12469, 17.5], ["100–199k", 8352, 11.7], ["200–299k", 2557, 3.6], ["300–499k", 2402, 3.4], ["500–999k", 2552, 3.6]];
+  var maxNa = Math.max.apply(null, ad.map(function(r){return r[1];}));
+  document.getElementById('area-dist').innerHTML = ad.map(function(r){
+    return '<tr><td>'+r[0]+'</td><td>'+r[1].toLocaleString()+'</td><td class="col-ctr"><div class="dist-bar-wrap"><div class="dist-bar" style="width:'+(r[1]/maxNa*120)+'px;background:var(--green);"></div><span class="dist-pct">'+r[2].toFixed(1)+'%</span></div></td></tr>';
+  }).join('');
+
+  var ard = [["< 0.5 (极窄/竖长)", 47623, 66.8], ["0.5–0.67", 14463, 20.3], ["0.67–0.8", 3581, 5.0], ["0.8–0.9", 1853, 2.6], ["0.9–1.1 (正方形)", 1873, 2.6], ["1.1–1.3", 744, 1.0], ["1.3–1.5", 403, 0.6], ["1.5–2.0", 546, 0.8]];
+  var maxAr = Math.max.apply(null, ard.map(function(r){return r[1];}));
+  document.getElementById('aspect-dist').innerHTML = ard.map(function(r){
+    return '<tr><td>'+r[0]+'</td><td>'+r[1].toLocaleString()+'</td><td class="col-ctr"><div class="dist-bar-wrap"><div class="dist-bar" style="width:'+(r[1]/maxAr*120)+'px;background:#a78bfa;"></div><span class="dist-pct">'+r[2].toFixed(1)+'%</span></div></td></tr>';
+  }).join('');
+})();
+
+// Threshold cards
+(function(){
+  var sh96 = D.short_thr.find(function(r){return r.t==96;}) || D.short_thr[4];
+  var ar25 = D.area_thr.find(function(r){return r.t==25;}) || D.area_thr[4];
+  var sh80 = D.short_thr.find(function(r){return r.t==80;}) || D.short_thr[3];
+  var ar15 = D.area_thr.find(function(r){return r.t==15;}) || D.area_thr[2];
+  var sh128 = D.short_thr.find(function(r){return r.t==128;}) || D.short_thr[6];
+  var ar40 = D.area_thr.find(function(r){return r.t==40;}) || D.area_thr[6];
+
+  var cards = [
+    {title: '🛡️ 保守方案', rules: ['short ≥ 80 px', 'area ≥ 15 kpx'], filterPct: (sh80.below_pct).toFixed(1)+'%', prec: (sh80.above_op*100).toFixed(1)+'%', scene: '高可靠性需求'},
+    {title: '⚖️ 平衡方案', rules: ['short ≥ 96 px', 'area ≥ 25 kpx'], filterPct: (sh96.below_pct).toFixed(1)+'%', prec: (sh96.above_op*100).toFixed(1)+'%', scene: '一般生产环境 ✓', recommended: true},
+    {title: '🚀 激进方案', rules: ['short ≥ 128 px', 'area ≥ 40 kpx'], filterPct: (sh128.below_pct).toFixed(1)+'%', prec: (sh128.above_op*100).toFixed(1)+'%', scene: '最大化覆盖'}
+  ];
+
+  document.getElementById('thresh-cards').innerHTML = cards.map(function(c){
+    var cls = c.recommended ? 'th-card recommended' : 'th-card';
+    return '<div class="'+cls+'"><h4>'+c.title+'</h4>'+
+      c.rules.map(function(r){return '<div class="th-rule">'+r+'</div>';}).join('')+
+      '<div style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-muted);margin:2px 0 6px 10px;">且关系</div>'+
+      '<div class="th-stat"><span>过滤比例</span><span class="val">~'+c.filterPct+'</span></div>'+
+      '<div class="th-stat"><span>过滤后颜色 Prec</span><span class="val" style="color:var(--green)">~'+c.prec+'</span></div>'+
+      '<div class="th-stat"><span>适用场景</span><span class="val" style="color:var(--text-secondary);font-size:0.73rem;">'+c.scene+'</span></div>'+
+    '</div>';
+  }).join('');
+})();
+</script>
+
+</body>
+</html>

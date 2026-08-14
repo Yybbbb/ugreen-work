@@ -1,0 +1,2009 @@
+[
+  {
+    "id": "source1_qwen/0002_00007270_2025-11-26_08-05-30_frame_9840_person_1.jpg",
+    "source": "qwen:00007270_2025-11-26_08-05-30_frame_9840_person_1.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00007270_2025-11-26_08-05-30_frame_9840_person_1.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00007270_2025-11-26_08-05-30_frame_9840_person_1.json",
+    "upper_color": "white",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0003_00005525_2025-11-26_07-44-39_frame_13970_person_2.jpg",
+    "source": "qwen:00005525_2025-11-26_07-44-39_frame_13970_person_2.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00005525_2025-11-26_07-44-39_frame_13970_person_2.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00005525_2025-11-26_07-44-39_frame_13970_person_2.json",
+    "upper_color": "gray",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0004_00015503_2025-11-26_08-37-11_frame_5330_person_0.jpg",
+    "source": "qwen:00015503_2025-11-26_08-37-11_frame_5330_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00015503_2025-11-26_08-37-11_frame_5330_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00015503_2025-11-26_08-37-11_frame_5330_person_0.json",
+    "upper_color": "gray",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0005_objects365_v1_00063532__p004.jpg",
+    "source": "qwen:objects365_v1_00063532__p004.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00063532__p004.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00063532__p004.json",
+    "upper_color": "black",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0006_objects365_v1_00022101__p001.jpg",
+    "source": "qwen:objects365_v1_00022101__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00022101__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00022101__p001.json",
+    "upper_color": "blue",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0007_00016828_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0036_person_3.jpg",
+    "source": "qwen:00016828_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0036_person_3.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00016828_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0036_person_3.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00016828_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0036_person_3.json",
+    "upper_color": "white",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0008_450709_438266.jpg",
+    "source": "qwen:450709_438266.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/450709_438266.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/450709_438266.json",
+    "upper_color": "white",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0009_82f2ca6fa7433132b3f91d0ef06e4a1d_0087__p000.jpg",
+    "source": "qwen:82f2ca6fa7433132b3f91d0ef06e4a1d_0087__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/82f2ca6fa7433132b3f91d0ef06e4a1d_0087__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/82f2ca6fa7433132b3f91d0ef06e4a1d_0087__p000.json",
+    "upper_color": "black",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0010_bab92aca_t15.0s_f021810__p000.jpg",
+    "source": "qwen:bab92aca_t15.0s_f021810__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/bab92aca_t15.0s_f021810__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/bab92aca_t15.0s_f021810__p000.json",
+    "upper_color": "gray",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0011_objects365_v1_00012736__p001.jpg",
+    "source": "qwen:objects365_v1_00012736__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00012736__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00012736__p001.json",
+    "upper_color": "blue",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0012_488676_477767.jpg",
+    "source": "qwen:488676_477767.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/488676_477767.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/488676_477767.json",
+    "upper_color": "red",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0013_objects365_v1_00028690__p000.jpg",
+    "source": "qwen:objects365_v1_00028690__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00028690__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00028690__p000.json",
+    "upper_color": "white",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0015_objects365_v1_00003276__p000.jpg",
+    "source": "qwen:objects365_v1_00003276__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00003276__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00003276__p000.json",
+    "upper_color": "blue",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0016_objects365_v1_00053080__p001.jpg",
+    "source": "qwen:objects365_v1_00053080__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00053080__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00053080__p001.json",
+    "upper_color": "black",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0017_522192_439950.jpg",
+    "source": "qwen:522192_439950.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/522192_439950.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/522192_439950.json",
+    "upper_color": "black",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0018_292188_194492.jpg",
+    "source": "qwen:292188_194492.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/292188_194492.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/292188_194492.json",
+    "upper_color": "brown",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0022_objects365_v1_00025407__p000.jpg",
+    "source": "qwen:objects365_v1_00025407__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00025407__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00025407__p000.json",
+    "upper_color": "white",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0023_472376_503050.jpg",
+    "source": "qwen:472376_503050.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/472376_503050.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/472376_503050.json",
+    "upper_color": "green",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0024_411707_489180.jpg",
+    "source": "qwen:411707_489180.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/411707_489180.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/411707_489180.json",
+    "upper_color": "blue",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0025_221169_215792.jpg",
+    "source": "qwen:221169_215792.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/221169_215792.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/221169_215792.json",
+    "upper_color": "blue",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0026_194700_2206015.jpg",
+    "source": "qwen:194700_2206015.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/194700_2206015.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/194700_2206015.json",
+    "upper_color": "green",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0027_00016844_14052452e90e13344183279d95f46e75_0214_person_0.jpg",
+    "source": "qwen:00016844_14052452e90e13344183279d95f46e75_0214_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00016844_14052452e90e13344183279d95f46e75_0214_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00016844_14052452e90e13344183279d95f46e75_0214_person_0.json",
+    "upper_color": "yellow",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0028_af2a39fea3b31310c3d6f11cdf79a690_100__p001.jpg",
+    "source": "qwen:af2a39fea3b31310c3d6f11cdf79a690_100__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/af2a39fea3b31310c3d6f11cdf79a690_100__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/af2a39fea3b31310c3d6f11cdf79a690_100__p001.json",
+    "upper_color": "yellow",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0032_00019912_vcg_303_person_0.jpg",
+    "source": "qwen:00019912_vcg_303_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00019912_vcg_303_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00019912_vcg_303_person_0.json",
+    "upper_color": "yellow",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0033_00005276_2025-11-26_08-05-21_frame_13140_person_1.jpg",
+    "source": "qwen:00005276_2025-11-26_08-05-21_frame_13140_person_1.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00005276_2025-11-26_08-05-21_frame_13140_person_1.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00005276_2025-11-26_08-05-21_frame_13140_person_1.json",
+    "upper_color": "gray",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0034_499865_234005.jpg",
+    "source": "qwen:499865_234005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/499865_234005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/499865_234005.json",
+    "upper_color": "pink",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0036_objects365_v1_00023777__p000.jpg",
+    "source": "qwen:objects365_v1_00023777__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00023777__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00023777__p000.json",
+    "upper_color": "red",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0037_267862_203626.jpg",
+    "source": "qwen:267862_203626.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/267862_203626.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/267862_203626.json",
+    "upper_color": "purple",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0039_535506_441444.jpg",
+    "source": "qwen:535506_441444.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/535506_441444.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/535506_441444.json",
+    "upper_color": "green",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0040_objects365_v1_00005736__p001.jpg",
+    "source": "qwen:objects365_v1_00005736__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00005736__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00005736__p001.json",
+    "upper_color": "pink",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0042_objects365_v1_00020836__p000.jpg",
+    "source": "qwen:objects365_v1_00020836__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00020836__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00020836__p000.json",
+    "upper_color": "brown",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0044_365563_555316.jpg",
+    "source": "qwen:365563_555316.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/365563_555316.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/365563_555316.json",
+    "upper_color": "red",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0045_81126d44093bada229e5c4d174ac174d_0246__p000.jpg",
+    "source": "qwen:81126d44093bada229e5c4d174ac174d_0246__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/81126d44093bada229e5c4d174ac174d_0246__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/81126d44093bada229e5c4d174ac174d_0246__p000.json",
+    "upper_color": "black",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0046_87681_900100087681.jpg",
+    "source": "qwen:87681_900100087681.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/87681_900100087681.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/87681_900100087681.json",
+    "upper_color": "green",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0047_391325_500487.jpg",
+    "source": "qwen:391325_500487.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/391325_500487.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/391325_500487.json",
+    "upper_color": "pink",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0048_objects365_v1_00017776__p005.jpg",
+    "source": "qwen:objects365_v1_00017776__p005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00017776__p005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00017776__p005.json",
+    "upper_color": "white",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0049_312783_482665.jpg",
+    "source": "qwen:312783_482665.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/312783_482665.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/312783_482665.json",
+    "upper_color": "black",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0052_objects365_v1_00032259__p002.jpg",
+    "source": "qwen:objects365_v1_00032259__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00032259__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00032259__p002.json",
+    "upper_color": "orange",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0053_objects365_v1_00032132__p002.jpg",
+    "source": "qwen:objects365_v1_00032132__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00032132__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00032132__p002.json",
+    "upper_color": "purple",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0055_535528_486050.jpg",
+    "source": "qwen:535528_486050.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/535528_486050.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/535528_486050.json",
+    "upper_color": "yellow",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0056_objects365_v1_00068095__p000.jpg",
+    "source": "qwen:objects365_v1_00068095__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00068095__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00068095__p000.json",
+    "upper_color": "brown",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0057_84157_522057.jpg",
+    "source": "qwen:84157_522057.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/84157_522057.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/84157_522057.json",
+    "upper_color": "yellow",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0059_objects365_v1_00031043__p005.jpg",
+    "source": "qwen:objects365_v1_00031043__p005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00031043__p005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00031043__p005.json",
+    "upper_color": "orange",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0060_objects365_v1_00020524__p000.jpg",
+    "source": "qwen:objects365_v1_00020524__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00020524__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00020524__p000.json",
+    "upper_color": "pink",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0061_objects365_v1_00045548__p005.jpg",
+    "source": "qwen:objects365_v1_00045548__p005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00045548__p005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00045548__p005.json",
+    "upper_color": "blue",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0063_c669e2fdbd3b5d65a7b0af6e561db69f_0251__p000.jpg",
+    "source": "qwen:c669e2fdbd3b5d65a7b0af6e561db69f_0251__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/c669e2fdbd3b5d65a7b0af6e561db69f_0251__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/c669e2fdbd3b5d65a7b0af6e561db69f_0251__p000.json",
+    "upper_color": "purple",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0064_objects365_v1_00037308__p001.jpg",
+    "source": "qwen:objects365_v1_00037308__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00037308__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00037308__p001.json",
+    "upper_color": "pink",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0065_515198_458107.jpg",
+    "source": "qwen:515198_458107.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/515198_458107.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/515198_458107.json",
+    "upper_color": "orange",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0066_objects365_v1_00033560__p010.jpg",
+    "source": "qwen:objects365_v1_00033560__p010.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00033560__p010.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00033560__p010.json",
+    "upper_color": "pink",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0067_objects365_v1_00012739__p002.jpg",
+    "source": "qwen:objects365_v1_00012739__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00012739__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00012739__p002.json",
+    "upper_color": "orange",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0068_367784_436821.jpg",
+    "source": "qwen:367784_436821.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/367784_436821.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/367784_436821.json",
+    "upper_color": "gray",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0069_objects365_v1_00015234__p000.jpg",
+    "source": "qwen:objects365_v1_00015234__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00015234__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00015234__p000.json",
+    "upper_color": "black",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0070_164572_505564.jpg",
+    "source": "qwen:164572_505564.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/164572_505564.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/164572_505564.json",
+    "upper_color": "purple",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0071_objects365_v1_00046116__p001.jpg",
+    "source": "qwen:objects365_v1_00046116__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00046116__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00046116__p001.json",
+    "upper_color": "brown",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0072_objects365_v1_00050112__p002.jpg",
+    "source": "qwen:objects365_v1_00050112__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00050112__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00050112__p002.json",
+    "upper_color": "white",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0073_70985_451904.jpg",
+    "source": "qwen:70985_451904.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/70985_451904.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/70985_451904.json",
+    "upper_color": "white",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0074_objects365_v1_00026991__p002.jpg",
+    "source": "qwen:objects365_v1_00026991__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00026991__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00026991__p002.json",
+    "upper_color": "yellow",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0075_416596_480930.jpg",
+    "source": "qwen:416596_480930.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/416596_480930.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/416596_480930.json",
+    "upper_color": "red",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0076_548964_187660.jpg",
+    "source": "qwen:548964_187660.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/548964_187660.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/548964_187660.json",
+    "upper_color": "gray",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0077_361030_432949.jpg",
+    "source": "qwen:361030_432949.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/361030_432949.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/361030_432949.json",
+    "upper_color": "blue",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0078_200058_501996.jpg",
+    "source": "qwen:200058_501996.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/200058_501996.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/200058_501996.json",
+    "upper_color": "black",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0079_objects365_v1_00007157__p002.jpg",
+    "source": "qwen:objects365_v1_00007157__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00007157__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00007157__p002.json",
+    "upper_color": "yellow",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0080_398938_422021.jpg",
+    "source": "qwen:398938_422021.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/398938_422021.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/398938_422021.json",
+    "upper_color": "green",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0081_425817_441706.jpg",
+    "source": "qwen:425817_441706.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/425817_441706.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/425817_441706.json",
+    "upper_color": "blue",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0082_objects365_v1_00013966__p001.jpg",
+    "source": "qwen:objects365_v1_00013966__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00013966__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00013966__p001.json",
+    "upper_color": "black",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0083_objects365_v1_00018956__p003.jpg",
+    "source": "qwen:objects365_v1_00018956__p003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00018956__p003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00018956__p003.json",
+    "upper_color": "white",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0084_9423e44b_t8.0s_f011576__p000.jpg",
+    "source": "qwen:9423e44b_t8.0s_f011576__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/9423e44b_t8.0s_f011576__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/9423e44b_t8.0s_f011576__p000.json",
+    "upper_color": "purple",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0085_82372_1215335.jpg",
+    "source": "qwen:82372_1215335.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/82372_1215335.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/82372_1215335.json",
+    "upper_color": "pink",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0086_objects365_v1_00010658__p003.jpg",
+    "source": "qwen:objects365_v1_00010658__p003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00010658__p003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00010658__p003.json",
+    "upper_color": "gray",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0087_551733_1247161.jpg",
+    "source": "qwen:551733_1247161.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/551733_1247161.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/551733_1247161.json",
+    "upper_color": "purple",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0088_229422_1714484.jpg",
+    "source": "qwen:229422_1714484.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/229422_1714484.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/229422_1714484.json",
+    "upper_color": "blue",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0089_207317_428658.jpg",
+    "source": "qwen:207317_428658.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/207317_428658.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/207317_428658.json",
+    "upper_color": "black",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0090_43133_189511.jpg",
+    "source": "qwen:43133_189511.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/43133_189511.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/43133_189511.json",
+    "upper_color": "blue",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0091_objects365_v1_00025868__p000.jpg",
+    "source": "qwen:objects365_v1_00025868__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00025868__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00025868__p000.json",
+    "upper_color": "orange",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0092_objects365_v1_00007487__p002.jpg",
+    "source": "qwen:objects365_v1_00007487__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00007487__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00007487__p002.json",
+    "upper_color": "yellow",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0093_39664_455347.jpg",
+    "source": "qwen:39664_455347.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/39664_455347.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/39664_455347.json",
+    "upper_color": "pink",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0094_55981_496176.jpg",
+    "source": "qwen:55981_496176.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/55981_496176.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/55981_496176.json",
+    "upper_color": "brown",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0095_objects365_v1_00020077__p008.jpg",
+    "source": "qwen:objects365_v1_00020077__p008.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00020077__p008.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00020077__p008.json",
+    "upper_color": "red",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0096_39958_454037.jpg",
+    "source": "qwen:39958_454037.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/39958_454037.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/39958_454037.json",
+    "upper_color": "green",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0097_247660_2149268.jpg",
+    "source": "qwen:247660_2149268.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/247660_2149268.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/247660_2149268.json",
+    "upper_color": "gray",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0098_61584_185146.jpg",
+    "source": "qwen:61584_185146.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/61584_185146.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/61584_185146.json",
+    "upper_color": "red",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0099_403743_507395.jpg",
+    "source": "qwen:403743_507395.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/403743_507395.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/403743_507395.json",
+    "upper_color": "green",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0100_206560_440004.jpg",
+    "source": "qwen:206560_440004.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/206560_440004.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/206560_440004.json",
+    "upper_color": "gray",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0101_197739_2164648.jpg",
+    "source": "qwen:197739_2164648.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/197739_2164648.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/197739_2164648.json",
+    "upper_color": "green",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0102_226748_498634.jpg",
+    "source": "qwen:226748_498634.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/226748_498634.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/226748_498634.json",
+    "upper_color": "red",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0103_objects365_v1_00023939__p001.jpg",
+    "source": "qwen:objects365_v1_00023939__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00023939__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00023939__p001.json",
+    "upper_color": "green",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0104_264642_485409.jpg",
+    "source": "qwen:264642_485409.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/264642_485409.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/264642_485409.json",
+    "upper_color": "brown",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0105_362446_453003.jpg",
+    "source": "qwen:362446_453003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/362446_453003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/362446_453003.json",
+    "upper_color": "red",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0106_163866_436553.jpg",
+    "source": "qwen:163866_436553.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/163866_436553.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/163866_436553.json",
+    "upper_color": "black",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0107_objects365_v1_00027933__p001.jpg",
+    "source": "qwen:objects365_v1_00027933__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00027933__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00027933__p001.json",
+    "upper_color": "brown",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0108_objects365_v1_00065348__p001.jpg",
+    "source": "qwen:objects365_v1_00065348__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00065348__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00065348__p001.json",
+    "upper_color": "beige",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0109_00014217_vcg_470_person_0.jpg",
+    "source": "qwen:00014217_vcg_470_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00014217_vcg_470_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00014217_vcg_470_person_0.json",
+    "upper_color": "gray",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0110_objects365_v1_00034133__p001.jpg",
+    "source": "qwen:objects365_v1_00034133__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00034133__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00034133__p001.json",
+    "upper_color": "brown",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0111_538163_492457.jpg",
+    "source": "qwen:538163_492457.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/538163_492457.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/538163_492457.json",
+    "upper_color": "pink",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0112_objects365_v1_00003062__p001.jpg",
+    "source": "qwen:objects365_v1_00003062__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00003062__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00003062__p001.json",
+    "upper_color": "gray",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0113_453512_464546.jpg",
+    "source": "qwen:453512_464546.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/453512_464546.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/453512_464546.json",
+    "upper_color": "beige",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0114_129492_475154.jpg",
+    "source": "qwen:129492_475154.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/129492_475154.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/129492_475154.json",
+    "upper_color": "white",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0115_490306_1282739.jpg",
+    "source": "qwen:490306_1282739.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/490306_1282739.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/490306_1282739.json",
+    "upper_color": "orange",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0116_objects365_v1_00057125__p001.jpg",
+    "source": "qwen:objects365_v1_00057125__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00057125__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00057125__p001.json",
+    "upper_color": "brown",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0117_objects365_v1_00015792__p000.jpg",
+    "source": "qwen:objects365_v1_00015792__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00015792__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00015792__p000.json",
+    "upper_color": "green",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0118_objects365_v1_00062973__p003.jpg",
+    "source": "qwen:objects365_v1_00062973__p003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00062973__p003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00062973__p003.json",
+    "upper_color": "beige",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0119_250155_2161186.jpg",
+    "source": "qwen:250155_2161186.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/250155_2161186.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/250155_2161186.json",
+    "upper_color": "orange",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0120_11497_2163025.jpg",
+    "source": "qwen:11497_2163025.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/11497_2163025.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/11497_2163025.json",
+    "upper_color": "pink",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0121_objects365_v1_00066370__p002.jpg",
+    "source": "qwen:objects365_v1_00066370__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00066370__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00066370__p002.json",
+    "upper_color": "red",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0122_395178_424787.jpg",
+    "source": "qwen:395178_424787.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/395178_424787.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/395178_424787.json",
+    "upper_color": "purple",
+    "lower_color": "yellow",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0123_381967_487387.jpg",
+    "source": "qwen:381967_487387.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/381967_487387.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/381967_487387.json",
+    "upper_color": "brown",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0124_168571_468736.jpg",
+    "source": "qwen:168571_468736.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/168571_468736.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/168571_468736.json",
+    "upper_color": "blue",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0125_166913_190197.jpg",
+    "source": "qwen:166913_190197.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/166913_190197.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/166913_190197.json",
+    "upper_color": "purple",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0126_69805_197479.jpg",
+    "source": "qwen:69805_197479.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/69805_197479.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/69805_197479.json",
+    "upper_color": "orange",
+    "lower_color": "pink",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0128_objects365_v1_00052150__p002.jpg",
+    "source": "qwen:objects365_v1_00052150__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00052150__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00052150__p002.json",
+    "upper_color": "maroon",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0129_objects365_v1_00041031__p000.jpg",
+    "source": "qwen:objects365_v1_00041031__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00041031__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00041031__p000.json",
+    "upper_color": "blue",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0130_137560_1233692.jpg",
+    "source": "qwen:137560_1233692.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/137560_1233692.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/137560_1233692.json",
+    "upper_color": "purple",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0131_objects365_v1_00052998__p005.jpg",
+    "source": "qwen:objects365_v1_00052998__p005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00052998__p005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00052998__p005.json",
+    "upper_color": "orange",
+    "lower_color": "beige",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0132_159953_185818.jpg",
+    "source": "qwen:159953_185818.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/159953_185818.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/159953_185818.json",
+    "upper_color": "beige",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0134_objects365_v1_00037008__p010.jpg",
+    "source": "qwen:objects365_v1_00037008__p010.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00037008__p010.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00037008__p010.json",
+    "upper_color": "yellow",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0135_439702_499884.jpg",
+    "source": "qwen:439702_499884.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/439702_499884.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/439702_499884.json",
+    "upper_color": "yellow",
+    "lower_color": "purple",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0136_objects365_v1_00014458__p000.jpg",
+    "source": "qwen:objects365_v1_00014458__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00014458__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00014458__p000.json",
+    "upper_color": "pink",
+    "lower_color": "orange",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0137_objects365_v1_00055068__p000.jpg",
+    "source": "qwen:objects365_v1_00055068__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00055068__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00055068__p000.json",
+    "upper_color": "maroon",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0138_348179_504693.jpg",
+    "source": "qwen:348179_504693.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/348179_504693.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/348179_504693.json",
+    "upper_color": "beige",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0139_62483_1687950.jpg",
+    "source": "qwen:62483_1687950.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/62483_1687950.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/62483_1687950.json",
+    "upper_color": "tan",
+    "lower_color": "tan",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0140_objects365_v1_00027403__p007.jpg",
+    "source": "qwen:objects365_v1_00027403__p007.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00027403__p007.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00027403__p007.json",
+    "upper_color": "maroon",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0141_objects365_v1_00055068__p003.jpg",
+    "source": "qwen:objects365_v1_00055068__p003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00055068__p003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00055068__p003.json",
+    "upper_color": "purple",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0142_363576_191485.jpg",
+    "source": "qwen:363576_191485.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/363576_191485.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/363576_191485.json",
+    "upper_color": "silver",
+    "lower_color": "silver",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0143_objects365_v1_00062544__p009.jpg",
+    "source": "qwen:objects365_v1_00062544__p009.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00062544__p009.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00062544__p009.json",
+    "upper_color": "black",
+    "lower_color": "gold",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0144_159398_441124.jpg",
+    "source": "qwen:159398_441124.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/159398_441124.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/159398_441124.json",
+    "upper_color": "maroon",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0145_objects365_v1_00027490__p002.jpg",
+    "source": "qwen:objects365_v1_00027490__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00027490__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00027490__p002.json",
+    "upper_color": "black",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0146_objects365_v1_00037574__p002.jpg",
+    "source": "qwen:objects365_v1_00037574__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00037574__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00037574__p002.json",
+    "upper_color": "silver",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0147_objects365_v1_00005407__p000.jpg",
+    "source": "qwen:objects365_v1_00005407__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00005407__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00005407__p000.json",
+    "upper_color": "white",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0148_57753_900100057753.jpg",
+    "source": "qwen:57753_900100057753.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/57753_900100057753.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/57753_900100057753.json",
+    "upper_color": "green",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0149_objects365_v1_00071004__p001.jpg",
+    "source": "qwen:objects365_v1_00071004__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00071004__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00071004__p001.json",
+    "upper_color": "orange",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0150_209046_437338.jpg",
+    "source": "qwen:209046_437338.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/209046_437338.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/209046_437338.json",
+    "upper_color": "gray",
+    "lower_color": "khaki",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0151_objects365_v1_00065145__p000.jpg",
+    "source": "qwen:objects365_v1_00065145__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00065145__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00065145__p000.json",
+    "upper_color": "white",
+    "lower_color": "silver",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0152_470284_451023.jpg",
+    "source": "qwen:470284_451023.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/470284_451023.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/470284_451023.json",
+    "upper_color": "beige",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0153_518116_443919.jpg",
+    "source": "qwen:518116_443919.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/518116_443919.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/518116_443919.json",
+    "upper_color": "black",
+    "lower_color": "maroon",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0154_2025-11-26_07-44-39_frame_3670__p002.jpg",
+    "source": "qwen:2025-11-26_07-44-39_frame_3670__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/2025-11-26_07-44-39_frame_3670__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/2025-11-26_07-44-39_frame_3670__p002.json",
+    "upper_color": "black",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0155_2025-11-26_08-24-53_frame_9980__p000.jpg",
+    "source": "qwen:2025-11-26_08-24-53_frame_9980__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/2025-11-26_08-24-53_frame_9980__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/2025-11-26_08-24-53_frame_9980__p000.json",
+    "upper_color": "white",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0156_e8d4fb16169e545304828c4d72a166d3_0096_comfy_00001___p000.jpg",
+    "source": "qwen:e8d4fb16169e545304828c4d72a166d3_0096_comfy_00001___p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/e8d4fb16169e545304828c4d72a166d3_0096_comfy_00001___p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/e8d4fb16169e545304828c4d72a166d3_0096_comfy_00001___p000.json",
+    "upper_color": "gray",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0157_objects365_v1_00011310__p004.jpg",
+    "source": "qwen:objects365_v1_00011310__p004.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00011310__p004.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00011310__p004.json",
+    "upper_color": "gray",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0158_79806_209529.jpg",
+    "source": "qwen:79806_209529.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/79806_209529.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/79806_209529.json",
+    "upper_color": "black",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0159_00005081_08e3b1feb29cf9cdf90624bbacc10f6f_001583_person_0.jpg",
+    "source": "qwen:00005081_08e3b1feb29cf9cdf90624bbacc10f6f_001583_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00005081_08e3b1feb29cf9cdf90624bbacc10f6f_001583_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00005081_08e3b1feb29cf9cdf90624bbacc10f6f_001583_person_0.json",
+    "upper_color": "blue",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0160_380192_1210084.jpg",
+    "source": "qwen:380192_1210084.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/380192_1210084.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/380192_1210084.json",
+    "upper_color": "white",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0161_408040_1687288.jpg",
+    "source": "qwen:408040_1687288.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/408040_1687288.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/408040_1687288.json",
+    "upper_color": "white",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0163_objects365_v1_00026424__p004.jpg",
+    "source": "qwen:objects365_v1_00026424__p004.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00026424__p004.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00026424__p004.json",
+    "upper_color": "gray",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0164_objects365_v1_00035876__p003.jpg",
+    "source": "qwen:objects365_v1_00035876__p003.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00035876__p003.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00035876__p003.json",
+    "upper_color": "blue",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0165_objects365_v1_00030930__p001.jpg",
+    "source": "qwen:objects365_v1_00030930__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00030930__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00030930__p001.json",
+    "upper_color": "red",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0166_285799_452923.jpg",
+    "source": "qwen:285799_452923.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/285799_452923.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/285799_452923.json",
+    "upper_color": "white",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0167_00013251_0e8862da7ab0c01a064be0e945c0065b_0061_person_0.jpg",
+    "source": "qwen:00013251_0e8862da7ab0c01a064be0e945c0065b_0061_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00013251_0e8862da7ab0c01a064be0e945c0065b_0061_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00013251_0e8862da7ab0c01a064be0e945c0065b_0061_person_0.json",
+    "upper_color": "red",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0168_266847_2198223.jpg",
+    "source": "qwen:266847_2198223.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/266847_2198223.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/266847_2198223.json",
+    "upper_color": "blue",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0169_00002576_2025-11-26_08-05-21_frame_1510_person_2.jpg",
+    "source": "qwen:00002576_2025-11-26_08-05-21_frame_1510_person_2.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00002576_2025-11-26_08-05-21_frame_1510_person_2.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00002576_2025-11-26_08-05-21_frame_1510_person_2.json",
+    "upper_color": "black",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0170_69333f6c9d468f53f78b2a78f2789612__p000.jpg",
+    "source": "qwen:69333f6c9d468f53f78b2a78f2789612__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/69333f6c9d468f53f78b2a78f2789612__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/69333f6c9d468f53f78b2a78f2789612__p000.json",
+    "upper_color": "black",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0171_180817_431009.jpg",
+    "source": "qwen:180817_431009.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/180817_431009.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/180817_431009.json",
+    "upper_color": "brown",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0172_520978_1204630.jpg",
+    "source": "qwen:520978_1204630.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/520978_1204630.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/520978_1204630.json",
+    "upper_color": "brown",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0173_9fdc553d_t15.0s_f012372__p002.jpg",
+    "source": "qwen:9fdc553d_t15.0s_f012372__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/9fdc553d_t15.0s_f012372__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/9fdc553d_t15.0s_f012372__p002.json",
+    "upper_color": "green",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0174_573287_452470.jpg",
+    "source": "qwen:573287_452470.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/573287_452470.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/573287_452470.json",
+    "upper_color": "brown",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0175_objects365_v1_00026841__p000.jpg",
+    "source": "qwen:objects365_v1_00026841__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00026841__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00026841__p000.json",
+    "upper_color": "white",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0177_objects365_v1_00023885__p001.jpg",
+    "source": "qwen:objects365_v1_00023885__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00023885__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00023885__p001.json",
+    "upper_color": "blue",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0178_460129_184792.jpg",
+    "source": "qwen:460129_184792.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/460129_184792.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/460129_184792.json",
+    "upper_color": "blue",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0179_b6d0863fd9a488b08ba96d2bf90a9cc3_0017__p001.jpg",
+    "source": "qwen:b6d0863fd9a488b08ba96d2bf90a9cc3_0017__p001.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/b6d0863fd9a488b08ba96d2bf90a9cc3_0017__p001.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/b6d0863fd9a488b08ba96d2bf90a9cc3_0017__p001.json",
+    "upper_color": "green",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0180_b6d0863fd9a488b08ba96d2bf90a9cc3_0019__p002.jpg",
+    "source": "qwen:b6d0863fd9a488b08ba96d2bf90a9cc3_0019__p002.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/b6d0863fd9a488b08ba96d2bf90a9cc3_0019__p002.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/b6d0863fd9a488b08ba96d2bf90a9cc3_0019__p002.json",
+    "upper_color": "yellow",
+    "lower_color": "white",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0181_131979_450437.jpg",
+    "source": "qwen:131979_450437.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/131979_450437.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/131979_450437.json",
+    "upper_color": "yellow",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0182_161996_440504.jpg",
+    "source": "qwen:161996_440504.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/161996_440504.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/161996_440504.json",
+    "upper_color": "gray",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0183_objects365_v1_00017239__p005.jpg",
+    "source": "qwen:objects365_v1_00017239__p005.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00017239__p005.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00017239__p005.json",
+    "upper_color": "green",
+    "lower_color": "green",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0185_00020293_2025-11-26_08-24-53_frame_560_person_0.jpg",
+    "source": "qwen:00020293_2025-11-26_08-24-53_frame_560_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00020293_2025-11-26_08-24-53_frame_560_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00020293_2025-11-26_08-24-53_frame_560_person_0.json",
+    "upper_color": "yellow",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0187_00017832_2025-11-26_08-05-30_frame_1950_person_1.jpg",
+    "source": "qwen:00017832_2025-11-26_08-05-30_frame_1950_person_1.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00017832_2025-11-26_08-05-30_frame_1950_person_1.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00017832_2025-11-26_08-05-30_frame_1950_person_1.json",
+    "upper_color": "pink",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0188_objects365_v1_00042574__p000.jpg",
+    "source": "qwen:objects365_v1_00042574__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/objects365_v1_00042574__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/objects365_v1_00042574__p000.json",
+    "upper_color": "red",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0192_d7536272a8dbb059335bd281a7836909_0213__p000.jpg",
+    "source": "qwen:d7536272a8dbb059335bd281a7836909_0213__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/d7536272a8dbb059335bd281a7836909_0213__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/d7536272a8dbb059335bd281a7836909_0213__p000.json",
+    "upper_color": "green",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0193_493724_536451.jpg",
+    "source": "qwen:493724_536451.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/493724_536451.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/493724_536451.json",
+    "upper_color": "pink",
+    "lower_color": "black",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0194_00020376_05c081b6_t103.0s_f003978_person_0.jpg",
+    "source": "qwen:00020376_05c081b6_t103.0s_f003978_person_0.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/upper_lower_person_export/00020376_05c081b6_t103.0s_f003978_person_0.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/upper_lower_person_export/00020376_05c081b6_t103.0s_f003978_person_0.json",
+    "upper_color": "orange",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0195_efe137992b8e46a29cd3a95369749410_0035__p000.jpg",
+    "source": "qwen:efe137992b8e46a29cd3a95369749410_0035__p000.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/ipc_seg_annotation/efe137992b8e46a29cd3a95369749410_0035__p000.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/ipc_seg_annotation/efe137992b8e46a29cd3a95369749410_0035__p000.json",
+    "upper_color": "brown",
+    "lower_color": "gray",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0196_572529_438744.jpg",
+    "source": "qwen:572529_438744.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/572529_438744.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/572529_438744.json",
+    "upper_color": "purple",
+    "lower_color": "blue",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0197_155543_2205855.jpg",
+    "source": "qwen:155543_2205855.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Val/155543_2205855.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Val/155543_2205855.json",
+    "upper_color": "red",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0198_56738_423270.jpg",
+    "source": "qwen:56738_423270.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/56738_423270.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/56738_423270.json",
+    "upper_color": "black",
+    "lower_color": "red",
+    "copied": true
+  },
+  {
+    "id": "source1_qwen/0199_161510_190208.jpg",
+    "source": "qwen:161510_190208.json",
+    "img_orig": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/images/lip/Train/161510_190208.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/LIP_clothes_accessory_unified/annotations/lip/Train/161510_190208.json",
+    "upper_color": "green",
+    "lower_color": "brown",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0001_045541.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/045541.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_045541_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0002_057523.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/057523.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_057523_jpg_p000.json",
+    "upper_color": "Blue",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0003_005450.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/005450.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_005450_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0004_058119.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/058119.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_058119_jpg_p000.json",
+    "upper_color": "Pink",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0005_051383.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/051383.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_051383_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0006_006521.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/006521.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_006521_jpg_p000.json",
+    "upper_color": "White",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0007_09488.png",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PETA/images/09488.png",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PETA_images_09488_png_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Other",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0008_005169.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/005169.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_005169_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Orange",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0009_074310.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/074310.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_074310_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0010_073238.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/073238.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_073238_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0011_019748.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/019748.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_019748_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Brown",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0012_004873.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/004873.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_004873_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0013_066342.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/066342.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_0296_c3s1_066342_04_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Orange",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0014_041625.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/041625.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_041625_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Blue",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0015_065662.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/065662.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_065662_jpg_p000.json",
+    "upper_color": "White",
+    "lower_color": "White",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0016_044708.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/044708.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_044708_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Red",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0017_069939.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/069939.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_069939_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0018_07869.png",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PETA/images/07869.png",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_0332_c5s1_078698_02_jpg_p000.json",
+    "upper_color": "Blue",
+    "lower_color": "Blue",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0019_031595.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/031595.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_031595_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Brown",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0020_014730.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/014730.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_014730_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0021_064706.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/064706.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_064706_jpg_p000.json",
+    "upper_color": "Pink",
+    "lower_color": "Pink",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0022_005308.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/005308.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_005308_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Red",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0023_004777.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/004777.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_004777_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0024_037493.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/037493.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_037493_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0025_0594_c3s2_019962_05.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/Market1501/bounding_box_train/0594_c3s2_019962_05.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_0594_c3s2_019962_05_jpg_p000.json",
+    "upper_color": "Other",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0026_033922.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/033922.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_033922_jpg_p000.json",
+    "upper_color": "White",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0027_0779_c2s2_124952_10.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/Market1501/bounding_box_train/0779_c2s2_124952_10.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_0779_c2s2_124952_10_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0028_036890.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/036890.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_036890_jpg_p000.json",
+    "upper_color": "Blue",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0029_030315.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/030315.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_030315_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Red",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0030_020707.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/020707.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_020707_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0031_010033.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/010033.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_010033_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0032_043193.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/043193.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_043193_jpg_p000.json",
+    "upper_color": "Green",
+    "lower_color": "Yellow",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0033_069229.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/069229.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_069229_jpg_p000.json",
+    "upper_color": "White",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0034_042400.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/042400.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_042400_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0035_1341_c3s3_039628_03.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/Market1501/bounding_box_train/1341_c3s3_039628_03.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_1341_c3s3_039628_03_jpg_p000.json",
+    "upper_color": "Yellow",
+    "lower_color": "White",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0036_052833.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/052833.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_052833_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0037_053298.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/053298.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_053298_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0038_0891_c3s2_109703_10.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/Market1501/bounding_box_train/0891_c3s2_109703_10.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_0891_c3s2_109703_10_jpg_p000.json",
+    "upper_color": "Other",
+    "lower_color": "Brown",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0039_053835.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/053835.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_053835_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Blue",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0040_02040.png",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PETA/images/02040.png",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_Market1501_bounding_box_train_1250_c3s3_020403_07_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0041_023514.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/023514.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_023514_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0042_014400.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/014400.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_014400_jpg_p000.json",
+    "upper_color": "Pink",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0043_042183.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/042183.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_042183_jpg_p000.json",
+    "upper_color": "Green",
+    "lower_color": "Brown",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0044_048701.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/048701.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_048701_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Blue",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0045_06774.png",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PETA/images/06774.png",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_067746_jpg_p000.json",
+    "upper_color": "Orange",
+    "lower_color": "Pink",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0046_037163.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/037163.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_037163_jpg_p000.json",
+    "upper_color": "Green",
+    "lower_color": "Purple",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0047_078295.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/078295.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_078295_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Red",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0048_03529.png",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PETA/images/03529.png",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_003529_jpg_p000.json",
+    "upper_color": "Purple",
+    "lower_color": "Green",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0049_070194.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/070194.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_070194_jpg_p000.json",
+    "upper_color": "Brown",
+    "lower_color": "Black",
+    "copied": true
+  },
+  {
+    "id": "source2_upar_rare/0050_041728.jpg",
+    "source": "upar_rare_color",
+    "img_orig": "/data1/work/MichaelYu/segment-color/extradata/upar-dataset/data/PA100k/release_data/release_data/041728.jpg",
+    "mask_path": "/data1/work/MichaelYu/segment-color/data/UPAR_rare_color/annotations/upar_PA100k_release_data_release_data_041728_jpg_p000.json",
+    "upper_color": "Red",
+    "lower_color": "Pink",
+    "copied": true
+  }
+]

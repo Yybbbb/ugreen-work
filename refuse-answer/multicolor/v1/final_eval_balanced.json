@@ -1,0 +1,5230 @@
+{
+  "parameters": {
+    "sigma": 2.5,
+    "peak_threshold": 0.15,
+    "merge_dist": 15,
+    "l_range_threshold": 100,
+    "purity_threshold": 0.8,
+    "min_blob_area": 50,
+    "n_bins": 128
+  },
+  "pure_set": {
+    "total": 175,
+    "correct": 143,
+    "incorrect": 32,
+    "accuracy": 0.8171
+  },
+  "multi_set": {
+    "total": 185,
+    "correct": 82,
+    "incorrect": 103,
+    "accuracy": 0.4432
+  },
+  "overall": {
+    "accuracy": 0.625,
+    "precision": 0.7193,
+    "recall": 0.4432,
+    "specificity": 0.8171,
+    "f1": 0.5485
+  },
+  "confusion_matrix": {
+    "tp": 82,
+    "fp": 32,
+    "tn": 143,
+    "fn": 103
+  },
+  "pure_results": [
+    {
+      "file": "0001_objects365_v1_00053353__p003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 38,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0002_00007270_2025-11-26_08-05-30_frame_9840_person_1.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0003_00005525_2025-11-26_07-44-39_frame_13970_person_2.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0026_194700_2206015.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.373996123829601,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.37808990478516,
+        "n_pixels": 9701,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0195_efe137992b8e46a29cd3a95369749410_0035__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 13,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0006_objects365_v1_00022101__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 61.97753143310547,
+        "n_pixels": 424,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0007_00016828_0a3a0a0abaf22ac3e04bb4d320e7e4ab_0036_person_3.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0008_450709_438266.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8653049582447812,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.80242156982422,
+        "n_pixels": 21783,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0009_82f2ca6fa7433132b3f91d0ef06e4a1d_0087__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.46326446533203,
+        "n_pixels": 298,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0010_bab92aca_t15.0s_f021810__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8203258142000736,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 94.33489990234375,
+        "n_pixels": 10827,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0012_488676_477767.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6312614883965405,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.42378234863281,
+        "n_pixels": 3685,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0013_objects365_v1_00028690__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0017_522192_439950.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.5254898071289,
+        "n_pixels": 6625,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0018_292188_194492.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.41690826416016,
+        "n_pixels": 4960,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0019_objects365_v1_00004050__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 33,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0020_ab7e8ed6_t31.6s_f012113__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0022_objects365_v1_00025407__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0023_472376_503050.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.56798553466797,
+        "n_pixels": 12061,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0024_411707_489180.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.621947776895086,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.92750549316406,
+        "n_pixels": 13271,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0025_221169_215792.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.1961669921875,
+        "n_pixels": 14754,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0027_00016844_14052452e90e13344183279d95f46e75_0214_person_0.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0028_af2a39fea3b31310c3d6f11cdf79a690_100__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 7,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0029_objects365_v1_00013085__p011.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 8,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0032_00019912_vcg_303_person_0.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0033_00005276_2025-11-26_08-05-21_frame_13140_person_1.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0034_499865_234005.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.4021956711408974,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 83.48297882080078,
+        "n_pixels": 1315,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0038_objects365_v1_00005842__p001.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.42543384235960174,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.00460052490234,
+        "n_pixels": 3072,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0039_535506_441444.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7750967821398339,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 92.04194641113281,
+        "n_pixels": 14239,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0040_objects365_v1_00005736__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 47.15516662597656,
+        "n_pixels": 56,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0043_55809_186781.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.14753723144531,
+        "n_pixels": 5792,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0045_81126d44093bada229e5c4d174ac174d_0246__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 80.0530014038086,
+        "n_pixels": 198,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0046_87681_900100087681.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 7293,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0047_391325_500487.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 78.95939636230469,
+        "n_pixels": 2614,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0048_objects365_v1_00017776__p005.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6765982124535611,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.94169616699219,
+        "n_pixels": 48003,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0049_312783_482665.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.30062866210938,
+        "n_pixels": 1564,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0052_objects365_v1_00032259__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 67.4844970703125,
+        "n_pixels": 117,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0053_objects365_v1_00032132__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0054_objects365_v1_00044333__p004.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 33.458499908447266,
+        "n_pixels": 61,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0055_535528_486050.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8298858084657772,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 90.01521301269531,
+        "n_pixels": 9726,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0056_objects365_v1_00068095__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 94.50569915771484,
+        "n_pixels": 112,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0057_84157_522057.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0061_objects365_v1_00045548__p005.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.681340791690498,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 91.08770751953125,
+        "n_pixels": 6321,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0063_c669e2fdbd3b5d65a7b0af6e561db69f_0251__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 2.2402191162109375,
+        "n_pixels": 110,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0065_515198_458107.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.4448940839928718,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.151123046875,
+        "n_pixels": 52874,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0066_objects365_v1_00033560__p010.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 30,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0067_objects365_v1_00012739__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 32,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0068_367784_436821.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.54264831542969,
+        "n_pixels": 3951,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0069_objects365_v1_00015234__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 59.56093215942383,
+        "n_pixels": 246,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0070_164572_505564.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.78933715820312,
+        "n_pixels": 4967,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0071_objects365_v1_00046116__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0072_objects365_v1_00050112__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 85.15648651123047,
+        "n_pixels": 76,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0073_70985_451904.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.71331787109375,
+        "n_pixels": 4462,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0075_416596_480930.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8235541139013659,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 65.53437805175781,
+        "n_pixels": 2689,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0076_548964_187660.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 71.7177963256836,
+        "n_pixels": 6673,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0077_361030_432949.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.22132110595703,
+        "n_pixels": 5850,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0079_objects365_v1_00007157__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 92.63002014160156,
+        "n_pixels": 1060,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0081_425817_441706.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 75.68467712402344,
+        "n_pixels": 38962,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0082_objects365_v1_00013966__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 5,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0083_objects365_v1_00018956__p003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.40491485595703,
+        "n_pixels": 56,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0084_9423e44b_t8.0s_f011576__p000.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.4992512654687056,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 88.32400512695312,
+        "n_pixels": 100839,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0086_objects365_v1_00010658__p003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0089_207317_428658.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 67.72517395019531,
+        "n_pixels": 2334,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0090_43133_189511.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5596230514193028,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.78182220458984,
+        "n_pixels": 5639,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0091_objects365_v1_00025868__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 92.88480377197266,
+        "n_pixels": 185,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0092_objects365_v1_00007487__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0094_55981_496176.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.23719024658203,
+        "n_pixels": 7509,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0095_objects365_v1_00020077__p008.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 67.87103271484375,
+        "n_pixels": 124,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0097_247660_2149268.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.94169616699219,
+        "n_pixels": 10789,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0101_197739_2164648.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 94.26268005371094,
+        "n_pixels": 1100,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0103_objects365_v1_00023939__p001.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6110752497042246,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.82803344726562,
+        "n_pixels": 18135,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0104_264642_485409.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 93.65632629394531,
+        "n_pixels": 7285,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0105_362446_453003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8207401539028149,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 79.96208190917969,
+        "n_pixels": 18506,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0106_163866_436553.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 64.37444305419922,
+        "n_pixels": 3799,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0108_objects365_v1_00065348__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 69.16852569580078,
+        "n_pixels": 117,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0112_objects365_v1_00003062__p001.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6203150355879089,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.41577911376953,
+        "n_pixels": 20578,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0113_453512_464546.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.68269348144531,
+        "n_pixels": 1134,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0114_129492_475154.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.54725646972656,
+        "n_pixels": 36217,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0115_490306_1282739.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.503326606791601,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.95890808105469,
+        "n_pixels": 12835,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0116_objects365_v1_00057125__p001.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7388168818551889,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.66930389404297,
+        "n_pixels": 115857,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0117_objects365_v1_00015792__p000.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5295796640817002,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.47382354736328,
+        "n_pixels": 6340,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0118_objects365_v1_00062973__p003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.32035827636719,
+        "n_pixels": 446,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0120_11497_2163025.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 76.7542495727539,
+        "n_pixels": 3990,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0123_381967_487387.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.9604263305664,
+        "n_pixels": 9822,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0124_168571_468736.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.35641479492188,
+        "n_pixels": 6548,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0126_69805_197479.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0128_objects365_v1_00052150__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.811906090650368,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 78.95668029785156,
+        "n_pixels": 516,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0130_137560_1233692.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6276642412906216,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.21078491210938,
+        "n_pixels": 2867,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0131_objects365_v1_00052998__p005.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.63177490234375,
+        "n_pixels": 115,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0133_16465_448514.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8345036045771556,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.86253356933594,
+        "n_pixels": 7556,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0135_439702_499884.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7400392685077136,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.06971740722656,
+        "n_pixels": 3879,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0136_objects365_v1_00014458__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.84981536865234,
+        "n_pixels": 147,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0137_objects365_v1_00055068__p000.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.5954850623137173,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.95045471191406,
+        "n_pixels": 79426,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0138_348179_504693.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 93.81012725830078,
+        "n_pixels": 11968,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0141_objects365_v1_00055068__p003.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.42658820400502273,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.95045471191406,
+        "n_pixels": 123146,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0143_objects365_v1_00062544__p009.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8004151719766797,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.31398010253906,
+        "n_pixels": 10585,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0144_159398_441124.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.42992489122095284,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 96.51822662353516,
+        "n_pixels": 14165,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0146_objects365_v1_00037574__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8213660048029722,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.78121948242188,
+        "n_pixels": 2351,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0147_objects365_v1_00005407__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 26,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0148_57753_900100057753.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 75.84982299804688,
+        "n_pixels": 7674,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0149_objects365_v1_00071004__p001.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.532064213369067,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 70.90377807617188,
+        "n_pixels": 607,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0150_209046_437338.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.75343322753906,
+        "n_pixels": 7839,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0151_objects365_v1_00065145__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 90.6243667602539,
+        "n_pixels": 132,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0152_470284_451023.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8246272255091751,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.81886291503906,
+        "n_pixels": 5545,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0154_2025-11-26_07-44-39_frame_3670__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0155_2025-11-26_08-24-53_frame_9980__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.4702377319336,
+        "n_pixels": 423,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0156_e8d4fb16169e545304828c4d72a166d3_0096_comfy_00001___p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 38.18746566772461,
+        "n_pixels": 577,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0158_79806_209529.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 92.55236053466797,
+        "n_pixels": 5791,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0159_00005081_08e3b1feb29cf9cdf90624bbacc10f6f_001583_person_0.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0160_380192_1210084.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.82864379882812,
+        "n_pixels": 2157,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0161_408040_1687288.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8631282547419586,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 93.1409912109375,
+        "n_pixels": 974,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0162_objects365_v1_00021573__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 16.454906463623047,
+        "n_pixels": 66,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0163_objects365_v1_00026424__p004.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 82.25464630126953,
+        "n_pixels": 62,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0164_objects365_v1_00035876__p003.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 1,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0165_objects365_v1_00030930__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.17376708984375,
+        "n_pixels": 485,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0166_285799_452923.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.43879699707031,
+        "n_pixels": 5262,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0169_00002576_2025-11-26_08-05-21_frame_1510_person_2.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0170_69333f6c9d468f53f78b2a78f2789612__p000.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7255804643638021,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.22454833984375,
+        "n_pixels": 11331,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0171_180817_431009.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.16553497314453,
+        "n_pixels": 7564,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0173_9fdc553d_t15.0s_f012372__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 82.31927490234375,
+        "n_pixels": 65,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0174_573287_452470.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 87.58308410644531,
+        "n_pixels": 9593,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0175_objects365_v1_00026841__p000.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6185156128845204,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.2268295288086,
+        "n_pixels": 70712,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0176_258094_183755.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.4851303100586,
+        "n_pixels": 3511,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0179_b6d0863fd9a488b08ba96d2bf90a9cc3_0017__p001.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 4.582279205322266,
+        "n_pixels": 72,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0180_b6d0863fd9a488b08ba96d2bf90a9cc3_0019__p002.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 75.61598205566406,
+        "n_pixels": 8030,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0181_131979_450437.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 6,
+        "purity": 0.356910765256837,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.63013458251953,
+        "n_pixels": 18179,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0182_161996_440504.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.9604263305664,
+        "n_pixels": 11378,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0183_objects365_v1_00017239__p005.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7677144712920383,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.39273834228516,
+        "n_pixels": 10741,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0184_166696_445431.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.3984244261427479,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 96.36512756347656,
+        "n_pixels": 3222,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0185_00020293_2025-11-26_08-24-53_frame_560_person_0.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0189_452909_427662.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0190_420397_1256198.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7278670981862221,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.30569458007812,
+        "n_pixels": 4334,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0191_527718_496389.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8003133094193834,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.40921020507812,
+        "n_pixels": 8927,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0192_d7536272a8dbb059335bd281a7836909_0213__p000.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 1.2173919677734375,
+        "n_pixels": 76,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0193_493724_536451.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 77.79658508300781,
+        "n_pixels": 6827,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0194_00020376_05c081b6_t103.0s_f003978_person_0.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0196_572529_438744.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6831720127889918,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.51808166503906,
+        "n_pixels": 22691,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0197_155543_2205855.jpg",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6519691661868188,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 69.822021484375,
+        "n_pixels": 3299,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0198_56738_423270.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 22012,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0004_058119.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 82.6009292602539,
+        "n_pixels": 1291,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0005_051383.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.62515258789062,
+        "n_pixels": 140,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0006_006521.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.71385955810547,
+        "n_pixels": 10433,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0008_005169.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 40.02851867675781,
+        "n_pixels": 148,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0010_073238.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 16,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0011_019748.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 3,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0013_066342.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8686517399232336,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.6654052734375,
+        "n_pixels": 69440,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0014_041625.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 64.79115295410156,
+        "n_pixels": 10028,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0015_065662.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 25,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0017_069939.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 33,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0019_031595.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 12,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0020_014730.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 10,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0022_005308.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 6667,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0025_0594_c3s2_019962_05.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 5,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0026_033922.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 87.80908966064453,
+        "n_pixels": 264,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0028_036890.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.94169616699219,
+        "n_pixels": 7298,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0029_030315.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 16,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0031_010033.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 87.73744201660156,
+        "n_pixels": 265,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0032_043193.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 49.31289291381836,
+        "n_pixels": 208,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0033_069229.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 6,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0034_042400.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 5,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0036_052833.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 88.52696228027344,
+        "n_pixels": 21735,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0037_053298.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0038_0891_c3s2_109703_10.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.23238372802734,
+        "n_pixels": 8001,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0039_053835.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8239549894867565,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 72.4875259399414,
+        "n_pixels": 487,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0041_023514.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 15.817367553710938,
+        "n_pixels": 61,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0042_014400.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 61.843711853027344,
+        "n_pixels": 71,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0043_042183.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.93643188476562,
+        "n_pixels": 15718,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0044_048701.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 70.95092010498047,
+        "n_pixels": 412,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0046_037163.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 35,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0047_078295.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8550312095254771,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.8250732421875,
+        "n_pixels": 13591,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0049_070194.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 65.36394500732422,
+        "n_pixels": 527,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0050_041728.jpg",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 32,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0007_09488.png",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 37.5018424987793,
+        "n_pixels": 55,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0018_07869.png",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6511083051363018,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 53.147071838378906,
+        "n_pixels": 12024,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0040_02040.png",
+      "detected": true,
+      "gt": false,
+      "correct": false,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.5424247263075586,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 83.67522430419922,
+        "n_pixels": 6528,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0045_06774.png",
+      "detected": false,
+      "gt": false,
+      "correct": true,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 12800,
+        "spatial_filtered": false
+      }
+    }
+  ],
+  "multi_results": [
+    {
+      "file": "0001_objects365_v1_00025530__p003.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 78.54756164550781,
+        "n_pixels": 225,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0002_2025-11-26_07-44-39_frame_10000__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 63.57856750488281,
+        "n_pixels": 74,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0149_537548_183020.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.77259826660156,
+        "n_pixels": 6527,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0004_2025-11-26_07-44-39_frame_10360__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 133576,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0005_398817_429238.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 83.41297912597656,
+        "n_pixels": 7126,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0006_objects365_v1_00032348__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 90.76596069335938,
+        "n_pixels": 349,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0007_343514_426144.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 29979,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0008_375304_1257775.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6201676572330144,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.74870300292969,
+        "n_pixels": 14917,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0009_c669e2fdbd3b5d65a7b0af6e561db69f_0318__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 79.75264739990234,
+        "n_pixels": 110,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0010_09554d078665098c88e3d72109869cac_141__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.49888536185609506,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 91.72331237792969,
+        "n_pixels": 76886,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0011_objects365_v1_00012371__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 17,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0012_4906c3e7b86d2a2b9d16f561a67a701c__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0013_377113_469403.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5441236541765657,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 96.42060852050781,
+        "n_pixels": 9605,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0017_506550_475039.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7915343123257551,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 51225,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0018_505656e84981bee989726f8deeffed5b_141__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 92.82371520996094,
+        "n_pixels": 540,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0019_00000656_2025-11-26_08-24-53_frame_4280_person_0.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0020_204049_462138.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.735610852280315,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.50675964355469,
+        "n_pixels": 6306,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0021_objects365_v1_00002555__p002.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6598672147324316,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.31629943847656,
+        "n_pixels": 71450,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0022_objects365_v1_00000270__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7446552668921838,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 21200,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0023_530313_1758696.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7433380556297763,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 76.59325408935547,
+        "n_pixels": 3384,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0024_objects365_v1_00005867__p001.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7266012591632708,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 34.64908981323242,
+        "n_pixels": 320,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0025_2c3ad2b178308d80a373a39836e89641_100__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.539678243490928,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.96400451660156,
+        "n_pixels": 104603,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0026_152686_426491.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 86.86211395263672,
+        "n_pixels": 7801,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0027_489248_203049.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6153444655922478,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.49359130859375,
+        "n_pixels": 25086,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0029_58355_424487.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.87700653076172,
+        "n_pixels": 29081,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0030_2025-11-26_07-57-14_frame_260__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.59886932373047,
+        "n_pixels": 313,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0032_objects365_v1_00070786__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6562737709181166,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 75644,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0033_1d28a184d497075466449d0dd23464c9__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 93.51597595214844,
+        "n_pixels": 113,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0034_497894_442960.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7597909609243926,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 31663,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0035_6a30363ee187b8a08047d2db53369f11__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 9,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0037_475403_481695.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7394546293981108,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.9604263305664,
+        "n_pixels": 11746,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0038_489304_2191048.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.358985451468141,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.3121337890625,
+        "n_pixels": 13176,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0039_objects365_v1_00012924__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5977460388317131,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.61258697509766,
+        "n_pixels": 9915,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0040_363640_2155553.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0041_2025-11-26_08-05-30_frame_11130__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.94169616699219,
+        "n_pixels": 21421,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0042_419019_466877.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.31474304199219,
+        "n_pixels": 11496,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0043_421287_442225.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.4265143093488443,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 94.50104522705078,
+        "n_pixels": 8637,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0044_objects365_v1_00009510__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 6,
+        "purity": 0.4455841580346091,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.45879364013672,
+        "n_pixels": 12364,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0045_32845_1222828.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.90105438232422,
+        "n_pixels": 11964,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0046_211877_2160378.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6302851077809587,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.8185043334961,
+        "n_pixels": 12709,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0047_1dc423fa50ac728a21448a1040bee6e0__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 31788,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0049_0c75b0902139d592bfa5e906f21ecbe9_250__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0051_objects365_v1_00003365__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.4525453734103878,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 157989,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0053_525012_426806.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6507844938294669,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 72.84478759765625,
+        "n_pixels": 42686,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0054_165803_443708.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.5364537186343561,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 88.56364440917969,
+        "n_pixels": 46969,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0055_objects365_v1_00000840__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6082361346424177,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.46981048583984,
+        "n_pixels": 455,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0056_424669_1256055.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.25728607177734,
+        "n_pixels": 9899,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0057_313921_1251466.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5543562253551926,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.52694702148438,
+        "n_pixels": 8169,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0058_6b63dadef56498815b7f7637146c1676_0__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 33,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0059_244577_428955.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7231330690060488,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.53787231445312,
+        "n_pixels": 6079,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0060_objects365_v1_00000165__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 30,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0061_424533_484672.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.3906708312329305,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.03791809082031,
+        "n_pixels": 10850,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0062_505701_424625.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8009581741920322,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.11054229736328,
+        "n_pixels": 2578,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0063_505636_464625.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.33475609279622753,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.50533294677734,
+        "n_pixels": 4074,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0064_132307_449527.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.94169616699219,
+        "n_pixels": 12182,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0065_3d8983ee828f999ed4854bf35d7a3ee0_360__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0066_29727_450339.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.70887756347656,
+        "n_pixels": 9461,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0067_489011_446418.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.5458474534047306,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 96.08362579345703,
+        "n_pixels": 14825,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0071_558070_234346.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.03466796875,
+        "n_pixels": 32818,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0072_467902_472592.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5557159347388627,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.74312591552734,
+        "n_pixels": 16765,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0073_346062_438444.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 6,
+        "purity": 0.340975152898923,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.69464111328125,
+        "n_pixels": 2259,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0074_objects365_v1_00002100__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 84.25900268554688,
+        "n_pixels": 97,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0075_291889_188697.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.94010162353516,
+        "n_pixels": 11360,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0076_141336_431871.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.7166022983010614,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 19848,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0078_122046_469277.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0079_418949_487090.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.47980665192745336,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.12169647216797,
+        "n_pixels": 13000,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0080_4ee5868b637037b4289e97de96e043db__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.537733753709184,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 16624,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0083_513123_431219.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 89.97132110595703,
+        "n_pixels": 9819,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0084_536609_1731599.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.40898895263672,
+        "n_pixels": 9721,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0085_941dbab69b2c8d7e8b7d31b1f2cb2c78_0__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8632250799661947,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.43399810791016,
+        "n_pixels": 91315,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0086_485840_1760847.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6858370733496623,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.81076049804688,
+        "n_pixels": 2161,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0087_361248_1295860.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 92.0414047241211,
+        "n_pixels": 1981,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0090_381377_193597.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.39400645341255014,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.95045471191406,
+        "n_pixels": 10517,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0091_228045_425606.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 12173,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0092_Thailand_TheBestPancakeMan_2025-12-25_21-36-44_000_frame_000360__p006.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.46531727619478236,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 82.26692199707031,
+        "n_pixels": 1236,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0093_d1e446997750dfba42df8afd2478d1d1_0425__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 7,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0094_512220_479318.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5641675650048934,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.15637969970703,
+        "n_pixels": 4591,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0101_119876_189198.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.4890214800679197,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.87700653076172,
+        "n_pixels": 66617,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0102_d7536272a8dbb059335bd281a7836909_0322__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0103_194700_2206015.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.373996123829601,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.37808990478516,
+        "n_pixels": 9701,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0104_95267_1721513.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.4754432115427993,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.34068298339844,
+        "n_pixels": 4248,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0105_objects365_v1_00034316__p001.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5369440755966349,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.22245025634766,
+        "n_pixels": 1506,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0106_11b4babf5798b10610948259f5dca266__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 79.78933715820312,
+        "n_pixels": 147,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0107_5eec2536141701b54fc4675577f85f31__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7590135630617788,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 53.56684494018555,
+        "n_pixels": 1202,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0108_518288_443700.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 6,
+        "purity": 0.40358183034315953,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.58431243896484,
+        "n_pixels": 14806,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0109_objects365_v1_00002729__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 34.84136962890625,
+        "n_pixels": 1537,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0110_419650_541518.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.16146087646484,
+        "n_pixels": 3033,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0112_480575_187314.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.82864379882812,
+        "n_pixels": 3682,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0113_339781_449369.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.81193542480469,
+        "n_pixels": 17562,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0115_97748_536808.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6143937981269204,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 96.017333984375,
+        "n_pixels": 6398,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0116_025a7763ddfc5b01b9068e67019479f0__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 35.452728271484375,
+        "n_pixels": 63,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0117_333634_423946.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7129598138934049,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.9604263305664,
+        "n_pixels": 24957,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0121_133492_1250208.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5315747479004123,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.34269714355469,
+        "n_pixels": 5971,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0122_168090_437079.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.3706947814512543,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 91.85111236572266,
+        "n_pixels": 3025,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0123_529665_1215528.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7570189418070338,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 12867,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0124_a44b584aadec6f9c096a5782f65a5aaf__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0125_c05cfe37b19975cf4fcf158b3ed9e3c6_517__p001.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.7362308126860243,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 84.53729248046875,
+        "n_pixels": 22786,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0126_objects365_v1_00000165__p005.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 8,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0127_520150_510017.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 81.55835723876953,
+        "n_pixels": 9253,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0128_objects365_v1_00003006__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5597569742553797,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.0439224243164,
+        "n_pixels": 130708,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0129_461595_1204899.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6536883530709501,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 90.90567016601562,
+        "n_pixels": 25815,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0130_457774_437000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 63.81324005126953,
+        "n_pixels": 5097,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0131_401123_483199.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7315473010340128,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 80.90133666992188,
+        "n_pixels": 4096,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0132_225251_1311502.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 79.01622772216797,
+        "n_pixels": 7047,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0133_560851_448432.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.428418761405503,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.25908660888672,
+        "n_pixels": 11526,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0137_225949_481323.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 82.43051147460938,
+        "n_pixels": 33066,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0138_4e66c53be589316bbd09cca5babe7f8e__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8142356988658678,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.0936050415039,
+        "n_pixels": 93370,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0139_76721_1279933.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8693459600153275,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.54026794433594,
+        "n_pixels": 3785,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0140_398834_488368.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.707301029554057,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 80.82664489746094,
+        "n_pixels": 5649,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0141_364994_478557.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.519466964502179,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 87.6138687133789,
+        "n_pixels": 22047,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0142_03321b3eefd82a3b416d41f6f7ea705a__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.5131106309042305,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.33074188232422,
+        "n_pixels": 69005,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0143_445620_496453.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8647525048236874,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.30886840820312,
+        "n_pixels": 9897,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0144_objects365_v1_00006423__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 96.9105224609375,
+        "n_pixels": 327,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0145_objects365_v1_00009168__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0146_317061_467269.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8173591006623688,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 91.02032470703125,
+        "n_pixels": 14235,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0147_260478_190124.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.88722229003906,
+        "n_pixels": 42590,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0154_objects365_v1_00011039__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6625427809129388,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 73.77600860595703,
+        "n_pixels": 225,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0155_535289_1733627.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.70887756347656,
+        "n_pixels": 50169,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0156_344013_426134.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.7515662325336072,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 85.10415649414062,
+        "n_pixels": 4051,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0157_08e3b1feb29cf9cdf90624bbacc10f6f_001590__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8518698896863275,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 19668,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0158_objects365_v1_00002552__p003.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 93.04573822021484,
+        "n_pixels": 387,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0159_499940_464292.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.416174196578193,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.40869140625,
+        "n_pixels": 5121,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0160_objects365_v1_00006617__p002.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6509759783747645,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.74456024169922,
+        "n_pixels": 74019,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0161_objects365_v1_00010922__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8623476182390626,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 56.35118103027344,
+        "n_pixels": 1512,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0162_339757_187621.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 71.44898223876953,
+        "n_pixels": 2790,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0163_282225_466515.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7420300901286044,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 97.4239501953125,
+        "n_pixels": 14703,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0164_247114_2157594.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.09809112548828,
+        "n_pixels": 2650,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0165_161925_493807.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7322701643538653,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.26553344726562,
+        "n_pixels": 26671,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0167_objects365_v1_00060665__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8242028602495376,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 98.92549896240234,
+        "n_pixels": 13900,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0168_objects365_v1_00001759__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6255575685496065,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 12744,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0169_520147_480923.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.70979309082031,
+        "n_pixels": 7443,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0170_54245_425265.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.6099855256184104,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 95.37279510498047,
+        "n_pixels": 6629,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0171_objects365_v1_00065910__p001.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.726274262368828,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 58.17987823486328,
+        "n_pixels": 341,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0172_529592_1204163.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.77183558169885,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.18138122558594,
+        "n_pixels": 28472,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0173_objects365_v1_00002357__p001.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5944029439804488,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.95045471191406,
+        "n_pixels": 65184,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0174_objects365_v1_00009125__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8470344248911658,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.60140228271484,
+        "n_pixels": 20434,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0175_136184_1212039.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.89215087890625,
+        "n_pixels": 19658,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0176_77332_195988.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8601174077718384,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 86.51961517333984,
+        "n_pixels": 11196,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0180_432603_474458.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.43616867116020736,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.40357971191406,
+        "n_pixels": 28520,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0181_1d28a184d497075466449d0dd23464c9__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 77.2878646850586,
+        "n_pixels": 61,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0182_ab7e8ed6_t21.7s_f012103__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8676720216323324,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.6809310913086,
+        "n_pixels": 150160,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0183_c669e2fdbd3b5d65a7b0af6e561db69f_0299__p001.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.60784912109375,
+        "n_pixels": 696,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0184_objects365_v1_00002357__p002.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.7147433716130456,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.52731323242188,
+        "n_pixels": 33118,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0186_457538_424434.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.5315829044193823,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 31935,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0187_451412_1725324.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 74.2113265991211,
+        "n_pixels": 12722,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0188_454722_1754950.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 83.80195617675781,
+        "n_pixels": 1189,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0189_objects365_v1_00006914__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.530419557131686,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 98.73604583740234,
+        "n_pixels": 45726,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0190_objects365_v1_00015242__p002.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.55191040039062,
+        "n_pixels": 102,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0191_190829_521169.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 95.6310043334961,
+        "n_pixels": 14583,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0192_objects365_v1_00035062__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 50.506107330322266,
+        "n_pixels": 73,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0193_364341_1708573.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 6,
+        "purity": 0.3369610988428041,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.71385955810547,
+        "n_pixels": 13286,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0194_261710_440336.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.64034271240234,
+        "n_pixels": 5458,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0195_objects365_v1_00057682__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 18,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0198_469158_471336.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 67.04947662353516,
+        "n_pixels": 21559,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0199_470714_441588.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.54984283447266,
+        "n_pixels": 9243,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0200_298110_189774.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.7402043312026627,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 5236,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0007_051369.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7685364990910107,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 90.28073120117188,
+        "n_pixels": 18968,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0014_0689_c6s2_058468_08.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 6,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0017_060827.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 42,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0043_0197_c2s1_044926_02.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 18,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0047_018903.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 89.42864990234375,
+        "n_pixels": 50,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0015_8095_422994.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 11597,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0016_461248_1313466.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7970674773678109,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.15234375,
+        "n_pixels": 2000,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0036_457805_202530.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 4,
+        "purity": 0.5286489702501572,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.6822738647461,
+        "n_pixels": 3410,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0048_02420d1358daa12a5ccfaade6bd235af_0188__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0082_02420d1358daa12a5ccfaade6bd235af_0205__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0098_254079_441512.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0099_003f25bf_t29.0s_f016767__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0100_objects365_v1_00012906__p000.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.5452843727172049,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 88.57864379882812,
+        "n_pixels": 325,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0111_281196_220805.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7258372212117203,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.9013671875,
+        "n_pixels": 4651,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0120_195ad495_t0.0s_f016420__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 86.21845245361328,
+        "n_pixels": 325,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0136_456068_465435.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 89.05420684814453,
+        "n_pixels": 4391,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0151_485381_1224501.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7960468786133473,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.92679595947266,
+        "n_pixels": 18591,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0152_206697_1224426.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.6126480102539,
+        "n_pixels": 12909,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0153_129439_478224.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 3,
+        "purity": 0.6994783028263024,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 74.27410888671875,
+        "n_pixels": 4628,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0166_objects365_v1_00001802__p000.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 97.76814270019531,
+        "n_pixels": 296,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0178_520703_221967.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "invalid_mask"
+      }
+    },
+    {
+      "file": "0179_447118_454070.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 5,
+        "purity": 0.32471647891777977,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 99.89215087890625,
+        "n_pixels": 10275,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0197_199865_458856.jpg",
+      "detected": true,
+      "gt": true,
+      "correct": true,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.7303736902904877,
+        "is_multi_ab": true,
+        "l_anomaly": false,
+        "l_range": 100.0,
+        "n_pixels": 9877,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0025_0059_c4s1_011076_02.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8107128717547554,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 73.0136489868164,
+        "n_pixels": 641,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0028_0340_c3s1_079992_02.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 0,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0030_0333_c3s2_115144_04.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "n_pixels": 1,
+        "error": "too_few_pixels"
+      }
+    },
+    {
+      "file": "0036_0780_c4s4_048760_01.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 94.3161849975586,
+        "n_pixels": 4717,
+        "spatial_filtered": false
+      }
+    },
+    {
+      "file": "0039_071114.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 1,
+        "purity": 1.0,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 47.59343338012695,
+        "n_pixels": 87,
+        "spatial_filtered": true
+      }
+    },
+    {
+      "file": "0040_033266.jpg",
+      "detected": false,
+      "gt": true,
+      "correct": false,
+      "detail": {
+        "n_peaks": 2,
+        "purity": 0.8046902219362765,
+        "is_multi_ab": false,
+        "l_anomaly": false,
+        "l_range": 99.69355773925781,
+        "n_pixels": 9861,
+        "spatial_filtered": false
+      }
+    }
+  ]
+}
