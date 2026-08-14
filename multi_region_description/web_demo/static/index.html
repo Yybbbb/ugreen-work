@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Florence2 Multi-Region Description Demo</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <h1>Florence2 Multi-Region Description</h1>
+          <p id="statusText">loading service status...</p>
+        </div>
+        <div class="actions">
+          <label class="fileButton">
+            <input id="imageInput" type="file" accept="image/*" />
+            Open Image
+          </label>
+          <button id="clearBoxesButton" type="button">Clear Boxes</button>
+          <label class="modeLabel">
+            Model:
+            <select id="modelSelect">
+              <option value="plan_a">Plan A — sep-delimited (89% count match)</option>
+              <option value="plan_b">Plan B — loc-appended (44% count match)</option>
+            </select>
+          </label>
+          <button id="predictButton" type="button" disabled>Run (1 inference)</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <div class="stagePanel">
+          <div class="stageHeader">
+            <span id="imageMeta">No image loaded</span>
+            <span id="drawHint">Drag on image to add boxes — all described in one model call</span>
+          </div>
+          <div id="dropZone" class="canvasWrap">
+            <canvas id="imageCanvas"></canvas>
+            <div id="dropOverlay" class="dropOverlay">Drop image here</div>
+          </div>
+        </div>
+
+        <aside class="sidePanel">
+          <section class="controlBlock">
+            <div class="blockTitle">
+              <h2>Manual Bboxes</h2>
+              <select id="bboxMode">
+                <option value="pixel">pixel x1,y1,x2,y2</option>
+                <option value="loc">loc 0-999</option>
+              </select>
+            </div>
+            <textarea id="bboxText" spellcheck="false"
+              placeholder="10,20,110,220&#10;30,40,130,240"></textarea>
+            <div class="rowActions">
+              <button id="loadTextBoxesButton" type="button">Load Text</button>
+              <button id="copyBoxesButton" type="button">Copy Boxes</button>
+            </div>
+          </section>
+
+          <section class="controlBlock">
+            <div class="blockTitle">
+              <h2>Boxes</h2>
+              <span id="boxCount">0</span>
+            </div>
+            <div id="boxList" class="boxList"></div>
+          </section>
+        </aside>
+      </section>
+
+      <!-- Raw output block -->
+      <section class="rawPanel" id="rawPanel" style="display:none">
+        <div class="blockTitle">
+          <h2>Raw Model Output</h2>
+          <span id="rawMeta"></span>
+        </div>
+        <pre id="rawOutput" class="rawOutput"></pre>
+      </section>
+
+      <!-- Per-region results -->
+      <section class="resultsPanel">
+        <div class="blockTitle">
+          <h2>Descriptions per Region</h2>
+          <span id="resultMeta">idle</span>
+        </div>
+        <div class="tableWrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>pixel bbox</th>
+                <th>loc bbox</th>
+                <th>description</th>
+              </tr>
+            </thead>
+            <tbody id="resultsBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <script src="/static/app.js"></script>
+  </body>
+</html>

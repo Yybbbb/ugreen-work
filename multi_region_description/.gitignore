@@ -1,0 +1,19 @@
+# Model artifacts. These are kept locally and distributed outside Git.
+/checkpoints/
+
+# Generated datasets. Keep only the inventory/report in version control.
+/data/*
+!/data/DATASET_SUMMARY.md
+
+# Generated training, inference, and evaluation artifacts.
+/logs/
+/outputs/
+/eval/logs/
+/eval/results/
+/eval/assignment_badcase_viewer/badcases.json
+
+# Python and local runtime state.
+__pycache__/
+*.py[cod]
+*.log
+*.pid

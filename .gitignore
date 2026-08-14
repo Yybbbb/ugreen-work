@@ -1,0 +1,19 @@
+# Model weights and checkpoint snapshots are distributed outside Git.
+**/checkpoint/
+**/checkpoints/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.ckpt
+
+# Downloaded/base-model bundles.
+/Florence-2-base/
+/Florence2-base.tar
+
+# Generated runtime artifacts.
+/outputs/
+**/__pycache__/
+*.py[cod]
+*.log
+*.pid

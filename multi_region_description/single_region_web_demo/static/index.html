@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Florence 人体区域详细描述</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">Florence-2 · Single Region Inference</p>
+      <h1>人体区域详细描述</h1>
+      <p class="subtitle">上传图片并手动画多个框。页面会按顺序对每个框独立调用一次 <code>&lt;REGION_TO_DESCRIPTION&gt;</code>。</p>
+    </div>
+    <div id="serviceStatus" class="status loading">正在连接模型服务…</div>
+  </header>
+
+  <main>
+    <section class="panel controls">
+      <div class="controlGroup grow">
+        <label for="imageInput">选择图片</label>
+        <input id="imageInput" type="file" accept="image/*">
+      </div>
+      <button id="undoButton" disabled>撤销最后一个框</button>
+      <button id="clearButton" disabled>清空框</button>
+      <button id="predictButton" class="primary" disabled>逐框开始推理</button>
+    </section>
+
+    <section class="workspace">
+      <div class="panel imagePanel">
+        <div class="panelHeader">
+          <div>
+            <strong>图片与手动画框</strong>
+            <span id="imageMeta">尚未选择图片</span>
+          </div>
+          <span id="boxCount" class="pill">0 boxes</span>
+        </div>
+        <div id="dropZone" class="dropZone">
+          <canvas id="imageCanvas"></canvas>
+          <div id="emptyHint" class="emptyHint">
+            <strong>拖放或选择图片</strong>
+            <span>载入后按住鼠标左键拖动即可画框</span>
+          </div>
+        </div>
+        <div class="tips">
+          <span>框坐标使用原图像素</span>
+          <span>转换规则与 Florence 训练时的 0–999 loc token 一致</span>
+          <span>多个框不会合并成 multi-crop prompt</span>
+        </div>
+      </div>
+
+      <aside class="panel sidePanel">
+        <div class="panelHeader">
+          <div>
+            <strong>区域列表</strong>
+            <span>拖动框后可在此删除单个区域</span>
+          </div>
+        </div>
+        <div id="boxList" class="boxList emptyList">暂无区域</div>
+      </aside>
+    </section>
+
+    <section class="panel resultsPanel">
+      <div class="panelHeader">
+        <div>
+          <strong>逐框推理结果</strong>
+          <span id="resultMeta">等待推理</span>
+        </div>
+        <span id="callCount" class="pill">0 calls</span>
+      </div>
+      <div id="progressWrap" class="progressWrap hidden">
+        <div id="progressBar" class="progressBar"></div>
+      </div>
+      <div id="results" class="results emptyList">完成推理后，每个框的独立描述会显示在这里。</div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

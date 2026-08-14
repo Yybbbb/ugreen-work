@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>相邻人物互换与多人位置串扰 Badcases</title>
+  <style>
+    :root { color-scheme: light; --bg:#f3f6fb; --panel:#fff; --soft:#f8fafc; --border:#d9e1ec; --text:#172033; --muted:#68758a; --accent:#2563eb; --bad:#cf334f; --good:#138a5b; --shadow:0 8px 24px rgba(31,49,79,.08); }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:14px/1.5 Inter,system-ui,sans-serif; }
+    header { position:sticky; top:0; z-index:20; padding:13px 20px; background:rgba(255,255,255,.96); border-bottom:1px solid var(--border); box-shadow:0 2px 12px rgba(31,49,79,.06); }
+    .toolbar { max-width:1900px; margin:auto; display:flex; flex-wrap:wrap; align-items:center; gap:10px; }
+    .title { margin-right:auto; font-size:18px; font-weight:800; }
+    button,select { padding:7px 10px; color:var(--text); background:#fff; border:1px solid var(--border); border-radius:8px; font:inherit; }
+    button { cursor:pointer; } button:hover { color:var(--accent); border-color:var(--accent); } button:disabled { opacity:.4; cursor:default; }
+    main { max-width:1900px; margin:auto; padding:18px; }
+    .method,.metrics { margin-bottom:14px; padding:14px; background:var(--panel); border:1px solid var(--border); border-radius:13px; box-shadow:var(--shadow); }
+    .method h2,.metrics h2 { margin:0 0 9px; font-size:16px; }
+    .method ol { margin:6px 0 0 20px; padding:0; }
+    .formula { margin:9px 0; padding:9px 11px; background:#eef4ff; border-left:4px solid var(--accent); border-radius:6px; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .note { color:var(--muted); }
+    .metricGrid { display:grid; grid-template-columns:repeat(5,minmax(130px,1fr)); gap:9px; }
+    .metric { padding:10px 11px; background:var(--soft); border:1px solid var(--border); border-radius:9px; }
+    .metric span { display:block; color:var(--muted); font-size:11px; } .metric strong { font-size:19px; }
+    .summary { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:13px; color:var(--muted); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+    .card { min-width:0; overflow:hidden; background:var(--panel); border:1px solid var(--border); border-radius:13px; box-shadow:var(--shadow); }
+    .cardHeader { display:flex; flex-wrap:wrap; gap:7px; align-items:center; padding:10px 12px; background:var(--soft); border-bottom:1px solid var(--border); }
+    .cardHeader strong { margin-right:auto; font-size:15px; }
+    .badge { padding:3px 8px; border:1px solid var(--border); border-radius:999px; background:#fff; color:var(--muted); font-size:12px; }
+    .category { color:var(--bad); border-color:#f0b8c2; background:#fff4f6; }
+    .canvasWrap { min-height:260px; display:grid; place-items:center; overflow:hidden; background:#edf2f7; }
+    canvas { display:block; max-width:100%; height:auto; }
+    .legend { padding:8px 12px; display:flex; flex-wrap:wrap; gap:10px; color:var(--muted); border-top:1px solid var(--border); font-size:12px; }
+    .dot { display:inline-block; width:9px; height:9px; margin-right:4px; border-radius:50%; }
+    .body { padding:0 12px 12px; }
+    .path { margin:10px 0; color:var(--muted); font-size:11px; overflow-wrap:anywhere; }
+    table { width:100%; border-collapse:collapse; table-layout:fixed; }
+    th,td { padding:7px 6px; border-bottom:1px solid #e7ecf3; text-align:left; vertical-align:top; overflow-wrap:anywhere; }
+    th { color:var(--muted); font-size:11px; } th:nth-child(1){width:42px} th:nth-child(2){width:54px} th:nth-child(5){width:86px}
+    .idx { display:inline-flex; width:24px; height:21px; align-items:center; justify-content:center; border-radius:5px; color:#07111d; font-weight:800; }
+    .move { color:var(--bad); font-weight:750; }
+    details { margin-top:10px; } summary { color:var(--accent); cursor:pointer; font-weight:700; }
+    pre { max-height:180px; overflow:auto; margin:7px 0 0; padding:10px; white-space:pre-wrap; overflow-wrap:anywhere; background:#f6f8fb; border:1px solid var(--border); border-radius:8px; color:#33415c; font:11px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace; }
+    .pagination { display:flex; justify-content:center; align-items:center; gap:10px; padding:20px 0 4px; }
+    .empty { grid-column:1/-1; padding:60px; text-align:center; background:#fff; border:1px solid var(--border); border-radius:12px; color:var(--muted); }
+    @media(min-width:1650px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+    @media(max-width:1100px){.grid{grid-template-columns:1fr}.metricGrid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:650px){.metricGrid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header><div class="toolbar">
+    <div class="title">相邻人物互换与多人位置串扰 Badcases</div>
+    <label>类型 <select id="category"><option value="all">全部</option><option value="adjacent_two_person_swap">N=2 相邻人物互换</option><option value="multi_person_position_interference">N≥3 多人位置串扰</option></select></label>
+    <label>N <select id="count"><option value="all">全部</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+    <label>每页 <select id="pageSize"><option>6</option><option selected>12</option><option>24</option></select></label>
+  </div></header>
+  <main>
+    <section class="method">
+      <h2>如何判定“多人场景中的位置串扰”</h2>
+      <ol>
+        <li>对每张图计算原始位置对应的内容 F1：预测 #i 与 GT #i 配对。</li>
+        <li>枚举同一张图中预测描述到 GT bbox 的全部排列，找到内容 F1 最高的分配。</li>
+        <li>计算 <code>assignment gap = 最优重排 F1 - 原始位置 F1</code>。</li>
+        <li>若 assignment gap ≥ 0.10，说明描述重新分配给其他 bbox 后显著更合理，判为明显 bbox 分配错位。</li>
+        <li>再要求至少一个被移动的 bbox 对相邻：两框有面积重叠，或边缘距离 ≤ 两框平均对角线的 35%。</li>
+        <li>N=2 归为“相邻人物描述互换”；N≥3 归为“多人场景中的位置串扰”。</li>
+      </ol>
+      <div class="formula">assignment_gap ≥ 0.10 AND moved_bbox_pair_is_adjacent</div>
+      <div class="note">该方法衡量的是“预测描述更适合另一个相邻 bbox”的强信号。它是自动统计口径，不等同于人工语义审核；F1 完全并列时保留最先达到最优的排列，避免制造无意义的假移动。</div>
+    </section>
+    <section class="metrics"><h2>严格口径统计</h2><div id="metrics" class="metricGrid"></div></section>
+    <div id="summary" class="summary">正在加载…</div>
+    <section id="grid" class="grid"></section>
+    <nav class="pagination"><button id="prev">← 上一页</button><span id="pageText">第 0 / 0 页</span><button id="next">下一页 →</button></nav>
+  </main>
+  <script>
+    const DATA_URL="/florence-caption/multi_region_description/eval/assignment_badcase_viewer/badcases.json";
+    const ROOT="/data/work/MichaelYu";
+    const COLORS=["#2f9ed8","#e95883","#35b778","#e2a72d","#9168d8","#ef8541"];
+    let payload=null, rows=[], page=0;
+    const $=id=>document.getElementById(id), color=i=>COLORS[i%COLORS.length];
+    const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+    const imageUrl=p=>p.startsWith(ROOT+"/")?p.slice(ROOT.length):p;
+    const pageSize=()=>Number($("pageSize").value), pageCount=()=>Math.ceil(rows.length/pageSize());
+
+    function filterRows(){
+      const category=$("category").value, count=$("count").value;
+      rows=payload.badcases.filter(r=>(category==="all"||r.category===category)&&(count==="all"||r.n_gt===Number(count)));
+      page=0; render();
+    }
+    function drawArrow(ctx,from,to){
+      const dx=to.x-from.x,dy=to.y-from.y,angle=Math.atan2(dy,dx),head=12;
+      ctx.save();ctx.strokeStyle="#d62846";ctx.fillStyle="#d62846";ctx.lineWidth=3;ctx.setLineDash([8,5]);
+      ctx.beginPath();ctx.moveTo(from.x,from.y);ctx.lineTo(to.x,to.y);ctx.stroke();ctx.setLineDash([]);
+      ctx.beginPath();ctx.moveTo(to.x,to.y);ctx.lineTo(to.x-head*Math.cos(angle-Math.PI/6),to.y-head*Math.sin(angle-Math.PI/6));ctx.lineTo(to.x-head*Math.cos(angle+Math.PI/6),to.y-head*Math.sin(angle+Math.PI/6));ctx.closePath();ctx.fill();ctx.restore();
+    }
+    function bboxPixels(b,width,height){return{x1:b[0]/999*width,y1:b[1]/999*height,x2:b[2]/999*width,y2:b[3]/999*height}}
+    function loadCanvas(canvas,row){
+      const image=new Image();image.onload=()=>{const scale=Math.min(1,900/image.naturalWidth);canvas.width=Math.round(image.naturalWidth*scale);canvas.height=Math.round(image.naturalHeight*scale);const ctx=canvas.getContext("2d");ctx.drawImage(image,0,0,canvas.width,canvas.height);
+        row.gt_pairs.forEach((pair,i)=>{const b=bboxPixels(pair.bbox,canvas.width,canvas.height),stroke=Math.max(2,canvas.width/650),size=Math.max(15,canvas.width/52),label=`#${i+1}`;ctx.strokeStyle=color(i);ctx.lineWidth=stroke;ctx.strokeRect(b.x1,b.y1,b.x2-b.x1,b.y2-b.y1);ctx.font=`800 ${size}px system-ui`;const w=ctx.measureText(label).width+10;ctx.fillStyle=color(i);ctx.fillRect(b.x1,Math.max(0,b.y1-size-7),w,size+7);ctx.fillStyle="#07111d";ctx.fillText(label,b.x1+5,Math.max(size,b.y1-5));});
+        row.moved_pairs.forEach(move=>{if(!move.adjacent)return;const a=bboxPixels(row.gt_pairs[move.original_gt_index].bbox,canvas.width,canvas.height),b=bboxPixels(row.gt_pairs[move.reassigned_gt_index].bbox,canvas.width,canvas.height);drawArrow(ctx,{x:(a.x1+a.x2)/2,y:(a.y1+a.y2)/2},{x:(b.x1+b.x2)/2,y:(b.y1+b.y2)/2});});
+      };image.src=imageUrl(row.image);
+    }
+    function categoryName(c){return c==="adjacent_two_person_swap"?"N=2 相邻人物互换":"N≥3 多人位置串扰"}
+    function card(row,i){
+      const moved=new Map(row.moved_pairs.map(x=>[x.pred_index,x]));
+      const table=row.pred_pairs.map((pred,index)=>{const move=moved.get(index),gt=row.gt_pairs[index],best=row.gt_pairs[row.best_permutation[index]];return `<tr><td><span class="idx" style="background:${color(index)}">${index+1}</span></td><td>${move?`<span class="move">→ #${move.reassigned_gt_index+1}</span>`:"—"}</td><td>${esc(gt.desc)}</td><td>${esc(pred.desc)}</td><td>${move?move.original_pair_f1.toFixed(3)+" → "+move.reassigned_pair_f1.toFixed(3):"—"}</td></tr>`}).join("");
+      return `<article class="card"><div class="cardHeader"><strong>idx ${row.idx}</strong><span class="badge category">${categoryName(row.category)}</span><span class="badge">N=${row.n_gt}</span><span class="badge">Pos F1=${row.positional_f1_recomputed.toFixed(4)}</span><span class="badge">Best=${row.best_permutation_f1.toFixed(4)}</span><span class="badge">Gap=${row.assignment_gap.toFixed(4)}</span></div><div class="canvasWrap"><canvas id="canvas-${i}"></canvas></div><div class="legend">${row.gt_pairs.map((_,j)=>`<span><i class="dot" style="background:${color(j)}"></i>#${j+1}</span>`).join("")}<span>红色箭头：预测描述更适合的相邻 GT bbox</span></div><div class="body"><div class="path">${esc(row.image)}</div><table><thead><tr><th>Pred 位</th><th>重分配</th><th>原位置 GT</th><th>Pred description</th><th>Pair F1</th></tr></thead><tbody>${table}</tbody></table><details><summary>查看 Pred Raw Output</summary><pre>${esc(row.raw)}</pre></details><details><summary>查看移动 bbox 的相邻计算</summary><pre>${esc(JSON.stringify(row.moved_pairs,null,2))}</pre></details></div></article>`;
+    }
+    function render(){const pages=pageCount(),start=page*pageSize(),current=rows.slice(start,start+pageSize());$("summary").innerHTML=`<span>当前筛选：<strong>${rows.length}</strong> 个 badcases</span><span>当前页：<strong>${current.length}</strong> 个</span>`;$("grid").innerHTML=current.length?current.map(card).join(""):'<div class="empty">当前条件下没有 badcase。</div>';current.forEach((r,i)=>loadCanvas($(`canvas-${i}`),r));$("pageText").textContent=`第 ${pages?page+1:0} / ${pages} 页`;$("prev").disabled=page<=0;$("next").disabled=!pages||page>=pages-1;window.scrollTo({top:0,behavior:"smooth"})}
+    $("category").addEventListener("change",filterRows);$("count").addEventListener("change",filterRows);$("pageSize").addEventListener("change",()=>{page=0;render()});$("prev").addEventListener("click",()=>{if(page>0){page--;render()}});$("next").addEventListener("click",()=>{if(page+1<pageCount()){page++;render()}});
+    fetch(DATA_URL).then(r=>{if(!r.ok)throw new Error(`${r.status} ${r.statusText}`);return r.json()}).then(data=>{payload=data;const s=data.summary;$("metrics").innerHTML=`<div class="metric"><span>测试集</span><strong>${s.total_test_samples}</strong></div><div class="metric"><span>严格 badcases</span><strong>${s.total_badcases}</strong></div><div class="metric"><span>占测试集</span><strong>${(s.badcase_rate*100).toFixed(2)}%</strong></div><div class="metric"><span>N=2 相邻互换</span><strong>${s.adjacent_two_person_swap}</strong></div><div class="metric"><span>N≥3 位置串扰</span><strong>${s.multi_person_position_interference}</strong></div>`;filterRows()}).catch(e=>{$("summary").innerHTML=`<span class="bad">加载失败：${esc(e.message)}</span>`});
+  </script>
+</body>
+</html>

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qwen Multi-Region Evaluation Viewer</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f3f6fb;
+      --panel: #ffffff;
+      --panel-2: #f8fafc;
+      --border: #d9e1ec;
+      --text: #172033;
+      --muted: #68758a;
+      --accent: #2563eb;
+      --good: #138a5b;
+      --bad: #d63c55;
+      --warn: #b76a05;
+      --shadow: 0 8px 24px rgba(31, 49, 79, .08);
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 Inter, system-ui, sans-serif; }
+    button, select, input { font: inherit; }
+    header { position: sticky; top: 0; z-index: 20; padding: 14px 20px; background: rgba(255,255,255,.96); border-bottom: 1px solid var(--border); box-shadow: 0 2px 12px rgba(31,49,79,.06); backdrop-filter: blur(12px); }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; max-width: 1900px; margin: 0 auto; }
+    .title { margin-right: auto; font-size: 18px; font-weight: 780; }
+    button, select, input { color: var(--text); background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 7px 10px; }
+    button { cursor: pointer; }
+    button:hover { border-color: var(--accent); color: var(--accent); }
+    button:disabled { opacity: .42; cursor: default; }
+    input[type="number"] { width: 82px; }
+    main { max-width: 1900px; margin: 0 auto; padding: 18px; }
+    .metricsPanel { margin-bottom: 15px; padding: 14px; background: #fff; border: 1px solid var(--border); border-radius: 13px; box-shadow: var(--shadow); }
+    .metricsTitle { margin: 0 0 10px; font-size: 15px; font-weight: 780; }
+    .metricsGrid { display: grid; grid-template-columns: repeat(5, minmax(125px, 1fr)); gap: 9px; }
+    .metricBox { padding: 10px 11px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 9px; }
+    .metricBox span { display: block; color: var(--muted); font-size: 11px; }
+    .metricBox strong { display: block; margin-top: 2px; font-size: 18px; }
+    .groupMetrics { display: grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); gap: 9px; margin-top: 10px; }
+    .groupCard { padding: 10px 12px; background: #fff; border: 1px solid var(--border); border-radius: 9px; }
+    .groupHeader { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 6px; font-weight: 780; }
+    .groupHeader span { color: var(--muted); font-size: 12px; font-weight: 500; }
+    .groupValues { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+    .groupValue { color: var(--muted); font-size: 11px; }
+    .groupValue strong { display: block; color: var(--text); font-size: 14px; }
+    .summary { display: flex; flex-wrap: wrap; gap: 9px; align-items: center; margin-bottom: 14px; color: var(--muted); }
+    .summary strong { color: var(--text); }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .card { min-width: 0; background: var(--panel); border: 1px solid var(--border); border-radius: 13px; box-shadow: var(--shadow); overflow: hidden; }
+    .cardHeader { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding: 10px 13px; background: var(--panel-2); border-bottom: 1px solid var(--border); }
+    .cardTitle { font-size: 15px; font-weight: 750; margin-right: auto; }
+    .badge { display: inline-flex; align-items: center; border: 1px solid var(--border); border-radius: 999px; padding: 3px 8px; background: #fff; color: var(--muted); font-size: 12px; }
+    .good { color: var(--good); }
+    .bad { color: var(--bad); }
+    .warn { color: var(--warn); }
+    .canvasWrap { min-height: 260px; display: grid; place-items: center; background: #edf2f7; overflow: hidden; }
+    canvas { display: block; max-width: 100%; height: auto; }
+    .legend { display: flex; flex-wrap: wrap; gap: 10px; padding: 8px 12px; color: var(--muted); border-top: 1px solid var(--border); font-size: 12px; }
+    .dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 4px; }
+    .body { padding: 0 12px 12px; }
+    .path { margin: 10px 0; color: var(--muted); font-size: 11px; overflow-wrap: anywhere; }
+    table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+    th, td { padding: 7px 6px; border-bottom: 1px solid #e7ecf3; vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+    th { color: var(--muted); font-size: 11px; }
+    th:nth-child(1) { width: 36px; }
+    th:nth-child(2) { width: 92px; }
+    code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    code { color: #245a9b; font-size: 11px; }
+    details { margin-top: 10px; }
+    summary { color: var(--accent); cursor: pointer; font-weight: 650; }
+    pre { margin: 7px 0 0; padding: 10px; max-height: 180px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; background: #f6f8fb; border: 1px solid var(--border); border-radius: 8px; color: #33415c; font-size: 11px; }
+    .regionTag { display: inline-flex; align-items: center; justify-content: center; width: 23px; height: 20px; border-radius: 5px; color: #07111d; font-weight: 800; }
+    .empty { grid-column: 1 / -1; padding: 70px; text-align: center; color: var(--muted); background: #fff; border: 1px solid var(--border); border-radius: 12px; }
+    .pagination { display: flex; justify-content: center; align-items: center; gap: 10px; padding: 20px 0 4px; }
+    @media (min-width: 1600px) { .grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+    @media (max-width: 1250px) { .groupMetrics { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 1050px) { .grid { grid-template-columns: 1fr; } .metricsGrid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 650px) { .metricsGrid, .groupMetrics { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="toolbar">
+      <div class="title">Multi-Region 测试结果可视化</div>
+      <label>N 数
+        <select id="countFilter">
+          <option value="all">全部</option>
+          <option value="2">N=2</option>
+          <option value="3">N=3</option>
+          <option value="4">N=4</option>
+          <option value="5">N=5</option>
+        </select>
+      </label>
+      <label>排序
+        <select id="sortMode">
+          <option value="index">原始顺序</option>
+          <option value="f1-asc">F1 从低到高</option>
+          <option value="f1-desc">F1 从高到低</option>
+        </select>
+      </label>
+      <label>最高 F1 <input id="maxF1" type="number" min="0" max="1" step="0.05" value="1"></label>
+      <label>每页
+        <select id="pageSize"><option>6</option><option selected>12</option><option>24</option><option>48</option></select>
+      </label>
+      <button id="applyButton">应用</button>
+    </div>
+  </header>
+  <main>
+    <section class="metricsPanel">
+      <h2 class="metricsTitle">完整 Test Set 指标</h2>
+      <div id="overallMetrics" class="metricsGrid"></div>
+      <div id="groupMetrics" class="groupMetrics"></div>
+    </section>
+    <div id="summary" class="summary">正在加载评估结果…</div>
+    <section id="grid" class="grid"></section>
+    <nav class="pagination">
+      <button id="prevButton">← 上一页</button>
+      <span id="pageText">第 0 / 0 页</span>
+      <button id="nextButton">下一页 →</button>
+    </nav>
+  </main>
+  <script>
+    const RESULT_URL = "/florence-caption/multi_region_description/eval/results/qwen_person_2to5_loc_gpu2_ep2_bs16_lr8e6_fixed.jsonl";
+    const WORKSPACE_ROOT = "/data/work/MichaelYu";
+    const COLORS = ["#2f9ed8", "#e95883", "#35b778", "#e2a72d", "#9168d8", "#ef8541"];
+    let allRows = [];
+    let rows = [];
+    let page = 0;
+    const $ = id => document.getElementById(id);
+    const color = index => COLORS[index % COLORS.length];
+    const esc = value => String(value ?? "").replace(/[&<>"']/g, ch => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+    const imageUrl = path => path.startsWith(WORKSPACE_ROOT + "/") ? path.slice(WORKSPACE_ROOT.length) : path;
+
+    function pageSize() { return Number($("pageSize").value); }
+    function pageCount() { return Math.ceil(rows.length / pageSize()); }
+
+    function average(items, getter) {
+      if (!items.length) return 0;
+      return items.reduce((sum, item) => sum + Number(getter(item) ?? 0), 0) / items.length;
+    }
+
+    function renderMetrics() {
+      const countMatch = average(allRows, row => row.count_match ? 1 : 0);
+      const contentF1 = average(allRows, row => row.positional_avg_f1);
+      const bboxF1 = average(allRows, row => row.bbox_matched_avg_f1);
+      const locEcho = average(allRows, row => row.loc_echo_acc);
+      const exactMatch = average(allRows, row => row.exact_match ? 1 : 0);
+      $("overallMetrics").innerHTML = `
+        <div class="metricBox"><span>测试样本数</span><strong>${allRows.length}</strong></div>
+        <div class="metricBox"><span>数量匹配率</span><strong>${(countMatch * 100).toFixed(2)}%</strong></div>
+        <div class="metricBox"><span>内容 Positional F1</span><strong>${contentF1.toFixed(4)}</strong></div>
+        <div class="metricBox"><span>Bbox-Matched F1</span><strong>${bboxF1.toFixed(4)}</strong></div>
+        <div class="metricBox"><span>Loc Echo Accuracy</span><strong>${(locEcho * 100).toFixed(2)}%</strong></div>
+        <div class="metricBox"><span>Exact Match Rate</span><strong>${(exactMatch * 100).toFixed(2)}%</strong></div>
+      `;
+      $("groupMetrics").innerHTML = [2, 3, 4, 5].map(n => {
+        const group = allRows.filter(row => row.n_gt === n);
+        const groupCountMatch = average(group, row => row.count_match ? 1 : 0);
+        const groupF1 = average(group, row => row.positional_avg_f1);
+        const groupLoc = average(group, row => row.loc_echo_acc);
+        const groupExact = average(group, row => row.exact_match ? 1 : 0);
+        return `<div class="groupCard">
+          <div class="groupHeader">N=${n}<span>${group.length} samples</span></div>
+          <div class="groupValues">
+            <div class="groupValue">数量匹配<strong>${(groupCountMatch * 100).toFixed(2)}%</strong></div>
+            <div class="groupValue">内容 F1<strong>${groupF1.toFixed(4)}</strong></div>
+            <div class="groupValue">Loc Echo<strong>${(groupLoc * 100).toFixed(2)}%</strong></div>
+            <div class="groupValue">Exact Match<strong>${(groupExact * 100).toFixed(2)}%</strong></div>
+          </div>
+        </div>`;
+      }).join("");
+    }
+
+    function applyFilters() {
+      const selectedN = $("countFilter").value;
+      const maxF1 = Number($("maxF1").value);
+      rows = allRows.filter(row => (selectedN === "all" || row.n_gt === Number(selectedN)) && row.positional_avg_f1 <= maxF1);
+      const sortMode = $("sortMode").value;
+      if (sortMode === "index") rows.sort((a, b) => a.idx - b.idx);
+      if (sortMode === "f1-asc") rows.sort((a, b) => a.positional_avg_f1 - b.positional_avg_f1 || a.idx - b.idx);
+      if (sortMode === "f1-desc") rows.sort((a, b) => b.positional_avg_f1 - a.positional_avg_f1 || a.idx - b.idx);
+      page = 0;
+      renderPage();
+    }
+
+    function drawBox(ctx, bbox, index, dashed, width, height) {
+      const [x1, y1, x2, y2] = bbox;
+      const px1 = x1 / 999 * width, py1 = y1 / 999 * height;
+      const px2 = x2 / 999 * width, py2 = y2 / 999 * height;
+      const stroke = Math.max(2, width / 650);
+      ctx.save();
+      ctx.strokeStyle = color(index);
+      ctx.lineWidth = stroke;
+      ctx.setLineDash(dashed ? [stroke * 4, stroke * 2] : []);
+      ctx.strokeRect(px1, py1, px2 - px1, py2 - py1);
+      if (!dashed) {
+        const size = Math.max(15, width / 52);
+        ctx.font = `800 ${size}px system-ui`;
+        const label = `#${index + 1}`;
+        const labelWidth = ctx.measureText(label).width + 10;
+        ctx.fillStyle = color(index);
+        ctx.fillRect(px1, Math.max(0, py1 - size - 7), labelWidth, size + 7);
+        ctx.fillStyle = "#07111d";
+        ctx.fillText(label, px1 + 5, Math.max(size, py1 - 5));
+      }
+      ctx.restore();
+    }
+
+    function loadCanvas(canvas, row) {
+      const image = new Image();
+      image.onload = () => {
+        const maxWidth = 900;
+        const scale = Math.min(1, maxWidth / image.naturalWidth);
+        canvas.width = Math.round(image.naturalWidth * scale);
+        canvas.height = Math.round(image.naturalHeight * scale);
+        const ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+        row.gt_pairs.forEach((pair, index) => drawBox(ctx, pair.bbox, index, false, canvas.width, canvas.height));
+        row.pred_pairs.forEach((pair, index) => drawBox(ctx, pair.bbox, index, true, canvas.width, canvas.height));
+      };
+      image.onerror = () => {
+        const ctx = canvas.getContext("2d");
+        canvas.width = 600; canvas.height = 300;
+        ctx.fillStyle = "#f4e4e7"; ctx.fillRect(0, 0, 600, 300);
+        ctx.fillStyle = "#d63c55"; ctx.font = "18px system-ui"; ctx.fillText("图片加载失败", 24, 42);
+      };
+      image.src = imageUrl(row.image);
+    }
+
+    function cardHtml(row, cardIndex) {
+      const tableRows = row.gt_pairs.map((gt, i) => {
+        const pred = row.pred_pairs[i];
+        return `<tr><td><span class="regionTag" style="background:${color(i)}">${i + 1}</span></td><td><code>${esc(gt.bbox.join(", "))}</code></td><td>${esc(gt.desc)}</td><td>${pred ? esc(pred.desc) : '<span class="bad">缺失</span>'}</td></tr>`;
+      }).join("");
+      const legend = row.gt_pairs.map((_, i) => `<span><i class="dot" style="background:${color(i)}"></i>#${i + 1}</span>`).join("");
+      return `<article class="card">
+        <div class="cardHeader">
+          <span class="cardTitle">idx ${row.idx}</span>
+          <span class="badge">N=${row.n_gt}</span>
+          <span class="badge">F1=${Number(row.positional_avg_f1).toFixed(4)}</span>
+          <span class="badge ${row.count_match ? 'good' : 'bad'}">${row.n_gt}/${row.n_pred} ${row.count_match ? '✓' : '✗'}</span>
+          <span class="badge">Loc=${Number(row.loc_echo_acc).toFixed(2)}</span>
+        </div>
+        <div class="canvasWrap"><canvas id="canvas-${cardIndex}"></canvas></div>
+        <div class="legend">${legend}<span>实线 GT</span><span>虚线 Pred</span></div>
+        <div class="body">
+          <div class="path">${esc(row.image)}</div>
+          <table><thead><tr><th>#</th><th>bbox loc</th><th>GT</th><th>Pred</th></tr></thead><tbody>${tableRows}</tbody></table>
+          <details><summary>查看 Pred Raw Output</summary><pre>${esc(row.raw)}</pre></details>
+        </div>
+      </article>`;
+    }
+
+    function renderPage() {
+      const totalPages = pageCount();
+      if (totalPages && page >= totalPages) page = totalPages - 1;
+      const start = page * pageSize();
+      const current = rows.slice(start, start + pageSize());
+      const selectedN = $("countFilter").value === "all" ? "全部 N" : `N=${$("countFilter").value}`;
+      $("summary").innerHTML = `<span>筛选：<strong>${selectedN}</strong></span><span>结果：<strong>${rows.length}</strong> / ${allRows.length}</span><span>当前显示：<strong>${current.length}</strong> 条</span>`;
+      $("grid").innerHTML = current.length ? current.map((row, i) => cardHtml(row, i)).join("") : '<div class="empty">当前筛选条件下没有结果。</div>';
+      current.forEach((row, i) => loadCanvas($(`canvas-${i}`), row));
+      $("pageText").textContent = `第 ${totalPages ? page + 1 : 0} / ${totalPages} 页`;
+      $("prevButton").disabled = page <= 0;
+      $("nextButton").disabled = !totalPages || page >= totalPages - 1;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    $("applyButton").addEventListener("click", applyFilters);
+    $("countFilter").addEventListener("change", applyFilters);
+    $("pageSize").addEventListener("change", () => { page = 0; renderPage(); });
+    $("prevButton").addEventListener("click", () => { if (page > 0) { page--; renderPage(); } });
+    $("nextButton").addEventListener("click", () => { if (page + 1 < pageCount()) { page++; renderPage(); } });
+    document.addEventListener("keydown", event => {
+      if (event.target.matches("input,select")) return;
+      if (event.key === "ArrowLeft" && page > 0) { page--; renderPage(); }
+      if (event.key === "ArrowRight" && page + 1 < pageCount()) { page++; renderPage(); }
+    });
+
+    fetch(RESULT_URL)
+      .then(response => { if (!response.ok) throw new Error(`${response.status} ${response.statusText}`); return response.text(); })
+      .then(text => {
+        allRows = text.trim().split(/\n+/).map(line => JSON.parse(line));
+        renderMetrics();
+        applyFilters();
+      })
+      .catch(error => { $("summary").innerHTML = `<span class="bad">加载失败：${esc(error.message)}</span>`; });
+  </script>
+</body>
+</html>
