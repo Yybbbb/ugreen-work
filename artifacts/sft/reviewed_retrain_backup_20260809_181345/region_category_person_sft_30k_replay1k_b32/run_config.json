@@ -1,0 +1,56 @@
+{
+  "adam_betas": [
+    0.9,
+    0.999
+  ],
+  "adam_eps": 1e-08,
+  "data": {
+    "data_loading": {
+      "format": "prepared_jsonl_byte_offsets",
+      "rows_materialized": false,
+      "shuffle": "DistributedSampler per epoch"
+    },
+    "dev_samples": 2000,
+    "files": {
+      "dev": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl",
+        "sha256": "063afd3b5bd0aea50faf5a50ac628fc630f5ae01788953f33e6b589285ba8e7e"
+      },
+      "replay": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/native_replay.jsonl",
+        "sha256": "87b6a1c2a1dc9557283402322e83bf1ec7d71628b6043de5d103db51c49a6900"
+      },
+      "train": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/train.jsonl",
+        "sha256": "bb7d1db79b820f540a12a06b05f5b0a2aff33529df29300b99fdfe262377df31"
+      }
+    },
+    "person_only": false,
+    "person_samples": 30000,
+    "replay_samples": 1000,
+    "train_samples": 31000
+  },
+  "dev_num_workers_per_rank": 0,
+  "epochs": 1,
+  "formal_global_batch_size": 32,
+  "global_batch_size": 32,
+  "gradient_accumulation_steps": 2,
+  "label_smoothing": 0.05,
+  "learning_rates": {
+    "language": 1e-06,
+    "projection": 5e-07,
+    "vision": 1e-07
+  },
+  "min_lr_ratio": 0.1,
+  "model_source": "/data1/work/MichaelYu/florence-attibute/pretrained/Florence-2-base",
+  "num_workers_per_rank": 6,
+  "per_device_batch_size": 4,
+  "person_only": false,
+  "prefetch_factor": 1,
+  "seed": 20260720,
+  "steps_per_epoch": 969,
+  "total_steps": 969,
+  "warmup_ratio": 0.05,
+  "weight_decay": 0.01,
+  "world_size": 4
+}

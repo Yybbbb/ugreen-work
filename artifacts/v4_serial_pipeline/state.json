@@ -1,0 +1,58 @@
+{
+  "schema_version": "v4-serial-pipeline-v1",
+  "created_at": "2026-08-07T03:41:40.565201+00:00",
+  "stages": {
+    "region_category_person_sft_30k_replay1k_b16_e3_lr125:train": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_replay1k_b16_e3_lr125/train.log",
+      "updated_at": "2026-08-07T05:03:36.067573+00:00"
+    },
+    "region_category_person_sft_30k_replay1k_b16_e3_lr125:infer": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_replay1k_b16_e3_lr125/infer.log",
+      "updated_at": "2026-08-07T05:06:08.939094+00:00"
+    },
+    "region_category_person_sft_30k_replay1k_b16_e3_lr125:extract": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_replay1k_b16_e3_lr125/extract.log",
+      "updated_at": "2026-08-07T05:32:17.202575+00:00"
+    },
+    "region_category_person_sft_30k_replay1k_b16_e3_lr125:finalize": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_replay1k_b16_e3_lr125/finalize.log",
+      "updated_at": "2026-08-07T05:32:23.441588+00:00"
+    },
+    "region_category_person_sft_30k_replay1k_b16_e3_lr125:document": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_replay1k_b16_e3_lr125/document.log",
+      "updated_at": "2026-08-07T05:32:23.537889+00:00"
+    },
+    "region_category_person_sft_30k_person_only_b16_e3_lr125:train": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_person_only_b16_e3_lr125/train.log",
+      "updated_at": "2026-08-07T06:48:28.126445+00:00"
+    },
+    "region_category_person_sft_30k_person_only_b16_e3_lr125:infer": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_person_only_b16_e3_lr125/infer.log",
+      "updated_at": "2026-08-07T06:51:37.350823+00:00"
+    },
+    "region_category_person_sft_30k_person_only_b16_e3_lr125:extract": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_person_only_b16_e3_lr125/extract.log",
+      "updated_at": "2026-08-07T07:17:42.235922+00:00"
+    },
+    "region_category_person_sft_30k_person_only_b16_e3_lr125:finalize": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_person_only_b16_e3_lr125/finalize.log",
+      "updated_at": "2026-08-07T07:17:46.270345+00:00"
+    },
+    "region_category_person_sft_30k_person_only_b16_e3_lr125:document": {
+      "status": "complete",
+      "log": "/data1/work/MichaelYu/florence-attibute/artifacts/v4_serial_pipeline/region_category_person_sft_30k_person_only_b16_e3_lr125/document.log",
+      "updated_at": "2026-08-07T07:17:46.579059+00:00"
+    }
+  },
+  "status": "complete",
+  "completed_at": "2026-08-07T07:17:46.580418+00:00"
+}

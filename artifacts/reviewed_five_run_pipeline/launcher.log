@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/run_reviewed_sft_pipeline.py", line 260, in qwen_worker
+    execute_stage(gt_stage(project_root), store, project_root)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/run_reviewed_sft_pipeline.py", line 243, in execute_stage
+    runner(command, cwd=project_root, env=environment, stdout=log, stderr=subprocess.STDOUT, check=True)
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/subprocess.py", line 526, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/data1/work/MichaelYu/miniconda3/envs/florence/bin/python', '/data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py', '--input', '/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl', '--output', '/data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl', '--base-url', 'http://127.0.0.1:6097/v1', '--model', 'Qwen36-35b-caption', '--batch-size', '4', '--workers', '16', '--timeout', '180', '--retries', '2', '--max-tokens', '2048', '--fresh']' returned non-zero exit status 1.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/run_reviewed_sft_pipeline.py", line 334, in <module>
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/run_reviewed_sft_pipeline.py", line 321, in main
+    run_pipeline(root, store, preflight["test_samples"])
+  File "/data1/work/MichaelYu/florence-attibute/scripts/run_reviewed_sft_pipeline.py", line 275, in run_pipeline
+    raise RuntimeError("Qwen worker failed") from qwen_failure[0]
+RuntimeError: Qwen worker failed

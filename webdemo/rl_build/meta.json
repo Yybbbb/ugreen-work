@@ -1,0 +1,92 @@
+{
+  "tiers": [
+    {
+      "id": 5,
+      "label": "挡位5 · 优秀",
+      "stars": "★★★★★",
+      "lo": 0.8,
+      "hi": 1.01,
+      "total": 1638,
+      "sampled": 20
+    },
+    {
+      "id": 4,
+      "label": "挡位4 · 良好",
+      "stars": "★★★★",
+      "lo": 0.6,
+      "hi": 0.8,
+      "total": 1960,
+      "sampled": 20
+    },
+    {
+      "id": 3,
+      "label": "挡位3 · 中等",
+      "stars": "★★★",
+      "lo": 0.4,
+      "hi": 0.6,
+      "total": 639,
+      "sampled": 20
+    },
+    {
+      "id": 2,
+      "label": "挡位2 · 较差",
+      "stars": "★★",
+      "lo": 0.2,
+      "hi": 0.4,
+      "total": 82,
+      "sampled": 20
+    },
+    {
+      "id": 1,
+      "label": "挡位1 · 很差",
+      "stars": "★",
+      "lo": 0.0,
+      "hi": 0.2,
+      "total": 9,
+      "sampled": 9
+    }
+  ],
+  "total_samples": 4328,
+  "candidates": [
+    "v4b_sft",
+    "qwen_rl",
+    "lexical_rl"
+  ],
+  "candidate_labels": {
+    "v4b_sft": "V4B SFT（基线）",
+    "qwen_rl": "qwen_rl",
+    "lexical_rl": "lexical_rl"
+  },
+  "metrics": {
+    "v4b_sft": {
+      "label": "V4B SFT（基线）",
+      "micro": {
+        "f1": 0.7421847104199603,
+        "precision": 0.7855434835040278,
+        "recall": 0.7033620166827969
+      },
+      "macro_field_f1": 0.5974276321940316,
+      "fabrication_ratio": 0.11072491473508135
+    },
+    "qwen_rl": {
+      "label": "qwen_rl",
+      "micro": {
+        "f1": 0.739996651095701,
+        "precision": 0.7833487665048007,
+        "recall": 0.7011912972821445
+      },
+      "macro_field_f1": 0.5945483242581919,
+      "fabrication_ratio": 0.10632629441180967
+    },
+    "lexical_rl": {
+      "label": "lexical_rl",
+      "micro": {
+        "f1": 0.7458034874714593,
+        "precision": 0.7875705869972434,
+        "recall": 0.7082433367703704
+      },
+      "macro_field_f1": 0.5992644710503786,
+      "fabrication_ratio": 0.10805944245579781
+    }
+  }
+}

@@ -1,0 +1,4 @@
+2026-08-06 16:50:27,699 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-06 16:50:28,028 INFO parameter groups: {'vision': {'tensors': 400, 'parameters': 90368000}, 'projection': {'tensors': 5, 'parameters': 839168}, 'language': {'tensors': 259, 'parameters': 140206848}}
+2026-08-06 16:50:35,512 INFO epoch=1 step=1/2 loss=4.221796 grad_norm=50.2405 lr=[1e-06, 1e-06, 5e-07, 5e-07, 1e-07, 1e-07]
+2026-08-06 16:50:35,513 INFO training stopped at optimizer step 1

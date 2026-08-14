@@ -1,0 +1,239 @@
+[2026-08-10T21:44:03+08:00] starting region_category_person_scst_reviewed5981_qwen4b on physical GPUs 3,4,5,6
+W0810 21:44:05.118000 826364 site-packages/torch/distributed/run.py:793] 
+W0810 21:44:05.118000 826364 site-packages/torch/distributed/run.py:793] *****************************************
+W0810 21:44:05.118000 826364 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0810 21:44:05.118000 826364 site-packages/torch/distributed/run.py:793] *****************************************
+2026-08-10 21:44:08,345 INFO reward service preflight passed: [{'role': 'extractor', 'base_url': 'http://127.0.0.1:6097/v1', 'model': 'Qwen3.6-27B-FP8', 'probe': {'model': 'Qwen3.6-27B-FP8', 'content': 'OK'}}, {'role': 'judge', 'base_url': 'http://127.0.0.1:6098/v1', 'model': 'Qwen3.5-4B', 'probe': {'model': 'Qwen3.5-4B', 'content': 'OK'}}]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-08-10 21:44:14,881 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-10 21:44:15,093 INFO RL parameter groups: {'vision': {'tensors': 400, 'parameters': 90368000}, 'projection': {'tensors': 5, 'parameters': 839168}, 'language': {'tensors': 259, 'parameters': 140206848}}
+2026-08-10 21:44:15,111 INFO RL config: train=5981 dev=2000 global_batch=8 steps=748 alpha=0.10->0.50 matcher=qwen extractor=Qwen3.6-27B-FP8 judge=Qwen3.5-4B
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-10 21:45:04,809 INFO epoch=1 step=1/748 ce=1.3835 scst=-1.0494 alpha=0.100 r_s=0.318 r_g=0.388 advantage=-0.070 grad=12.2195
+2026-08-10 21:51:37,724 INFO epoch=1 step=10/748 ce=1.5130 scst=-1.1840 alpha=0.105 r_s=0.216 r_g=0.226 advantage=-0.010 grad=16.7991
+2026-08-10 21:58:41,117 INFO epoch=1 step=20/748 ce=1.3515 scst=-1.1831 alpha=0.110 r_s=0.438 r_g=0.498 advantage=-0.060 grad=11.6510
+2026-08-10 22:05:41,767 INFO epoch=1 step=30/748 ce=1.2055 scst=1.0160 alpha=0.116 r_s=0.350 r_g=0.291 advantage=0.059 grad=20.0467
+2026-08-10 22:12:39,979 INFO epoch=1 step=40/748 ce=1.6133 scst=-2.2272 alpha=0.121 r_s=0.399 r_g=0.470 advantage=-0.071 grad=16.2053
+2026-08-10 22:19:40,766 INFO epoch=1 step=50/748 ce=1.4156 scst=-0.4029 alpha=0.126 r_s=0.282 r_g=0.299 advantage=-0.016 grad=14.7125
+2026-08-10 22:26:43,605 INFO epoch=1 step=60/748 ce=1.2735 scst=-1.4519 alpha=0.132 r_s=0.344 r_g=0.407 advantage=-0.063 grad=12.1218
+2026-08-10 22:33:41,889 INFO epoch=1 step=70/748 ce=1.6971 scst=0.2764 alpha=0.137 r_s=0.357 r_g=0.341 advantage=0.016 grad=24.7501
+2026-08-10 22:40:48,291 INFO epoch=1 step=80/748 ce=1.1520 scst=-2.9505 alpha=0.142 r_s=0.275 r_g=0.386 advantage=-0.111 grad=22.7125
+2026-08-10 22:47:48,929 INFO epoch=1 step=90/748 ce=1.3790 scst=-0.6058 alpha=0.148 r_s=0.292 r_g=0.306 advantage=-0.014 grad=15.6838
+2026-08-10 22:54:49,307 INFO epoch=1 step=100/748 ce=1.3180 scst=-2.8249 alpha=0.153 r_s=0.333 r_g=0.426 advantage=-0.093 grad=17.8586
+2026-08-10 23:02:13,808 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.46875, 'p95_words': 30, 'length_18_24_ratio': 0.5078125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3635699616967647, 'mean_reward': 0.38610989002206003, 'min_reward': 0.0, 'max_reward': 0.5692307692307692, 'mean_soft_f1': 0.7036537288638414, 'mean_fabrication_ratio': 0.04404306630869131, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 100}
+Removed shared tensor {'language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight'} while saving. This should be OK, but check by verifying that you don't receive any warning while reloading
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-10 23:09:12,179 INFO epoch=1 step=110/748 ce=1.3925 scst=0.7118 alpha=0.158 r_s=0.399 r_g=0.381 advantage=0.018 grad=13.3251
+2026-08-10 23:16:14,509 INFO epoch=1 step=120/748 ce=1.6302 scst=2.2967 alpha=0.164 r_s=0.443 r_g=0.322 advantage=0.121 grad=17.3126
+2026-08-10 23:23:16,144 INFO epoch=1 step=130/748 ce=1.5678 scst=-0.7004 alpha=0.169 r_s=0.350 r_g=0.373 advantage=-0.023 grad=14.2921
+2026-08-10 23:30:09,157 INFO epoch=1 step=140/748 ce=2.1852 scst=2.5701 alpha=0.174 r_s=0.231 r_g=0.171 advantage=0.060 grad=18.8759
+2026-08-10 23:37:06,069 INFO epoch=1 step=150/748 ce=1.5515 scst=-1.3910 alpha=0.180 r_s=0.261 r_g=0.301 advantage=-0.040 grad=11.7173
+2026-08-10 23:44:02,085 INFO epoch=1 step=160/748 ce=1.2917 scst=-4.2128 alpha=0.185 r_s=0.262 r_g=0.406 advantage=-0.144 grad=20.2991
+2026-08-10 23:50:54,272 INFO epoch=1 step=170/748 ce=1.5317 scst=1.6546 alpha=0.190 r_s=0.331 r_g=0.269 advantage=0.061 grad=12.4239
+2026-08-10 23:57:54,570 INFO epoch=1 step=180/748 ce=1.4406 scst=-1.6816 alpha=0.196 r_s=0.276 r_g=0.344 advantage=-0.068 grad=14.1305
+2026-08-11 00:04:47,363 INFO epoch=1 step=190/748 ce=1.7124 scst=0.1389 alpha=0.201 r_s=0.370 r_g=0.384 advantage=-0.014 grad=17.2529
+2026-08-11 00:11:45,760 INFO epoch=1 step=200/748 ce=1.6653 scst=-1.7447 alpha=0.207 r_s=0.235 r_g=0.303 advantage=-0.067 grad=18.1328
+2026-08-11 00:18:36,617 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.4453125, 'p95_words': 30, 'length_18_24_ratio': 0.515625, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3624129103953757, 'mean_reward': 0.37990683480723064, 'min_reward': 0.0, 'max_reward': 0.584, 'mean_soft_f1': 0.6860700635554281, 'mean_fabrication_ratio': 0.043920164037351536, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 8, 'global_step': 200}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 00:25:39,845 INFO epoch=1 step=210/748 ce=1.3805 scst=1.4340 alpha=0.212 r_s=0.377 r_g=0.295 advantage=0.082 grad=16.3214
+2026-08-11 00:32:37,125 INFO epoch=1 step=220/748 ce=1.4423 scst=-0.3821 alpha=0.217 r_s=0.333 r_g=0.335 advantage=-0.002 grad=14.8446
+2026-08-11 00:39:32,460 INFO epoch=1 step=230/748 ce=1.4364 scst=1.5263 alpha=0.223 r_s=0.353 r_g=0.299 advantage=0.054 grad=25.6368
+2026-08-11 00:46:27,507 INFO epoch=1 step=240/748 ce=1.4922 scst=-5.3317 alpha=0.228 r_s=0.314 r_g=0.513 advantage=-0.199 grad=25.9097
+2026-08-11 00:53:24,298 INFO epoch=1 step=250/748 ce=1.6461 scst=0.5998 alpha=0.233 r_s=0.320 r_g=0.282 advantage=0.038 grad=16.2328
+2026-08-11 01:00:23,837 INFO epoch=1 step=260/748 ce=1.3649 scst=-0.1029 alpha=0.239 r_s=0.260 r_g=0.261 advantage=-0.001 grad=16.5883
+2026-08-11 01:07:23,628 INFO epoch=1 step=270/748 ce=1.7085 scst=-0.4402 alpha=0.244 r_s=0.425 r_g=0.402 advantage=0.023 grad=23.0216
+2026-08-11 01:14:18,421 INFO epoch=1 step=280/748 ce=1.6295 scst=-0.4449 alpha=0.249 r_s=0.370 r_g=0.407 advantage=-0.037 grad=15.8435
+2026-08-11 01:21:16,693 INFO epoch=1 step=290/748 ce=1.6047 scst=-0.7727 alpha=0.255 r_s=0.300 r_g=0.336 advantage=-0.036 grad=25.7214
+2026-08-11 01:28:08,016 INFO epoch=1 step=300/748 ce=1.4178 scst=-3.4246 alpha=0.260 r_s=0.172 r_g=0.331 advantage=-0.160 grad=19.6937
+2026-08-11 01:34:42,271 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.1015625, 'p95_words': 30, 'length_18_24_ratio': 0.5078125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3617664220069274, 'mean_reward': 0.3892872525987158, 'min_reward': 0.05, 'max_reward': 0.5692307692307692, 'mean_soft_f1': 0.7074008758357838, 'mean_fabrication_ratio': 0.03984680683899434, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 300}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 01:41:33,589 INFO epoch=1 step=310/748 ce=1.6023 scst=-0.7486 alpha=0.265 r_s=0.224 r_g=0.249 advantage=-0.025 grad=22.6185
+2026-08-11 01:48:29,755 INFO epoch=1 step=320/748 ce=1.4180 scst=-2.0320 alpha=0.271 r_s=0.191 r_g=0.287 advantage=-0.096 grad=24.8911
+2026-08-11 01:55:29,673 INFO epoch=1 step=330/748 ce=1.8641 scst=0.9946 alpha=0.276 r_s=0.334 r_g=0.270 advantage=0.064 grad=18.2980
+2026-08-11 02:02:31,568 INFO epoch=1 step=340/748 ce=1.5419 scst=-1.3463 alpha=0.282 r_s=0.266 r_g=0.333 advantage=-0.067 grad=13.6510
+2026-08-11 02:09:26,511 INFO epoch=1 step=350/748 ce=1.3976 scst=-0.6892 alpha=0.287 r_s=0.441 r_g=0.468 advantage=-0.027 grad=17.3152
+2026-08-11 02:16:18,202 INFO epoch=1 step=360/748 ce=1.1731 scst=-1.3547 alpha=0.292 r_s=0.299 r_g=0.348 advantage=-0.049 grad=22.4393
+2026-08-11 02:23:14,223 INFO epoch=1 step=370/748 ce=1.4033 scst=0.3042 alpha=0.298 r_s=0.462 r_g=0.442 advantage=0.021 grad=20.6173
+2026-08-11 02:30:09,451 INFO epoch=1 step=380/748 ce=1.2772 scst=-0.4407 alpha=0.303 r_s=0.476 r_g=0.502 advantage=-0.026 grad=37.2108
+2026-08-11 02:37:04,800 INFO epoch=1 step=390/748 ce=1.5698 scst=1.4125 alpha=0.308 r_s=0.481 r_g=0.409 advantage=0.072 grad=17.4064
+2026-08-11 02:43:55,864 INFO epoch=1 step=400/748 ce=1.3697 scst=2.8320 alpha=0.314 r_s=0.500 r_g=0.332 advantage=0.168 grad=21.0009
+2026-08-11 02:50:49,768 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.0859375, 'p95_words': 30, 'length_18_24_ratio': 0.5234375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.361792135876632, 'mean_reward': 0.38818948568978695, 'min_reward': 0.004285714285714254, 'max_reward': 0.5733333333333334, 'mean_soft_f1': 0.7040547382351788, 'mean_fabrication_ratio': 0.04412789901071151, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 400}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 02:57:47,268 INFO epoch=1 step=410/748 ce=1.4216 scst=-3.5609 alpha=0.319 r_s=0.275 r_g=0.431 advantage=-0.156 grad=25.2635
+2026-08-11 03:04:37,957 INFO epoch=1 step=420/748 ce=1.5348 scst=-0.4062 alpha=0.324 r_s=0.423 r_g=0.440 advantage=-0.017 grad=14.2614
+2026-08-11 03:11:30,041 INFO epoch=1 step=430/748 ce=1.4960 scst=-0.1776 alpha=0.330 r_s=0.462 r_g=0.481 advantage=-0.019 grad=18.3894
+2026-08-11 03:18:26,879 INFO epoch=1 step=440/748 ce=1.4708 scst=-4.9052 alpha=0.335 r_s=0.236 r_g=0.458 advantage=-0.222 grad=24.3353
+2026-08-11 03:25:21,611 INFO epoch=1 step=450/748 ce=1.3385 scst=-7.0172 alpha=0.340 r_s=0.256 r_g=0.456 advantage=-0.200 grad=31.2425
+2026-08-11 03:32:19,555 INFO epoch=1 step=460/748 ce=1.2375 scst=-2.5852 alpha=0.346 r_s=0.316 r_g=0.381 advantage=-0.065 grad=25.3707
+2026-08-11 03:39:18,176 INFO epoch=1 step=470/748 ce=1.4643 scst=-0.0943 alpha=0.351 r_s=0.410 r_g=0.418 advantage=-0.008 grad=15.4158
+2026-08-11 03:46:11,230 INFO epoch=1 step=480/748 ce=1.5003 scst=-0.0706 alpha=0.356 r_s=0.362 r_g=0.365 advantage=-0.002 grad=29.7372
+2026-08-11 03:53:04,702 INFO epoch=1 step=490/748 ce=1.3552 scst=-0.2819 alpha=0.362 r_s=0.283 r_g=0.288 advantage=-0.005 grad=16.0320
+2026-08-11 04:00:00,126 INFO epoch=1 step=500/748 ce=1.5879 scst=-0.2508 alpha=0.367 r_s=0.416 r_g=0.381 advantage=0.035 grad=19.4578
+2026-08-11 04:06:39,561 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.8984375, 'p95_words': 30, 'length_18_24_ratio': 0.53125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3622571550991034, 'mean_reward': 0.3850852583411701, 'min_reward': 0.023333333333333303, 'max_reward': 0.5733333333333334, 'mean_soft_f1': 0.6874903651613945, 'mean_fabrication_ratio': 0.038253781808469306, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 8, 'global_step': 500}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 04:13:34,833 INFO epoch=1 step=510/748 ce=1.9202 scst=-3.0425 alpha=0.373 r_s=0.258 r_g=0.390 advantage=-0.132 grad=21.1604
+2026-08-11 04:20:27,938 INFO epoch=1 step=520/748 ce=1.4096 scst=-2.7838 alpha=0.378 r_s=0.357 r_g=0.412 advantage=-0.055 grad=22.8879
+2026-08-11 04:27:22,544 INFO epoch=1 step=530/748 ce=1.7651 scst=-0.0698 alpha=0.383 r_s=0.363 r_g=0.372 advantage=-0.009 grad=144.4801
+2026-08-11 04:34:22,489 INFO epoch=1 step=540/748 ce=1.9208 scst=1.4949 alpha=0.389 r_s=0.415 r_g=0.321 advantage=0.095 grad=126.7377
+2026-08-11 04:41:16,576 INFO epoch=1 step=550/748 ce=1.3893 scst=-1.4226 alpha=0.394 r_s=0.449 r_g=0.526 advantage=-0.077 grad=21.5529
+2026-08-11 04:48:05,020 INFO epoch=1 step=560/748 ce=1.6655 scst=-3.4675 alpha=0.399 r_s=0.238 r_g=0.358 advantage=-0.121 grad=27.7402
+2026-08-11 04:54:59,714 INFO epoch=1 step=570/748 ce=1.4888 scst=0.2683 alpha=0.405 r_s=0.441 r_g=0.410 advantage=0.031 grad=27.1601
+2026-08-11 05:01:54,003 INFO epoch=1 step=580/748 ce=1.3829 scst=1.0258 alpha=0.410 r_s=0.335 r_g=0.311 advantage=0.024 grad=21.9537
+2026-08-11 05:08:52,496 INFO epoch=1 step=590/748 ce=1.7519 scst=-5.7181 alpha=0.415 r_s=0.224 r_g=0.366 advantage=-0.142 grad=29.7768
+2026-08-11 05:15:48,185 INFO epoch=1 step=600/748 ce=1.7282 scst=1.2800 alpha=0.421 r_s=0.423 r_g=0.372 advantage=0.051 grad=30.1345
+2026-08-11 05:22:54,347 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.9921875, 'p95_words': 30, 'length_18_24_ratio': 0.53125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3631631133351085, 'mean_reward': 0.39265230692143016, 'min_reward': 0.004285714285714254, 'max_reward': 0.5733333333333334, 'mean_soft_f1': 0.7113275245393952, 'mean_fabrication_ratio': 0.04317331973581973, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 600}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 05:29:48,120 INFO epoch=1 step=610/748 ce=1.2968 scst=-0.6978 alpha=0.426 r_s=0.485 r_g=0.516 advantage=-0.031 grad=24.1849
+2026-08-11 05:36:47,867 INFO epoch=1 step=620/748 ce=1.4085 scst=-3.0989 alpha=0.431 r_s=0.362 r_g=0.523 advantage=-0.161 grad=22.8983
+2026-08-11 05:43:42,727 INFO epoch=1 step=630/748 ce=1.2307 scst=-0.2446 alpha=0.437 r_s=0.420 r_g=0.396 advantage=0.024 grad=20.6438
+2026-08-11 05:50:38,675 INFO epoch=1 step=640/748 ce=1.6604 scst=-0.6565 alpha=0.442 r_s=0.319 r_g=0.333 advantage=-0.013 grad=19.7190
+2026-08-11 05:57:32,543 INFO epoch=1 step=650/748 ce=1.4646 scst=0.2760 alpha=0.448 r_s=0.336 r_g=0.319 advantage=0.016 grad=50.6982
+2026-08-11 06:04:28,028 INFO epoch=1 step=660/748 ce=1.4567 scst=-0.1446 alpha=0.453 r_s=0.299 r_g=0.306 advantage=-0.007 grad=35.0898
+2026-08-11 06:11:24,057 INFO epoch=1 step=670/748 ce=1.4458 scst=-2.5414 alpha=0.458 r_s=0.265 r_g=0.391 advantage=-0.126 grad=37.9956
+2026-08-11 06:18:17,972 INFO epoch=1 step=680/748 ce=1.5296 scst=-0.9229 alpha=0.464 r_s=0.388 r_g=0.486 advantage=-0.098 grad=32.1882
+2026-08-11 06:25:14,579 INFO epoch=1 step=690/748 ce=1.4558 scst=0.2853 alpha=0.469 r_s=0.417 r_g=0.392 advantage=0.024 grad=35.0538
+2026-08-11 06:32:08,367 INFO epoch=1 step=700/748 ce=1.3034 scst=-2.7269 alpha=0.474 r_s=0.294 r_g=0.428 advantage=-0.134 grad=23.9756
+2026-08-11 06:38:57,220 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.953125, 'p95_words': 30, 'length_18_24_ratio': 0.53125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3635186737435232, 'mean_reward': 0.3759105315013837, 'min_reward': 0.004285714285714254, 'max_reward': 0.5733333333333334, 'mean_soft_f1': 0.6684173058319363, 'mean_fabrication_ratio': 0.04114097707847708, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 12, 'global_step': 700}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 06:45:54,966 INFO epoch=1 step=710/748 ce=1.3507 scst=0.8671 alpha=0.480 r_s=0.311 r_g=0.340 advantage=-0.029 grad=29.1157
+2026-08-11 06:52:44,973 INFO epoch=1 step=720/748 ce=1.4292 scst=0.2621 alpha=0.485 r_s=0.459 r_g=0.444 advantage=0.015 grad=24.3168
+2026-08-11 06:59:41,530 INFO epoch=1 step=730/748 ce=1.2229 scst=2.0127 alpha=0.490 r_s=0.422 r_g=0.319 advantage=0.103 grad=32.7255
+2026-08-11 07:06:40,012 INFO epoch=1 step=740/748 ce=1.7415 scst=-0.3410 alpha=0.496 r_s=0.298 r_g=0.316 advantage=-0.018 grad=30.6218
+2026-08-11 07:12:09,539 INFO RL training stopped at step 748; saved final to /data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_qwen4b/final status={'completed': True, 'stopped_by_max_steps': False}
+[2026-08-11T07:12:11+08:00] completed region_category_person_scst_reviewed5981_qwen4b; starting region_category_person_scst_reviewed5981_lexical
+W0811 07:12:13.343000 1262869 site-packages/torch/distributed/run.py:793] 
+W0811 07:12:13.343000 1262869 site-packages/torch/distributed/run.py:793] *****************************************
+W0811 07:12:13.343000 1262869 site-packages/torch/distributed/run.py:793] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0811 07:12:13.343000 1262869 site-packages/torch/distributed/run.py:793] *****************************************
+2026-08-11 07:12:16,268 INFO reward service preflight passed: [{'role': 'extractor', 'base_url': 'http://127.0.0.1:6097/v1', 'model': 'Qwen3.6-27B-FP8', 'probe': {'model': 'Qwen3.6-27B-FP8', 'content': 'OK'}}]
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-08-11 07:12:23,860 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-11 07:12:24,083 INFO RL parameter groups: {'vision': {'tensors': 400, 'parameters': 90368000}, 'projection': {'tensors': 5, 'parameters': 839168}, 'language': {'tensors': 259, 'parameters': 140206848}}
+2026-08-11 07:12:24,101 INFO RL config: train=5981 dev=2000 global_batch=8 steps=748 alpha=0.10->0.50 matcher=lexical extractor=Qwen3.6-27B-FP8 judge=Qwen3.5-4B
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 07:13:06,580 INFO epoch=1 step=1/748 ce=1.3835 scst=-2.0957 alpha=0.100 r_s=0.276 r_g=0.385 advantage=-0.110 grad=11.7963
+2026-08-11 07:19:10,688 INFO epoch=1 step=10/748 ce=1.5067 scst=-4.6556 alpha=0.105 r_s=0.195 r_g=0.381 advantage=-0.186 grad=17.8886
+2026-08-11 07:25:57,990 INFO epoch=1 step=20/748 ce=1.3355 scst=-0.3962 alpha=0.110 r_s=0.453 r_g=0.471 advantage=-0.019 grad=12.2802
+2026-08-11 07:32:49,393 INFO epoch=1 step=30/748 ce=1.1372 scst=-3.7132 alpha=0.116 r_s=0.172 r_g=0.283 advantage=-0.112 grad=24.5884
+2026-08-11 07:39:36,575 INFO epoch=1 step=40/748 ce=1.6391 scst=0.1963 alpha=0.121 r_s=0.393 r_g=0.382 advantage=0.011 grad=13.8694
+2026-08-11 07:46:27,248 INFO epoch=1 step=50/748 ce=1.4143 scst=1.8167 alpha=0.126 r_s=0.349 r_g=0.261 advantage=0.088 grad=24.8566
+2026-08-11 07:53:21,151 INFO epoch=1 step=60/748 ce=1.2063 scst=-2.1272 alpha=0.132 r_s=0.270 r_g=0.365 advantage=-0.095 grad=12.2947
+2026-08-11 08:00:08,281 INFO epoch=1 step=70/748 ce=1.7313 scst=2.8114 alpha=0.137 r_s=0.341 r_g=0.190 advantage=0.151 grad=19.5849
+2026-08-11 08:07:01,852 INFO epoch=1 step=80/748 ce=1.1512 scst=2.0362 alpha=0.142 r_s=0.483 r_g=0.339 advantage=0.144 grad=14.9173
+2026-08-11 08:13:58,529 INFO epoch=1 step=90/748 ce=1.3573 scst=2.7299 alpha=0.148 r_s=0.393 r_g=0.252 advantage=0.141 grad=13.2558
+2026-08-11 08:20:46,385 INFO epoch=1 step=100/748 ce=1.2896 scst=1.2233 alpha=0.153 r_s=0.471 r_g=0.384 advantage=0.087 grad=12.3838
+2026-08-11 08:28:28,504 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.5, 'p95_words': 30, 'length_18_24_ratio': 0.5, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.363056426646483, 'mean_reward': 0.38355039595182694, 'min_reward': 0.0, 'max_reward': 0.5890909090909091, 'mean_soft_f1': 0.7024576035783685, 'mean_fabrication_ratio': 0.0472925511988012, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 100}
+Removed shared tensor {'language_model.model.decoder.embed_tokens.weight', 'language_model.model.encoder.embed_tokens.weight'} while saving. This should be OK, but check by verifying that you don't receive any warning while reloading
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 08:35:17,848 INFO epoch=1 step=110/748 ce=1.3591 scst=-0.1483 alpha=0.158 r_s=0.393 r_g=0.398 advantage=-0.006 grad=14.4608
+2026-08-11 08:42:14,053 INFO epoch=1 step=120/748 ce=1.6614 scst=-1.6852 alpha=0.164 r_s=0.191 r_g=0.267 advantage=-0.076 grad=15.2274
+2026-08-11 08:49:05,728 INFO epoch=1 step=130/748 ce=1.6515 scst=-1.4125 alpha=0.169 r_s=0.307 r_g=0.401 advantage=-0.093 grad=21.4173
+2026-08-11 08:55:52,223 INFO epoch=1 step=140/748 ce=2.2355 scst=1.2963 alpha=0.174 r_s=0.181 r_g=0.110 advantage=0.071 grad=21.1212
+2026-08-11 09:02:40,396 INFO epoch=1 step=150/748 ce=1.6473 scst=-1.3967 alpha=0.180 r_s=0.241 r_g=0.297 advantage=-0.055 grad=18.3961
+2026-08-11 09:09:28,625 INFO epoch=1 step=160/748 ce=1.3420 scst=0.1881 alpha=0.185 r_s=0.354 r_g=0.293 advantage=0.061 grad=20.0247
+2026-08-11 09:16:13,644 INFO epoch=1 step=170/748 ce=1.6211 scst=0.0698 alpha=0.190 r_s=0.374 r_g=0.325 advantage=0.049 grad=11.9703
+2026-08-11 09:23:01,361 INFO epoch=1 step=180/748 ce=1.4674 scst=-0.3745 alpha=0.196 r_s=0.231 r_g=0.237 advantage=-0.006 grad=18.1171
+2026-08-11 09:29:42,899 INFO epoch=1 step=190/748 ce=1.7295 scst=-3.4882 alpha=0.201 r_s=0.224 r_g=0.366 advantage=-0.142 grad=13.5489
+2026-08-11 09:36:27,857 INFO epoch=1 step=200/748 ce=1.7216 scst=1.9848 alpha=0.207 r_s=0.354 r_g=0.257 advantage=0.097 grad=12.3559
+2026-08-11 09:42:36,704 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.6484375, 'p95_words': 30, 'length_18_24_ratio': 0.5078125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3642110545673127, 'mean_reward': 0.37513574901048763, 'min_reward': 0.0, 'max_reward': 0.5969230769230769, 'mean_soft_f1': 0.683172858484705, 'mean_fabrication_ratio': 0.05002098595848596, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 8, 'global_step': 200}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 09:49:28,205 INFO epoch=1 step=210/748 ce=1.4139 scst=-3.6858 alpha=0.212 r_s=0.315 r_g=0.443 advantage=-0.128 grad=22.3944
+2026-08-11 09:56:15,346 INFO epoch=1 step=220/748 ce=1.4206 scst=-3.0742 alpha=0.217 r_s=0.174 r_g=0.331 advantage=-0.156 grad=17.4722
+2026-08-11 10:02:59,539 INFO epoch=1 step=230/748 ce=1.3986 scst=-0.4338 alpha=0.223 r_s=0.357 r_g=0.390 advantage=-0.033 grad=15.3696
+2026-08-11 10:09:42,897 INFO epoch=1 step=240/748 ce=1.5126 scst=-4.0196 alpha=0.228 r_s=0.357 r_g=0.485 advantage=-0.128 grad=30.4148
+2026-08-11 10:16:32,044 INFO epoch=1 step=250/748 ce=1.6681 scst=-2.0249 alpha=0.233 r_s=0.282 r_g=0.349 advantage=-0.067 grad=24.6823
+2026-08-11 10:23:22,038 INFO epoch=1 step=260/748 ce=1.3384 scst=0.5334 alpha=0.239 r_s=0.299 r_g=0.272 advantage=0.027 grad=14.7905
+2026-08-11 10:30:12,360 INFO epoch=1 step=270/748 ce=1.6524 scst=-2.5596 alpha=0.244 r_s=0.259 r_g=0.370 advantage=-0.111 grad=20.2646
+2026-08-11 10:37:02,598 INFO epoch=1 step=280/748 ce=1.5933 scst=-2.4977 alpha=0.249 r_s=0.272 r_g=0.371 advantage=-0.099 grad=21.9828
+2026-08-11 10:43:58,002 INFO epoch=1 step=290/748 ce=1.6384 scst=2.5402 alpha=0.255 r_s=0.361 r_g=0.240 advantage=0.120 grad=29.0606
+2026-08-11 10:50:49,690 INFO epoch=1 step=300/748 ce=1.4711 scst=-1.1085 alpha=0.260 r_s=0.199 r_g=0.276 advantage=-0.076 grad=13.7539
+2026-08-11 10:58:10,855 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.25, 'p95_words': 30, 'length_18_24_ratio': 0.546875, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.362176624876335, 'mean_reward': 0.3820750836988116, 'min_reward': 0.05, 'max_reward': 0.5890909090909091, 'mean_soft_f1': 0.6810768591596164, 'mean_fabrication_ratio': 0.04620164991258741, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 8, 'global_step': 300}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 11:05:04,389 INFO epoch=1 step=310/748 ce=1.6032 scst=0.3583 alpha=0.265 r_s=0.384 r_g=0.355 advantage=0.029 grad=15.6468
+2026-08-11 11:11:59,503 INFO epoch=1 step=320/748 ce=1.4129 scst=4.3829 alpha=0.271 r_s=0.413 r_g=0.218 advantage=0.195 grad=15.9944
+2026-08-11 11:19:09,804 INFO epoch=1 step=330/748 ce=1.8856 scst=-1.1868 alpha=0.276 r_s=0.312 r_g=0.346 advantage=-0.034 grad=12.5063
+2026-08-11 11:26:09,795 INFO epoch=1 step=340/748 ce=1.4706 scst=-1.5367 alpha=0.282 r_s=0.323 r_g=0.328 advantage=-0.005 grad=18.8579
+2026-08-11 11:32:55,594 INFO epoch=1 step=350/748 ce=1.3591 scst=-4.2571 alpha=0.287 r_s=0.332 r_g=0.490 advantage=-0.158 grad=26.3834
+2026-08-11 11:39:54,655 INFO epoch=1 step=360/748 ce=1.2356 scst=0.5803 alpha=0.292 r_s=0.303 r_g=0.280 advantage=0.024 grad=16.1999
+2026-08-11 11:46:48,393 INFO epoch=1 step=370/748 ce=1.4537 scst=0.0652 alpha=0.298 r_s=0.446 r_g=0.442 advantage=0.004 grad=15.1690
+2026-08-11 11:53:54,706 INFO epoch=1 step=380/748 ce=1.3135 scst=-1.2188 alpha=0.303 r_s=0.445 r_g=0.506 advantage=-0.061 grad=18.8911
+2026-08-11 12:00:46,523 INFO epoch=1 step=390/748 ce=1.6602 scst=0.6285 alpha=0.308 r_s=0.383 r_g=0.341 advantage=0.042 grad=15.4729
+2026-08-11 12:07:41,597 INFO epoch=1 step=400/748 ce=1.3720 scst=-2.9887 alpha=0.314 r_s=0.305 r_g=0.383 advantage=-0.077 grad=30.2381
+2026-08-11 12:13:58,773 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.015625, 'p95_words': 30, 'length_18_24_ratio': 0.5625, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3629609469896073, 'mean_reward': 0.3764692026548851, 'min_reward': 0.05, 'max_reward': 0.5969230769230769, 'mean_soft_f1': 0.6585065411582472, 'mean_fabrication_ratio': 0.04350540952103452, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 12, 'global_step': 400}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 12:21:05,269 INFO epoch=1 step=410/748 ce=1.3328 scst=2.3837 alpha=0.319 r_s=0.383 r_g=0.303 advantage=0.081 grad=55.9088
+2026-08-11 12:28:14,337 INFO epoch=1 step=420/748 ce=1.5364 scst=-1.6291 alpha=0.324 r_s=0.386 r_g=0.465 advantage=-0.079 grad=20.6119
+2026-08-11 12:35:17,503 INFO epoch=1 step=430/748 ce=1.3934 scst=-1.0791 alpha=0.330 r_s=0.363 r_g=0.436 advantage=-0.074 grad=35.2375
+2026-08-11 12:42:06,757 INFO epoch=1 step=440/748 ce=1.4559 scst=0.0165 alpha=0.335 r_s=0.434 r_g=0.441 advantage=-0.007 grad=11.5305
+2026-08-11 12:49:02,195 INFO epoch=1 step=450/748 ce=1.4134 scst=-8.5778 alpha=0.340 r_s=0.079 r_g=0.347 advantage=-0.268 grad=46.6983
+2026-08-11 12:56:19,286 INFO epoch=1 step=460/748 ce=1.1792 scst=-1.2916 alpha=0.346 r_s=0.295 r_g=0.374 advantage=-0.079 grad=20.4400
+2026-08-11 13:03:25,222 INFO epoch=1 step=470/748 ce=1.4278 scst=0.3826 alpha=0.351 r_s=0.451 r_g=0.429 advantage=0.022 grad=20.5560
+2026-08-11 13:10:16,730 INFO epoch=1 step=480/748 ce=1.5289 scst=-0.7038 alpha=0.356 r_s=0.354 r_g=0.392 advantage=-0.038 grad=39.9510
+2026-08-11 13:17:20,721 INFO epoch=1 step=490/748 ce=1.3970 scst=0.9410 alpha=0.362 r_s=0.354 r_g=0.306 advantage=0.048 grad=23.4926
+2026-08-11 13:24:25,722 INFO epoch=1 step=500/748 ce=1.7177 scst=0.3736 alpha=0.367 r_s=0.301 r_g=0.269 advantage=0.032 grad=29.2431
+2026-08-11 13:31:55,747 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.9453125, 'p95_words': 30, 'length_18_24_ratio': 0.5546875, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.363794941288945, 'mean_reward': 0.39458121379292077, 'min_reward': 0.05, 'max_reward': 0.5890909090909091, 'mean_soft_f1': 0.7046583968282892, 'mean_fabrication_ratio': 0.04047098734598734, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 500}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 13:38:47,229 INFO epoch=1 step=510/748 ce=1.9620 scst=-0.7859 alpha=0.373 r_s=0.279 r_g=0.312 advantage=-0.033 grad=21.2944
+2026-08-11 13:45:33,743 INFO epoch=1 step=520/748 ce=1.4484 scst=-0.3291 alpha=0.378 r_s=0.388 r_g=0.354 advantage=0.034 grad=25.2322
+2026-08-11 13:52:21,232 INFO epoch=1 step=530/748 ce=1.7710 scst=2.6354 alpha=0.383 r_s=0.354 r_g=0.239 advantage=0.115 grad=27.3043
+2026-08-11 13:59:30,834 INFO epoch=1 step=540/748 ce=1.9357 scst=-0.2981 alpha=0.389 r_s=0.337 r_g=0.317 advantage=0.020 grad=20.8996
+2026-08-11 14:06:22,217 INFO epoch=1 step=550/748 ce=1.4226 scst=-1.8851 alpha=0.394 r_s=0.370 r_g=0.470 advantage=-0.099 grad=40.4428
+2026-08-11 14:13:19,111 INFO epoch=1 step=560/748 ce=1.6264 scst=-1.6708 alpha=0.399 r_s=0.375 r_g=0.459 advantage=-0.084 grad=29.1325
+2026-08-11 14:20:28,557 INFO epoch=1 step=570/748 ce=1.5514 scst=2.5202 alpha=0.405 r_s=0.396 r_g=0.324 advantage=0.072 grad=23.4522
+2026-08-11 14:27:26,219 INFO epoch=1 step=580/748 ce=1.3573 scst=0.6757 alpha=0.410 r_s=0.331 r_g=0.303 advantage=0.028 grad=23.2528
+2026-08-11 14:34:25,729 INFO epoch=1 step=590/748 ce=1.7305 scst=3.0048 alpha=0.415 r_s=0.395 r_g=0.197 advantage=0.198 grad=171.1901
+2026-08-11 14:41:20,967 INFO epoch=1 step=600/748 ce=1.7161 scst=-1.8407 alpha=0.421 r_s=0.364 r_g=0.443 advantage=-0.079 grad=23.1130
+2026-08-11 14:47:52,135 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.9921875, 'p95_words': 30, 'length_18_24_ratio': 0.5703125, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3661075294214817, 'mean_reward': 0.397186252558847, 'min_reward': 0.05, 'max_reward': 0.5890909090909091, 'mean_soft_f1': 0.70589239647232, 'mean_fabrication_ratio': 0.04105176507520258, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 4, 'global_step': 600}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 14:54:43,545 INFO epoch=1 step=610/748 ce=1.3253 scst=2.3522 alpha=0.426 r_s=0.500 r_g=0.386 advantage=0.113 grad=21.6876
+2026-08-11 15:01:44,509 INFO epoch=1 step=620/748 ce=1.4282 scst=-4.5505 alpha=0.431 r_s=0.263 r_g=0.421 advantage=-0.157 grad=38.6213
+2026-08-11 15:08:40,010 INFO epoch=1 step=630/748 ce=1.2350 scst=-1.8314 alpha=0.437 r_s=0.319 r_g=0.395 advantage=-0.075 grad=18.1867
+2026-08-11 15:15:26,307 INFO epoch=1 step=640/748 ce=1.7375 scst=-0.2225 alpha=0.442 r_s=0.328 r_g=0.342 advantage=-0.014 grad=37.4151
+2026-08-11 15:22:17,482 INFO epoch=1 step=650/748 ce=1.4332 scst=0.3948 alpha=0.448 r_s=0.363 r_g=0.344 advantage=0.019 grad=19.9615
+2026-08-11 15:29:11,810 INFO epoch=1 step=660/748 ce=1.4247 scst=1.6659 alpha=0.453 r_s=0.327 r_g=0.265 advantage=0.062 grad=20.6796
+2026-08-11 15:36:01,475 INFO epoch=1 step=670/748 ce=1.4991 scst=-1.4413 alpha=0.458 r_s=0.345 r_g=0.427 advantage=-0.082 grad=24.2670
+2026-08-11 15:42:51,812 INFO epoch=1 step=680/748 ce=1.6341 scst=-1.6811 alpha=0.464 r_s=0.391 r_g=0.473 advantage=-0.083 grad=45.4660
+2026-08-11 15:50:01,333 INFO epoch=1 step=690/748 ce=1.4655 scst=0.0775 alpha=0.469 r_s=0.346 r_g=0.349 advantage=-0.003 grad=23.0694
+2026-08-11 15:56:54,184 INFO epoch=1 step=700/748 ce=1.2927 scst=-1.9952 alpha=0.474 r_s=0.288 r_g=0.385 advantage=-0.097 grad=30.4435
+2026-08-11 16:03:41,691 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 20.8984375, 'p95_words': 30, 'length_18_24_ratio': 0.5390625, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.3684793085296116, 'mean_reward': 0.3832704709124337, 'min_reward': 0.05, 'max_reward': 0.5963636363636363, 'mean_soft_f1': 0.6878845114816059, 'mean_fabrication_ratio': 0.0441614592005217, 'background_keyword_ratio': 0.0, 'empty_ratio': 0.0, 'extractor_failures': 8, 'global_step': 700}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-11 16:10:36,999 INFO epoch=1 step=710/748 ce=1.3980 scst=-1.5561 alpha=0.480 r_s=0.229 r_g=0.284 advantage=-0.055 grad=28.0180
+2026-08-11 16:17:22,409 INFO epoch=1 step=720/748 ce=1.4603 scst=-2.8510 alpha=0.485 r_s=0.341 r_g=0.487 advantage=-0.146 grad=21.1921
+2026-08-11 16:24:08,938 INFO epoch=1 step=730/748 ce=1.2498 scst=-4.6599 alpha=0.490 r_s=0.184 r_g=0.366 advantage=-0.182 grad=29.6541
+2026-08-11 16:31:00,147 INFO epoch=1 step=740/748 ce=1.6998 scst=-0.6173 alpha=0.496 r_s=0.295 r_g=0.349 advantage=-0.054 grad=24.4428
+2026-08-11 16:36:29,401 INFO RL training stopped at step 748; saved final to /data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_lexical/final status={'completed': True, 'stopped_by_max_steps': False}
+[2026-08-11T16:36:34+08:00] completed both RL runs

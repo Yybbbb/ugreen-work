@@ -1,0 +1,12 @@
+
+[2026-08-09T14:53:04.352141+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/evaluate_with_qwen_gt.py --run-dir /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/test_inference_final/evaluation_qwen_final --gt-file /data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl
+{
+  "micro_f1": 0.6811657542439159,
+  "soft_micro_f1": 0.7446588933929138,
+  "macro_field_f1": 0.5646747903603113,
+  "mean_field_exact": 0.6477175791246528,
+  "unknown_extra_rate": 0.10942714887563605,
+  "rows_used": 4328,
+  "rows_missing_gt": 0
+}
+written: /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/test_inference_final/evaluation_qwen_final/metrics_qwen_gt.json

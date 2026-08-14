@@ -1,0 +1,34 @@
+
+[2026-08-09T10:13:45.523960+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py --input /data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl --output /data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl --base-url http://127.0.0.1:6097/v1 --model Qwen36-35b-caption --batch-size 4 --workers 16 --timeout 180 --retries 2 --max-tokens 2048 --fresh
+
+[2026-08-09T10:16:15.658565+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py --input /data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl --output /data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl --base-url http://127.0.0.1:6097/v1 --model Qwen36-35b-caption --batch-size 4 --workers 16 --timeout 180 --retries 2 --max-tokens 2048 --fresh
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py", line 268, in <module>
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py", line 264, in main
+    print(json.dumps(run(args), ensure_ascii=False, indent=2), flush=True)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py", line 220, in run
+    raise RuntimeError(
+RuntimeError: GT Qwen extraction incomplete: 20 failed or missing rows; first IDs: ['2026_4_21/2026-04-21_07-07-19_0098.json#0', '2026_4_21/2026-04-21_07-07-19_0124.json#0', '2026_4_21/2026-04-21_07-07-19_0146.json#0', '2026_4_21/2026-04-21_07-07-19_0222.json#0', 'company_surveillance/03000005239000000_1551.json#0', 'company_surveillance/03000005275000000_0972.json#0', 'company_surveillance/03000005275000000_0972.json#1', 'company_surveillance/03000005275000000_1054.json#0', 'company_surveillance/外围东边1_01000001593000001_frame_000400.json#0', 'company_surveillance/外围东边1_01000001593000201_frame_000040.json#0']
+
+[2026-08-09T11:08:17.733379+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_gt_attributes.py --input /data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl --output /data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl --base-url http://127.0.0.1:6097/v1 --model Qwen36-35b-caption --batch-size 4 --workers 16 --timeout 180 --retries 2 --max-tokens 2048 --fresh
+{
+  "input": "/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl",
+  "caption_source": "label (GT caption)",
+  "model": "Qwen36-35b-caption",
+  "base_url": "http://127.0.0.1:6097/v1",
+  "batch_size": 4,
+  "workers": 16,
+  "input_samples": 4328,
+  "empty_caption_samples": 0,
+  "empty_caption_ids": [],
+  "samples": 4328,
+  "submitted": 4352,
+  "completed": 4328,
+  "initial_errors": 24,
+  "individual_retries": 24,
+  "errors": 0,
+  "resumed_from": 0,
+  "fresh": true
+}

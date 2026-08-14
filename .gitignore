@@ -1,0 +1,88 @@
+# ============================================================
+# florence-attibute — 仅提交代码与实验记录,权重/数据走对象存储
+#
+# 数据集与权重的规模、结构、恢复方式见 DATASET_REPORT.md(必须入库)
+# ============================================================
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ------------------------------------------------------------
+# 训练数据 (530M) - 人物裁剪图 + caption 标注,走共享存储
+# 保留 data/scripts/ 下的处理脚本
+# ------------------------------------------------------------
+data/*
+!data/scripts/
+!data/split_statistics.json
+
+# ------------------------------------------------------------
+# 预训练权重 (888M) - 从 ModelScope 重新下载
+# AI-ModelScope/Florence-2-base
+# ------------------------------------------------------------
+pretrained/
+
+# ------------------------------------------------------------
+# 训练产物 (126G) - SFT/RL checkpoint,走对象存储
+#
+# 策略:默认全部排除,再放行体积极小但不可重新生成的实验记录
+#      (323 个文件 / 3.0M:训练日志、配置、dev 指标、最终评估)
+#      重新生成这些记录需要重跑全部训练,因此必须入库
+# ------------------------------------------------------------
+artifacts/**
+
+# 允许 git 遍历子目录(否则下面的放行规则不生效)
+!artifacts/**/
+
+# 训练配置与运行状态
+!artifacts/**/run_config.json
+!artifacts/**/state.json
+!artifacts/**/rescore_config.json
+!artifacts/**/evaluation_manifest.json
+
+# 训练与流水线日志
+!artifacts/**/*.log
+
+# dev 阶段指标(每个 step 一份,单份约 250 字节)
+!artifacts/**/dev_metrics_step_*.json
+
+# 测试推理 manifest 与最终 Qwen-GT 指标
+!artifacts/**/manifest.json
+!artifacts/**/metrics_qwen_gt.json
+
+# RL 三模型对比的最终报告
+!artifacts/rl/evaluation/person_caption_metrics.json
+!artifacts/rl/evaluation/person_caption_comparison.md
+
+# ---- 以下为大文件,即使在放行目录内也必须排除 ----
+
+# 模型权重与优化器状态(单个 checkpoint 2.6G)
+*.safetensors
+*.pt
+*.bin
+*.pdparams
+
+# 推理预测结果(单份 2-8M,可由 checkpoint 重新生成)
+artifacts/**/predictions*.jsonl
+artifacts/**/dev_predictions_step_*.jsonl
+artifacts/**/*.jsonl
+
+# Qwen 判定缓存(288K,可重新生成)
+artifacts/**/judge_cache.json
+
+# 进程残留
+*.pid
+*.complete
+
+# ------------------------------------------------------------
+# 数据集总结报告必须入库
+# ------------------------------------------------------------
+!DATASET_REPORT.md

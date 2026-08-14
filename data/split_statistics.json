@@ -1,0 +1,141 @@
+{
+  "caption_similarity_threshold": 0.9,
+  "dev": {
+    "frames": 944,
+    "people": 2000,
+    "reviewed": 0,
+    "scenes": {
+      "2026_04_03_cat_cafe": 42,
+      "2026_3_09_industrial_park": 31,
+      "2026_3_12_europe_city": 50,
+      "2026_3_17_hardware_store": 38,
+      "2026_3_20_expo": 53,
+      "2026_3_25_urban_village": 26,
+      "2026_3_26_cat_cafe": 13,
+      "2026_3_30_shopping_mall": 7,
+      "2026_4_16_transport_hub": 29,
+      "2026_4_21": 6,
+      "2026_4_28_park": 9,
+      "2026_4_8_cat_cafe": 18,
+      "2026_4_9_ikea": 49,
+      "ReID_pedestrian": 48,
+      "company_surveillance": 19,
+      "company_surveillance_mp4_adaptive": 770,
+      "fall_scene": 22,
+      "tradeshow": 770
+    }
+  },
+  "generated_at": "2026-08-06T07:28:41.585828+00:00",
+  "materialized": {
+    "dev": {
+      "frames": 944,
+      "people": 2000
+    },
+    "reserve": {
+      "frames": 6599,
+      "people": 21602
+    },
+    "rl": {
+      "frames": 3368,
+      "people": 5981
+    },
+    "test": {
+      "frames": 2432,
+      "people": 4328
+    },
+    "train": {
+      "frames": 15422,
+      "people": 30000
+    }
+  },
+  "reserve": {
+    "frames": 6599,
+    "people": 21602,
+    "reviewed": 0,
+    "scenes": {
+      "company_surveillance_mp4_adaptive": 610,
+      "tradeshow": 20992
+    }
+  },
+  "rl": {
+    "frames": 3368,
+    "people": 5981,
+    "reviewed": 0,
+    "scenes": {
+      "2026_04_03_cat_cafe": 356,
+      "2026_3_09_industrial_park": 126,
+      "2026_3_12_europe_city": 438,
+      "2026_3_17_hardware_store": 247,
+      "2026_3_20_expo": 509,
+      "2026_3_25_urban_village": 114,
+      "2026_3_26_cat_cafe": 21,
+      "2026_3_30_shopping_mall": 5,
+      "2026_4_16_transport_hub": 147,
+      "2026_4_21": 4,
+      "2026_4_28_park": 9,
+      "2026_4_8_cat_cafe": 46,
+      "2026_4_9_ikea": 427,
+      "ReID_pedestrian": 402,
+      "company_surveillance": 54,
+      "company_surveillance_mp4_adaptive": 1498,
+      "fall_scene": 80,
+      "tradeshow": 1498
+    }
+  },
+  "shortfall_tolerance": 0.04,
+  "source": "reviewed-person-dataset-merge",
+  "test": {
+    "frames": 2432,
+    "people": 4328,
+    "reviewed": 2912,
+    "scenes": {
+      "2026_04_03_cat_cafe": 321,
+      "2026_3_09_industrial_park": 125,
+      "2026_3_12_europe_city": 145,
+      "2026_3_17_hardware_store": 189,
+      "2026_3_20_expo": 317,
+      "2026_3_25_urban_village": 144,
+      "2026_3_26_cat_cafe": 108,
+      "2026_3_30_shopping_mall": 118,
+      "2026_4_16_transport_hub": 157,
+      "2026_4_17_residential_area": 64,
+      "2026_4_21": 71,
+      "2026_4_28_park": 118,
+      "2026_4_29_park": 76,
+      "2026_4_8_cat_cafe": 115,
+      "2026_4_9_ikea": 154,
+      "ReID_pedestrian": 237,
+      "company_surveillance": 187,
+      "company_surveillance_mp4_adaptive": 172,
+      "fall_scene": 55,
+      "tradeshow": 430,
+      "小红书": 1025
+    }
+  },
+  "train": {
+    "frames": 15422,
+    "people": 30000,
+    "reviewed": 1025,
+    "scenes": {
+      "2026_04_03_cat_cafe": 1760,
+      "2026_3_09_industrial_park": 583,
+      "2026_3_12_europe_city": 2129,
+      "2026_3_17_hardware_store": 1174,
+      "2026_3_20_expo": 2447,
+      "2026_3_25_urban_village": 535,
+      "2026_3_26_cat_cafe": 102,
+      "2026_3_30_shopping_mall": 25,
+      "2026_4_16_transport_hub": 697,
+      "2026_4_21": 18,
+      "2026_4_28_park": 35,
+      "2026_4_8_cat_cafe": 224,
+      "2026_4_9_ikea": 2054,
+      "ReID_pedestrian": 1930,
+      "company_surveillance": 257,
+      "company_surveillance_mp4_adaptive": 7205,
+      "fall_scene": 397,
+      "tradeshow": 7403,
+      "小红书": 1025
+    }
+  }
+}

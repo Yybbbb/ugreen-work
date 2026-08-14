@@ -1,0 +1,14 @@
+{
+  "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b32/final",
+  "test_data": "/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b32/test_inference_final/predictions.jsonl",
+  "samples": 4328,
+  "world_size": 4,
+  "batch_size_per_rank": 4,
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 64
+  },
+  "completed_at": "2026-08-09T11:07:56.769985+00:00"
+}

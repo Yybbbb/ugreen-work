@@ -1,0 +1,13 @@
+
+[2026-08-09T11:39:43.634037+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/extract_qwen_attributes.py --input /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/predictions.jsonl --output /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/qwen_attribute_extraction.jsonl --base-url http://127.0.0.1:6097/v1 --model Qwen36-35b-caption --batch-size 4 --workers 16 --timeout 180 --retries 2 --max-tokens 2048
+{
+  "input": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/predictions.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/qwen_attribute_extraction.jsonl",
+  "model": "Qwen36-35b-caption",
+  "base_url": "http://127.0.0.1:6097/v1",
+  "batch_size": 4,
+  "workers": 16,
+  "submitted": 4328,
+  "completed": 4328,
+  "errors": 8
+}

@@ -1,0 +1,1 @@
+2026-08-10 14:35:59,485 INFO reward service preflight passed: [{'role': 'extractor', 'base_url': 'http://127.0.0.1:6097/v1', 'model': 'Qwen3.6-27B-FP8', 'probe': {'model': 'Qwen3.6-27B-FP8', 'content': 'OK'}}, {'role': 'judge', 'base_url': 'http://127.0.0.1:6098/v1', 'model': 'Qwen3.5-4B', 'probe': {'model': 'Qwen3.5-4B', 'content': 'OK'}}]

@@ -1,0 +1,14 @@
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-08-06 18:35:35,504 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-06 18:35:41,261 INFO rank=0 generated=40
+2026-08-06 18:35:45,673 INFO rank=0 generated=80
+2026-08-06 18:35:50,416 INFO rank=0 generated=120
+2026-08-06 18:35:55,256 INFO rank=0 generated=160
+2026-08-06 18:35:59,931 INFO rank=0 generated=200
+2026-08-06 18:36:04,934 INFO rank=0 generated=240
+2026-08-06 18:36:09,609 INFO rank=0 generated=280
+2026-08-06 18:36:14,049 INFO rank=0 generated=320
+2026-08-06 18:36:18,409 INFO rank=0 generated=360
+2026-08-06 18:36:23,060 INFO rank=0 generated=400
+2026-08-06 18:36:27,768 INFO rank=0 generated=440
+2026-08-06 18:36:31,974 INFO rank=0 generated=480

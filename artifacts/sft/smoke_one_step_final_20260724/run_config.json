@@ -1,0 +1,35 @@
+{
+  "data": {
+    "dev_samples": 1,
+    "files": {
+      "dev": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl",
+        "sha256": "063afd3b5bd0aea50faf5a50ac628fc630f5ae01788953f33e6b589285ba8e7e"
+      },
+      "train": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/train.jsonl",
+        "sha256": "bb7d1db79b820f540a12a06b05f5b0a2aff33529df29300b99fdfe262377df31"
+      }
+    },
+    "person_only": true,
+    "person_samples": 1,
+    "replay_samples": 0,
+    "train_samples": 1
+  },
+  "epochs": 1,
+  "gradient_accumulation_steps": 1,
+  "label_smoothing": 0.05,
+  "learning_rates": {
+    "language": 2e-06,
+    "projection": 1e-06,
+    "vision": 2e-07
+  },
+  "model_source": "/data1/work/MichaelYu/florence-attibute/pretrained/Florence-2-base",
+  "per_device_batch_size": 1,
+  "person_only": true,
+  "seed": 20260720,
+  "steps_per_epoch": 1,
+  "total_steps": 1,
+  "weight_decay": 0.01,
+  "world_size": 1
+}

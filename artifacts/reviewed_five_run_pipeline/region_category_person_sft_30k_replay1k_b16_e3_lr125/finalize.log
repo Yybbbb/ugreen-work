@@ -1,0 +1,175 @@
+
+[2026-08-09T13:39:06.450884+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/finalize_qwen_attribute_evaluation.py --predictions /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b16_e3_lr125/test_inference_final/predictions.jsonl --extraction /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b16_e3_lr125/test_inference_final/qwen_attribute_extraction.jsonl --output-dir /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b16_e3_lr125/test_inference_final/evaluation_qwen_final --base-url http://127.0.0.1:6097/v1 --model Qwen36-35b-caption --expected-samples 4328
+{
+  "input": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b16_e3_lr125/test_inference_final/evaluation_qwen_final/qwen_retry_input.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b16_e3_lr125/test_inference_final/evaluation_qwen_final/qwen_retry_output.jsonl",
+  "model": "Qwen36-35b-caption",
+  "base_url": "http://127.0.0.1:6097/v1",
+  "batch_size": 1,
+  "workers": 4,
+  "submitted": 8,
+  "completed": 8,
+  "errors": 0
+}
+{
+  "samples": 4328,
+  "input_lines": 4336,
+  "duplicate_lines": 8,
+  "extractor_failures": 0,
+  "micro": {
+    "precision": 0.7055797610681659,
+    "recall": 0.5756317937898454,
+    "f1": 0.6340157360983063
+  },
+  "soft_micro": {
+    "precision": 0.7731659957127279,
+    "recall": 0.6307705429867504,
+    "f1": 0.6947469796410822
+  },
+  "macro_field_f1": 0.5070389316527716,
+  "mean_field_exact": 0.5756317937898454,
+  "known_attributes": 43606,
+  "unknown_slots": 38957,
+  "unknown_extra_count": 9600,
+  "unknown_extra_rate": 0.24642554611494724,
+  "caption": {
+    "average_words": 21.342190388170057,
+    "p95_words": 30,
+    "length_18_24_ratio": 0.48590573012939003,
+    "empty_ratio": 0.0,
+    "single_sentence_ratio": 1.0,
+    "subject_start_ratio": 0.9817467652495379,
+    "background_keyword_ratio": 0.0006931608133086876,
+    "special_token_ratio": 0.0
+  },
+  "per_field": {
+    "age_group": {
+      "precision": 0.8486682808716707,
+      "recall": 0.8419409079990392,
+      "f1": 0.8452912094537561,
+      "known": 4163,
+      "exact": 0.8419409079990392
+    },
+    "gender": {
+      "precision": 0.9073170731707317,
+      "recall": 0.883843717001056,
+      "f1": 0.8954265846483017,
+      "known": 3788,
+      "exact": 0.883843717001056
+    },
+    "upper_garment.type": {
+      "precision": 0.5498026468539586,
+      "recall": 0.5480212913677389,
+      "f1": 0.5489105238757532,
+      "known": 4321,
+      "exact": 0.5480212913677389
+    },
+    "upper_garment.color": {
+      "precision": 0.6417910447761194,
+      "recall": 0.6386138613861386,
+      "f1": 0.6401985111662531,
+      "known": 1414,
+      "exact": 0.6386138613861386
+    },
+    "upper_garment.length": {
+      "precision": 0.8211122047244095,
+      "recall": 0.781315851088738,
+      "f1": 0.8007198560287943,
+      "known": 4271,
+      "exact": 0.781315851088738
+    },
+    "lower_garment.type": {
+      "precision": 0.829954954954955,
+      "recall": 0.7813411078717201,
+      "f1": 0.8049146757679181,
+      "known": 3773,
+      "exact": 0.7813411078717201
+    },
+    "lower_garment.color": {
+      "precision": 0.5765391014975042,
+      "recall": 0.5606796116504854,
+      "f1": 0.5684987694831829,
+      "known": 1236,
+      "exact": 0.5606796116504854
+    },
+    "lower_garment.length": {
+      "precision": 0.7000443066016836,
+      "recall": 0.4478458049886621,
+      "f1": 0.5462402765773552,
+      "known": 3528,
+      "exact": 0.4478458049886621
+    },
+    "shoes.type": {
+      "precision": 0.6925238898257448,
+      "recall": 0.4689760182717929,
+      "f1": 0.5592374035406263,
+      "known": 2627,
+      "exact": 0.4689760182717929
+    },
+    "shoes.color": {
+      "precision": 0.6893491124260355,
+      "recall": 0.535632183908046,
+      "f1": 0.6028460543337646,
+      "known": 870,
+      "exact": 0.535632183908046
+    },
+    "head.accessories": {
+      "precision": 0.6959706959706959,
+      "recall": 0.4846938775510204,
+      "f1": 0.5714285714285714,
+      "known": 392,
+      "exact": 0.4846938775510204
+    },
+    "head.hairstyle": {
+      "precision": 0.347949080622348,
+      "recall": 0.1130514705882353,
+      "f1": 0.17065556711758587,
+      "known": 2176,
+      "exact": 0.1130514705882353
+    },
+    "head.hair_color": {
+      "precision": 0.380873410724157,
+      "recall": 0.35708732832339984,
+      "f1": 0.3685970308947438,
+      "known": 3859,
+      "exact": 0.35708732832339984
+    },
+    "head.hair_length": {
+      "precision": 0.9056915949702184,
+      "recall": 0.7425393380358112,
+      "f1": 0.8160405485986882,
+      "known": 3686,
+      "exact": 0.7425393380358112
+    },
+    "carried_items.handbag": {
+      "precision": 0.03867403314917127,
+      "recall": 0.02108433734939759,
+      "f1": 0.02729044834307992,
+      "known": 332,
+      "exact": 0.02108433734939759
+    },
+    "carried_items.backpack": {
+      "precision": 0.06818181818181818,
+      "recall": 0.041237113402061855,
+      "f1": 0.05139186295503212,
+      "known": 291,
+      "exact": 0.041237113402061855
+    },
+    "handheld_items.dangerous_item": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "known": 21,
+      "exact": 0.0
+    },
+    "handheld_items.mobile_phone": {
+      "precision": 0.4630225080385852,
+      "recall": 0.2318840579710145,
+      "f1": 0.3090128755364807,
+      "known": 621,
+      "exact": 0.2318840579710145
+    }
+  },
+  "initial_extraction_rows": 4328,
+  "retried_samples": 8
+}

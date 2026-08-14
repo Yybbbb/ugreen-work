@@ -1,0 +1,52 @@
+{
+  "adam_betas": [
+    0.9,
+    0.999
+  ],
+  "adam_eps": 1e-08,
+  "data": {
+    "data_loading": {
+      "format": "prepared_jsonl_byte_offsets",
+      "rows_materialized": false,
+      "shuffle": "DistributedSampler per epoch"
+    },
+    "dev_samples": 2000,
+    "files": {
+      "dev": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl",
+        "sha256": "a725317ca6b3df1a58992975d02b6e9020b6ae9832c22652e23b2f9e3da4b7f9"
+      },
+      "train": {
+        "path": "/data1/work/MichaelYu/florence-attibute/data/prepared/train.jsonl",
+        "sha256": "4752fe4631a27d873bc053caff16ab712b4a09d23ee6ab1ce98fe14ee7d5c575"
+      }
+    },
+    "person_only": true,
+    "person_samples": 30000,
+    "replay_samples": 0,
+    "train_samples": 30000
+  },
+  "dev_num_workers_per_rank": 0,
+  "epochs": 3,
+  "formal_global_batch_size": 16,
+  "global_batch_size": 16,
+  "gradient_accumulation_steps": 1,
+  "label_smoothing": 0.05,
+  "learning_rates": {
+    "language": 1.25e-06,
+    "projection": 7.5e-07,
+    "vision": 2e-07
+  },
+  "min_lr_ratio": 0.03,
+  "model_source": "/data1/work/MichaelYu/florence-attibute/pretrained/Florence-2-base",
+  "num_workers_per_rank": 6,
+  "per_device_batch_size": 4,
+  "person_only": true,
+  "prefetch_factor": 1,
+  "seed": 20260720,
+  "steps_per_epoch": 1875,
+  "total_steps": 5625,
+  "warmup_ratio": 0.05,
+  "weight_decay": 0.015,
+  "world_size": 4
+}

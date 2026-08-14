@@ -1,0 +1,19 @@
+{
+  "average_words": 20.9453125,
+  "background_keyword_ratio": 0.0,
+  "dev_loss": 1.363794941288945,
+  "empty_outputs": 0,
+  "empty_ratio": 0.0,
+  "extractor_failures": 4,
+  "global_step": 500,
+  "length_18_24_ratio": 0.5546875,
+  "max_reward": 0.5890909090909091,
+  "mean_fabrication_ratio": 0.04047098734598734,
+  "mean_reward": 0.39458121379292077,
+  "mean_soft_f1": 0.7046583968282892,
+  "min_reward": 0.05,
+  "p95_words": 30,
+  "samples": 128,
+  "single_sentence_ratio": 1.0,
+  "subject_start_ratio": 1.0
+}

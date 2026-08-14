@@ -1,0 +1,14 @@
+{
+  "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_lexical/final",
+  "test_data": "/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/evaluation/lexical_rl/inference/predictions.jsonl",
+  "samples": 4328,
+  "world_size": 4,
+  "batch_size_per_rank": 4,
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 64
+  },
+  "completed_at": "2026-08-11T09:08:17.586215+00:00"
+}

@@ -1,0 +1,123 @@
+
+[2026-08-09T11:49:43.673861+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/torchrun --standalone --nproc_per_node=4 --master_port=29831 /data1/work/MichaelYu/florence-attibute/scripts/infer_person_attribute.py --checkpoint /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b32_e1p5/final --test-data /data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl --output-dir /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b32_e1p5/test_inference_final --batch-size 4 --max-new-tokens 64
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+2026-08-09 19:49:55,998 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-09 19:49:55,999 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-09 19:49:55,999 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-09 19:49:56,070 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-09 19:50:03,259 INFO rank=0 generated=40
+2026-08-09 19:50:03,374 INFO rank=1 generated=40
+2026-08-09 19:50:03,787 INFO rank=3 generated=40
+2026-08-09 19:50:03,809 INFO rank=2 generated=40
+2026-08-09 19:50:07,538 INFO rank=0 generated=80
+2026-08-09 19:50:07,613 INFO rank=1 generated=80
+2026-08-09 19:50:08,085 INFO rank=2 generated=80
+2026-08-09 19:50:08,117 INFO rank=3 generated=80
+2026-08-09 19:50:11,722 INFO rank=0 generated=120
+2026-08-09 19:50:11,803 INFO rank=1 generated=120
+2026-08-09 19:50:12,309 INFO rank=3 generated=120
+2026-08-09 19:50:12,315 INFO rank=2 generated=120
+2026-08-09 19:50:15,776 INFO rank=0 generated=160
+2026-08-09 19:50:15,879 INFO rank=1 generated=160
+2026-08-09 19:50:16,408 INFO rank=3 generated=160
+2026-08-09 19:50:16,479 INFO rank=2 generated=160
+2026-08-09 19:50:19,866 INFO rank=0 generated=200
+2026-08-09 19:50:19,950 INFO rank=1 generated=200
+2026-08-09 19:50:20,474 INFO rank=2 generated=200
+2026-08-09 19:50:20,537 INFO rank=3 generated=200
+2026-08-09 19:50:23,968 INFO rank=0 generated=240
+2026-08-09 19:50:24,090 INFO rank=1 generated=240
+2026-08-09 19:50:24,730 INFO rank=2 generated=240
+2026-08-09 19:50:24,753 INFO rank=3 generated=240
+2026-08-09 19:50:28,006 INFO rank=0 generated=280
+2026-08-09 19:50:28,357 INFO rank=1 generated=280
+2026-08-09 19:50:28,979 INFO rank=2 generated=280
+2026-08-09 19:50:29,124 INFO rank=3 generated=280
+2026-08-09 19:50:31,990 INFO rank=0 generated=320
+2026-08-09 19:50:32,234 INFO rank=1 generated=320
+2026-08-09 19:50:33,081 INFO rank=2 generated=320
+2026-08-09 19:50:33,141 INFO rank=3 generated=320
+2026-08-09 19:50:36,039 INFO rank=0 generated=360
+2026-08-09 19:50:36,233 INFO rank=1 generated=360
+2026-08-09 19:50:37,102 INFO rank=2 generated=360
+2026-08-09 19:50:37,171 INFO rank=3 generated=360
+2026-08-09 19:50:40,291 INFO rank=0 generated=400
+2026-08-09 19:50:40,345 INFO rank=1 generated=400
+2026-08-09 19:50:41,254 INFO rank=3 generated=400
+2026-08-09 19:50:41,365 INFO rank=2 generated=400
+2026-08-09 19:50:44,304 INFO rank=0 generated=440
+2026-08-09 19:50:44,317 INFO rank=1 generated=440
+2026-08-09 19:50:45,370 INFO rank=3 generated=440
+2026-08-09 19:50:45,452 INFO rank=2 generated=440
+2026-08-09 19:50:48,443 INFO rank=0 generated=480
+2026-08-09 19:50:48,472 INFO rank=1 generated=480
+2026-08-09 19:50:49,556 INFO rank=3 generated=480
+2026-08-09 19:50:49,624 INFO rank=2 generated=480
+2026-08-09 19:50:52,701 INFO rank=0 generated=520
+2026-08-09 19:50:52,879 INFO rank=1 generated=520
+2026-08-09 19:50:53,789 INFO rank=3 generated=520
+2026-08-09 19:50:53,968 INFO rank=2 generated=520
+2026-08-09 19:50:56,803 INFO rank=0 generated=560
+2026-08-09 19:50:57,027 INFO rank=1 generated=560
+2026-08-09 19:50:57,904 INFO rank=3 generated=560
+2026-08-09 19:50:57,973 INFO rank=2 generated=560
+2026-08-09 19:51:00,933 INFO rank=0 generated=600
+2026-08-09 19:51:01,362 INFO rank=1 generated=600
+2026-08-09 19:51:02,068 INFO rank=3 generated=600
+2026-08-09 19:51:02,111 INFO rank=2 generated=600
+2026-08-09 19:51:05,245 INFO rank=0 generated=640
+2026-08-09 19:51:05,683 INFO rank=1 generated=640
+2026-08-09 19:51:06,382 INFO rank=3 generated=640
+2026-08-09 19:51:06,448 INFO rank=2 generated=640
+2026-08-09 19:51:10,558 INFO rank=0 generated=680
+2026-08-09 19:51:10,975 INFO rank=1 generated=680
+2026-08-09 19:51:11,565 INFO rank=2 generated=680
+2026-08-09 19:51:11,579 INFO rank=3 generated=680
+2026-08-09 19:51:14,953 INFO rank=0 generated=720
+2026-08-09 19:51:15,517 INFO rank=1 generated=720
+2026-08-09 19:51:15,986 INFO rank=3 generated=720
+2026-08-09 19:51:16,022 INFO rank=2 generated=720
+2026-08-09 19:51:25,145 INFO rank=0 generated=760
+2026-08-09 19:51:25,753 INFO rank=1 generated=760
+2026-08-09 19:51:26,056 INFO rank=2 generated=760
+2026-08-09 19:51:26,363 INFO rank=3 generated=760
+2026-08-09 19:51:35,479 INFO rank=0 generated=800
+2026-08-09 19:51:36,031 INFO rank=2 generated=800
+2026-08-09 19:51:36,220 INFO rank=1 generated=800
+2026-08-09 19:51:36,541 INFO rank=3 generated=800
+2026-08-09 19:51:44,388 INFO rank=0 generated=840
+2026-08-09 19:51:44,848 INFO rank=2 generated=840
+2026-08-09 19:51:45,165 INFO rank=1 generated=840
+2026-08-09 19:51:45,397 INFO rank=3 generated=840
+2026-08-09 19:51:49,932 INFO rank=0 generated=880
+2026-08-09 19:51:50,542 INFO rank=2 generated=880
+2026-08-09 19:51:50,614 INFO rank=1 generated=880
+2026-08-09 19:51:51,194 INFO rank=3 generated=880
+2026-08-09 19:51:55,927 INFO rank=0 generated=920
+2026-08-09 19:51:56,361 INFO rank=2 generated=920
+2026-08-09 19:51:56,426 INFO rank=1 generated=920
+2026-08-09 19:51:57,361 INFO rank=3 generated=920
+2026-08-09 19:52:01,436 INFO rank=0 generated=960
+2026-08-09 19:52:01,734 INFO rank=1 generated=960
+2026-08-09 19:52:01,747 INFO rank=2 generated=960
+2026-08-09 19:52:03,341 INFO rank=3 generated=960
+2026-08-09 19:52:07,693 INFO rank=0 generated=1000
+2026-08-09 19:52:07,802 INFO rank=2 generated=1000
+2026-08-09 19:52:07,945 INFO rank=1 generated=1000
+2026-08-09 19:52:09,375 INFO rank=3 generated=1000
+2026-08-09 19:52:13,134 INFO rank=1 generated=1040
+2026-08-09 19:52:13,151 INFO rank=0 generated=1040
+2026-08-09 19:52:13,261 INFO rank=2 generated=1040
+2026-08-09 19:52:14,753 INFO rank=3 generated=1040
+2026-08-09 19:52:18,612 INFO rank=1 generated=1080
+2026-08-09 19:52:18,765 INFO rank=2 generated=1080
+2026-08-09 19:52:18,889 INFO rank=0 generated=1080
+[rank1]:[W809 19:52:19.355010829 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank2]:[W809 19:52:19.544159468 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+[rank0]:[W809 19:52:19.622929325 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+2026-08-09 19:52:20,288 INFO rank=3 generated=1080
+[rank3]:[W809 19:52:20.000914434 ProcessGroupNCCL.cpp:4115] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device,or call init_process_group() with a device_id.
+2026-08-09 19:52:21,461 INFO merged 4328 test predictions into /data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b32_e1p5/test_inference_final/predictions.jsonl

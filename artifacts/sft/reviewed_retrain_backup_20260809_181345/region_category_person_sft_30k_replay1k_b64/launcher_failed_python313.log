@@ -1,0 +1,155 @@
+/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/cuda/__init__.py:187: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 12040). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at /pytorch/c10/cuda/CUDAFunctions.cpp:119.)
+  return torch._C._cuda_getDeviceCount() > 0
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 436, in load_training_runtime
+    from transformers import (
+    ...<4 lines>...
+    )
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 436, in load_training_runtime
+    from transformers import (
+    ...<4 lines>...
+    )
+ModuleNotFoundError: No module named 'transformers'
+ModuleNotFoundError: No module named 'transformers'
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 436, in load_training_runtime
+    from transformers import (
+    ...<4 lines>...
+    )
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+ModuleNotFoundError: No module named 'transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1276, in <module>
+    main()
+    ~~~~^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1272, in main
+    train(parse_args())
+    ~~~~~^^^^^^^^^^^^^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 807, in train
+    runtime = load_training_runtime()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 443, in load_training_runtime
+    raise RuntimeError(
+        "Training requires torch, transformers, safetensors, Pillow and tqdm"
+    ) from error
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1276, in <module>
+    main()
+    ~~~~^^
+RuntimeError: Training requires torch, transformers, safetensors, Pillow and tqdm
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1272, in main
+    train(parse_args())
+    ~~~~~^^^^^^^^^^^^^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 807, in train
+    runtime = load_training_runtime()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 443, in load_training_runtime
+    raise RuntimeError(
+        "Training requires torch, transformers, safetensors, Pillow and tqdm"
+    ) from error
+RuntimeError: Training requires torch, transformers, safetensors, Pillow and tqdm
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1276, in <module>
+    main()
+    ~~~~^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1272, in main
+    train(parse_args())
+    ~~~~~^^^^^^^^^^^^^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 807, in train
+    runtime = load_training_runtime()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 443, in load_training_runtime
+    raise RuntimeError(
+        "Training requires torch, transformers, safetensors, Pillow and tqdm"
+    ) from error
+RuntimeError: Training requires torch, transformers, safetensors, Pillow and tqdm
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 436, in load_training_runtime
+    from transformers import (
+    ...<4 lines>...
+    )
+ModuleNotFoundError: No module named 'transformers'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1276, in <module>
+    main()
+    ~~~~^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1272, in main
+    train(parse_args())
+    ~~~~~^^^^^^^^^^^^^^
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 807, in train
+    runtime = load_training_runtime()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 443, in load_training_runtime
+    raise RuntimeError(
+        "Training requires torch, transformers, safetensors, Pillow and tqdm"
+    ) from error
+RuntimeError: Training requires torch, transformers, safetensors, Pillow and tqdm
+E0806 17:44:11.203000 1346127 site-packages/torch/distributed/elastic/multiprocessing/api.py:988] failed (exitcode: 1) local_rank: 0 (pid: 1346223) of binary: /data1/work/MichaelYu/miniconda3/bin/python3.13
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/miniconda3/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 367, in wrapper
+    return f(*args, **kwargs)
+  File "/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/distributed/run.py", line 1016, in main
+    run(args)
+    ~~~^^^^^^
+  File "/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/distributed/run.py", line 1007, in run
+    elastic_launch(
+    ~~~~~~~~~~~~~~~
+        config=config,
+        ~~~~~~~~~~~~~~
+        entrypoint=cmd,
+        ~~~~~~~~~~~~~~~
+    )(*cmd_args)
+    ~^^^^^^^^^^^
+  File "/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 191, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data1/work/MichaelYu/miniconda3/lib/python3.13/site-packages/torch/distributed/launcher/api.py", line 371, in launch_agent
+    raise ChildFailedError(
+    ...<2 lines>...
+    )
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+scripts/train_person_attribute_sft.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-08-06_17:44:11
+  host      : amax
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1346224) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-08-06_17:44:11
+  host      : amax
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 1346225) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-08-06_17:44:11
+  host      : amax
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 1346226) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-08-06_17:44:11
+  host      : amax
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1346223) 
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================

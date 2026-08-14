@@ -1,0 +1,130 @@
+{
+  "alpha": {
+    "end": 0.5,
+    "start": 0.1
+  },
+  "data": {
+    "dev_path": "/data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl",
+    "dev_sha256": "a725317ca6b3df1a58992975d02b6e9020b6ae9832c22652e23b2f9e3da4b7f9",
+    "schema": "florence_person_rl_v1",
+    "task": "<REGION_TO_CATEGORY>",
+    "train_path": "/data1/work/MichaelYu/florence-attibute/data/prepared/rl.jsonl",
+    "train_samples": 5981,
+    "train_sha256": "d0b42e627e4e8913421915a6c27b3706aaf03bc582c5ff1c4fa1d97354859b60"
+  },
+  "data_loading": {
+    "num_workers": 4,
+    "prefetch_factor": 1
+  },
+  "distributed": {
+    "timeout_minutes": 60
+  },
+  "epochs": 1,
+  "evaluation": {
+    "dev_num_workers": 0,
+    "eval_steps": 100,
+    "generation_samples": 128,
+    "reward_batch_size": 4
+  },
+  "formal_global_batch_size": 8,
+  "generation": {
+    "max_new_tokens": 64,
+    "prompt_max_length": 1024,
+    "target_max_length": 64,
+    "temperature": 0.8,
+    "top_p": 0.95
+  },
+  "global_batch_size": 8,
+  "gradient_accumulation_steps": 1,
+  "label_smoothing": 0.05,
+  "learning_rates": {
+    "language": 2e-07,
+    "projection": 2e-07,
+    "vision": 5e-08
+  },
+  "max_optimizer_steps": 0,
+  "model_source": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final",
+  "optimizer": {
+    "adam_betas": [
+      0.9,
+      0.999
+    ],
+    "adam_eps": 1e-08,
+    "max_grad_norm": 1.0,
+    "weight_decay": 0.01
+  },
+  "per_device_batch_size": 2,
+  "precision": "bf16",
+  "reward": {
+    "client_code_sha256": "2c55e5d2ee6811f91da59fbfa8d62c0779b8d86e742c89fc988bedfd734a5601",
+    "extractor_base_url": "http://127.0.0.1:6097/v1",
+    "extractor_model": "Qwen3.6-27B-FP8",
+    "extractor_prompt_code_sha256": "7553f9dad414c249e9ca3283ff589eeac55d3422dde83faf958e456a7de95205",
+    "judge_base_url": "http://127.0.0.1:6098/v1",
+    "judge_model": "Qwen3.5-4B",
+    "judge_request_concurrency": 16,
+    "matcher": "lexical",
+    "reward_code_sha256": "22c674f9cb390ef5d15fc75b7b8c0150c058e1ad87208f4b97d0d62fe1adb2d7",
+    "service_config_code_sha256": "3a2baa23a6fe03a6c53fd54ab761f30038ffc35e5b6a21245daf6caab00a6b58",
+    "service_preflight_skipped": false,
+    "services": {
+      "extractor": {
+        "base_url": "http://127.0.0.1:6097/v1",
+        "container_name": "vllm-qwen36-27b-fp8",
+        "container_port": 8000,
+        "enable_thinking": false,
+        "environment": {
+          "VLLM_TEST_FORCE_FP8_MARLIN": "1"
+        },
+        "gpu": 1,
+        "gpu_memory_utilization": 0.9,
+        "host_port": 6097,
+        "image": "docker.m.daocloud.io/vllm/vllm-openai:v0.19.1",
+        "max_model_len": 65536,
+        "max_num_batched_tokens": 8192,
+        "max_num_seqs": 64,
+        "model": "Qwen3.6-27B-FP8",
+        "model_path": "/data1/work/MichaelYu/models/Qwen3.6-27B-FP8",
+        "role": "extractor",
+        "swap_space_gib": null,
+        "tensor_parallel_size": 1,
+        "vllm_version": "0.19.1"
+      },
+      "judge": {
+        "base_url": "http://127.0.0.1:6098/v1",
+        "container_name": "vllm-qwen35-4b",
+        "container_port": 8000,
+        "enable_thinking": false,
+        "environment": {},
+        "gpu": 2,
+        "gpu_memory_utilization": 0.9,
+        "host_port": 6098,
+        "image": "docker.m.daocloud.io/vllm/vllm-openai:qwen3_5",
+        "max_model_len": 32768,
+        "max_num_batched_tokens": 65536,
+        "max_num_seqs": 128,
+        "model": "Qwen3.5-4B",
+        "model_path": "/data1/work/MichaelYu/models/Qwen3.5-4B",
+        "role": "judge",
+        "swap_space_gib": 8,
+        "tensor_parallel_size": 1,
+        "vllm_version": null
+      }
+    },
+    "weights": {
+      "background": 0.1,
+      "f1": 0.4,
+      "fabrication": 0.4,
+      "length": 0.1,
+      "structure": 0.1
+    }
+  },
+  "scheduler": {
+    "min_lr_ratio": 0.1,
+    "warmup_ratio": 0.05
+  },
+  "seed": 20260720,
+  "steps_per_epoch": 748,
+  "total_steps": 748,
+  "world_size": 4
+}

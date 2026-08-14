@@ -1,0 +1,198 @@
+
+[2026-08-09T10:13:45.486156+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/torchrun --standalone --nproc_per_node=4 --master_port=29810 /data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py --train-data /data1/work/MichaelYu/florence-attibute/data/prepared/train.jsonl --dev-data /data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl --replay-data /data1/work/MichaelYu/florence-attibute/data/prepared/native_replay.jsonl --model-path /data1/work/MichaelYu/florence-attibute/pretrained/Florence-2-base --output-root /data1/work/MichaelYu/florence-attibute/artifacts/sft --run-name region_category_person_sft_30k_replay1k_b64 --formal-global-batch-size 64 --per-device-batch-size 4 --gradient-accumulation-steps 4 --vision-lr 1e-07 --projection-lr 5e-07 --language-lr 1e-06 --weight-decay 0.01 --label-smoothing 0.05 --warmup-ratio 0.05 --min-lr-ratio 0.1 --eval-steps 50 --log-steps 10 --num-workers 6 --dev-num-workers 0 --prefetch-factor 1 --epochs 1 --max-optimizer-steps 485
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1317, in <module>
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1313, in main
+    train(parse_args())
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 831, in train
+    train_rows, dev_rows, data_metadata = load_training_data(args)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 389, in load_training_data
+    train_index = IndexedJsonlRows(train_sources)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 315, in __init__
+    raise ValueError(f"Duplicate sample_id: {sample_id}")
+ValueError: Duplicate sample_id: tradeshow/2025-11-25_04-07-52/frame_4040.json#1
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1317, in <module>
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1313, in main
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1317, in <module>
+    train(parse_args())
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 831, in train
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1313, in main
+    train_rows, dev_rows, data_metadata = load_training_data(args)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 389, in load_training_data
+    train_index = IndexedJsonlRows(train_sources)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 315, in __init__
+    raise ValueError(f"Duplicate sample_id: {sample_id}")
+ValueError: Duplicate sample_id: tradeshow/2025-11-25_04-07-52/frame_4040.json#1
+    train(parse_args())
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 831, in train
+    train_rows, dev_rows, data_metadata = load_training_data(args)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 389, in load_training_data
+    train_index = IndexedJsonlRows(train_sources)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 315, in __init__
+    raise ValueError(f"Duplicate sample_id: {sample_id}")
+ValueError: Duplicate sample_id: tradeshow/2025-11-25_04-07-52/frame_4040.json#1
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1317, in <module>
+    main()
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 1313, in main
+    train(parse_args())
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 831, in train
+    train_rows, dev_rows, data_metadata = load_training_data(args)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 389, in load_training_data
+    train_index = IndexedJsonlRows(train_sources)
+  File "/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py", line 315, in __init__
+    raise ValueError(f"Duplicate sample_id: {sample_id}")
+ValueError: Duplicate sample_id: tradeshow/2025-11-25_04-07-52/frame_4040.json#1
+E0809 18:13:48.299000 2094596 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 2094671) of binary: /data1/work/MichaelYu/miniconda3/envs/florence/bin/python3.10
+Traceback (most recent call last):
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/bin/torchrun", line 6, in <module>
+    sys.exit(main())
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+/data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2026-08-09_18:13:48
+  host      : amax
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 2094672)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[2]:
+  time      : 2026-08-09_18:13:48
+  host      : amax
+  rank      : 2 (local_rank: 2)
+  exitcode  : 1 (pid: 2094673)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+[3]:
+  time      : 2026-08-09_18:13:48
+  host      : amax
+  rank      : 3 (local_rank: 3)
+  exitcode  : 1 (pid: 2094674)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2026-08-09_18:13:48
+  host      : amax
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 2094671)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+
+[2026-08-09T10:16:15.648064+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/torchrun --standalone --nproc_per_node=4 --master_port=29810 /data1/work/MichaelYu/florence-attibute/scripts/train_person_attribute_sft.py --train-data /data1/work/MichaelYu/florence-attibute/data/prepared/train.jsonl --dev-data /data1/work/MichaelYu/florence-attibute/data/prepared/dev.jsonl --replay-data /data1/work/MichaelYu/florence-attibute/data/prepared/native_replay.jsonl --model-path /data1/work/MichaelYu/florence-attibute/pretrained/Florence-2-base --output-root /data1/work/MichaelYu/florence-attibute/artifacts/sft --run-name region_category_person_sft_30k_replay1k_b64 --formal-global-batch-size 64 --per-device-batch-size 4 --gradient-accumulation-steps 4 --vision-lr 1e-07 --projection-lr 5e-07 --language-lr 1e-06 --weight-decay 0.01 --label-smoothing 0.05 --warmup-ratio 0.05 --min-lr-ratio 0.1 --eval-steps 50 --log-steps 10 --num-workers 6 --dev-num-workers 0 --prefetch-factor 1 --epochs 1 --max-optimizer-steps 485
+2026-08-09 18:16:28,439 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-09 18:16:28,725 INFO parameter groups: {'vision': {'tensors': 400, 'parameters': 90368000}, 'projection': {'tensors': 5, 'parameters': 839168}, 'language': {'tensors': 259, 'parameters': 140206848}}
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1024, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [1024, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1024, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [1024, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1024, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [1024, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/torch/autograd/graph.py:825: UserWarning: Grad strides do not match bucket view strides. This may indicate grad was not created according to the gradient layout contract, or that the param's strides changed since DDP was constructed.  This is not an error, but may impair performance.
+grad.sizes() = [1024, 1, 3, 3], strides() = [9, 1, 3, 1]
+bucket_view.sizes() = [1024, 1, 3, 3], strides() = [9, 9, 3, 1] (Triggered internally at ../torch/csrc/distributed/c10d/reducer.cpp:327.)
+  return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+2026-08-09 18:16:36,791 INFO epoch=1 step=1/485 loss=3.903985 grad_norm=33.2805 lr=[4e-08, 4e-08, 2e-08, 2e-08, 4e-09, 4e-09]
+2026-08-09 18:16:46,765 INFO epoch=1 step=10/485 loss=3.462282 grad_norm=22.0993 lr=[4e-07, 4e-07, 2e-07, 2e-07, 4e-08, 4e-08]
+2026-08-09 18:16:55,283 INFO epoch=1 step=20/485 loss=3.425942 grad_norm=19.8129 lr=[8e-07, 8e-07, 4e-07, 4e-07, 8e-08, 8e-08]
+2026-08-09 18:17:03,617 INFO epoch=1 step=30/485 loss=3.017550 grad_norm=14.9755 lr=[9.997376600647783e-07, 9.997376600647783e-07, 4.998688300323891e-07, 4.998688300323891e-07, 9.997376600647782e-08, 9.997376600647782e-08]
+2026-08-09 18:17:12,115 INFO epoch=1 step=40/485 loss=2.459900 grad_norm=15.2813 lr=[9.976407754861425e-07, 9.976407754861425e-07, 4.988203877430712e-07, 4.988203877430712e-07, 9.976407754861426e-08, 9.976407754861426e-08]
+2026-08-09 18:17:20,183 INFO epoch=1 step=50/485 loss=2.419841 grad_norm=11.0919 lr=[9.934567829727386e-07, 9.934567829727386e-07, 4.967283914863693e-07, 4.967283914863693e-07, 9.934567829727385e-08, 9.934567829727385e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:19:06,915 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 5.0, 'p95_words': 5, 'length_18_24_ratio': 0.0, 'single_sentence_ratio': 0.0, 'subject_start_ratio': 0.0, 'dev_loss': 2.3729158626960505, 'global_step': 50}
+Removed shared tensor {'language_model.model.decoder.embed_tokens.weight', 'language_model.model.encoder.embed_tokens.weight'} while saving. This should be OK, but check by verifying that you don't receive any warning while reloading
+2026-08-09 18:19:19,284 INFO epoch=1 step=60/485 loss=2.264657 grad_norm=15.9733 lr=[9.872051902290735e-07, 9.872051902290735e-07, 4.936025951145368e-07, 4.936025951145368e-07, 9.872051902290736e-08, 9.872051902290736e-08]
+2026-08-09 18:19:27,339 INFO epoch=1 step=70/485 loss=2.324627 grad_norm=6.8823 lr=[9.789151450663723e-07, 9.789151450663723e-07, 4.894575725331861e-07, 4.894575725331861e-07, 9.789151450663723e-08, 9.789151450663723e-08]
+2026-08-09 18:19:35,414 INFO epoch=1 step=80/485 loss=1.809443 grad_norm=6.3610 lr=[9.686252995020249e-07, 9.686252995020249e-07, 4.843126497510124e-07, 4.843126497510124e-07, 9.686252995020248e-08, 9.686252995020248e-08]
+2026-08-09 18:19:46,409 INFO epoch=1 step=90/485 loss=2.085450 grad_norm=5.7796 lr=[9.563836295460397e-07, 9.563836295460397e-07, 4.781918147730198e-07, 4.781918147730198e-07, 9.563836295460396e-08, 9.563836295460396e-08]
+2026-08-09 18:19:54,743 INFO epoch=1 step=100/485 loss=2.014100 grad_norm=5.8593 lr=[9.422472115147381e-07, 9.422472115147381e-07, 4.7112360575736906e-07, 4.7112360575736906e-07, 9.422472115147381e-08, 9.422472115147381e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:21:33,146 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 21.8984375, 'p95_words': 32, 'length_18_24_ratio': 0.640625, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 0.9921875, 'dev_loss': 1.8831234881957835, 'global_step': 100}
+2026-08-09 18:21:48,066 INFO epoch=1 step=110/485 loss=2.008749 grad_norm=6.1402 lr=[9.262819559146199e-07, 9.262819559146199e-07, 4.6314097795730997e-07, 4.6314097795730997e-07, 9.262819559146199e-08, 9.262819559146199e-08]
+2026-08-09 18:21:56,061 INFO epoch=1 step=120/485 loss=1.896490 grad_norm=6.0183 lr=[9.08562300137157e-07, 9.08562300137157e-07, 4.542811500685785e-07, 4.542811500685785e-07, 9.085623001371569e-08, 9.085623001371569e-08]
+2026-08-09 18:22:04,139 INFO epoch=1 step=130/485 loss=1.949471 grad_norm=5.2961 lr=[8.891708613973124e-07, 8.891708613973124e-07, 4.445854306986562e-07, 4.445854306986562e-07, 8.891708613973125e-08, 8.891708613973125e-08]
+2026-08-09 18:22:12,309 INFO epoch=1 step=140/485 loss=1.882446 grad_norm=5.6553 lr=[8.681980515339463e-07, 8.681980515339463e-07, 4.3409902576697315e-07, 4.3409902576697315e-07, 8.681980515339464e-08, 8.681980515339464e-08]
+2026-08-09 18:22:20,714 INFO epoch=1 step=150/485 loss=1.928655 grad_norm=4.9186 lr=[8.457416554680876e-07, 8.457416554680876e-07, 4.228708277340438e-07, 4.228708277340438e-07, 8.457416554680877e-08, 8.457416554680877e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:23:50,923 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.3046875, 'p95_words': 29, 'length_18_24_ratio': 0.6484375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.757784966208063, 'global_step': 150}
+2026-08-09 18:24:08,478 INFO epoch=1 step=160/485 loss=1.621402 grad_norm=5.0325 lr=[8.219063752844925e-07, 8.219063752844925e-07, 4.1095318764224625e-07, 4.1095318764224625e-07, 8.219063752844925e-08, 8.219063752844925e-08]
+2026-08-09 18:24:16,536 INFO epoch=1 step=170/485 loss=1.776559 grad_norm=12.0831 lr=[7.968033420621934e-07, 7.968033420621934e-07, 3.984016710310967e-07, 3.984016710310967e-07, 7.968033420621933e-08, 7.968033420621933e-08]
+2026-08-09 18:24:24,621 INFO epoch=1 step=180/485 loss=1.984556 grad_norm=5.5996 lr=[7.705495977301078e-07, 7.705495977301078e-07, 3.852747988650539e-07, 3.852747988650539e-07, 7.705495977301077e-08, 7.705495977301077e-08]
+2026-08-09 18:24:32,995 INFO epoch=1 step=190/485 loss=1.878413 grad_norm=5.4832 lr=[7.432675493635369e-07, 7.432675493635369e-07, 3.7163377468176843e-07, 3.7163377468176843e-07, 7.432675493635369e-08, 7.432675493635369e-08]
+2026-08-09 18:24:41,491 INFO epoch=1 step=200/485 loss=2.125302 grad_norm=5.1089 lr=[7.150843984658754e-07, 7.150843984658754e-07, 3.575421992329377e-07, 3.575421992329377e-07, 7.150843984658754e-08, 7.150843984658754e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:26:23,972 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.4921875, 'p95_words': 29, 'length_18_24_ratio': 0.59375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.701749228260263, 'global_step': 200}
+2026-08-09 18:26:39,523 INFO epoch=1 step=210/485 loss=1.545391 grad_norm=14.5523 lr=[6.861315478964841e-07, 6.861315478964841e-07, 3.4306577394824204e-07, 3.4306577394824204e-07, 6.861315478964841e-08, 6.861315478964841e-08]
+2026-08-09 18:26:47,971 INFO epoch=1 step=220/485 loss=2.085535 grad_norm=5.2560 lr=[6.565439892099009e-07, 6.565439892099009e-07, 3.2827199460495045e-07, 3.2827199460495045e-07, 6.56543989209901e-08, 6.56543989209901e-08]
+2026-08-09 18:27:13,509 INFO epoch=1 step=230/485 loss=1.874801 grad_norm=6.1138 lr=[6.264596732629e-07, 6.264596732629e-07, 3.1322983663145e-07, 3.1322983663145e-07, 6.264596732629e-08, 6.264596732629e-08]
+2026-08-09 18:27:31,175 INFO epoch=1 step=240/485 loss=1.805182 grad_norm=5.5431 lr=[5.960188670239154e-07, 5.960188670239154e-07, 2.980094335119577e-07, 2.980094335119577e-07, 5.960188670239153e-08, 5.960188670239153e-08]
+2026-08-09 18:27:39,352 INFO epoch=1 step=250/485 loss=1.955645 grad_norm=5.2603 lr=[5.653634995836856e-07, 5.653634995836856e-07, 2.826817497918428e-07, 2.826817497918428e-07, 5.653634995836856e-08, 5.653634995836856e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:29:12,733 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.296875, 'p95_words': 29, 'length_18_24_ratio': 0.5625, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.669721922776126, 'global_step': 250}
+2026-08-09 18:29:29,432 INFO epoch=1 step=260/485 loss=1.585035 grad_norm=6.0790 lr=[5.346365004163145e-07, 5.346365004163145e-07, 2.6731825020815723e-07, 2.6731825020815723e-07, 5.346365004163145e-08, 5.346365004163145e-08]
+2026-08-09 18:29:37,459 INFO epoch=1 step=270/485 loss=1.601773 grad_norm=6.7322 lr=[5.039811329760846e-07, 5.039811329760846e-07, 2.519905664880423e-07, 2.519905664880423e-07, 5.039811329760846e-08, 5.039811329760846e-08]
+2026-08-09 18:29:45,457 INFO epoch=1 step=280/485 loss=1.839758 grad_norm=8.1413 lr=[4.735403267371e-07, 4.735403267371e-07, 2.3677016336855e-07, 2.3677016336855e-07, 4.735403267371e-08, 4.735403267371e-08]
+2026-08-09 18:29:53,750 INFO epoch=1 step=290/485 loss=2.051888 grad_norm=4.8123 lr=[4.43456010790099e-07, 4.43456010790099e-07, 2.217280053950495e-07, 2.217280053950495e-07, 4.43456010790099e-08, 4.43456010790099e-08]
+2026-08-09 18:30:01,995 INFO epoch=1 step=300/485 loss=1.606504 grad_norm=5.2347 lr=[4.1386845210351593e-07, 4.1386845210351593e-07, 2.0693422605175797e-07, 2.0693422605175797e-07, 4.13868452103516e-08, 4.13868452103516e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:31:43,384 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.140625, 'p95_words': 29, 'length_18_24_ratio': 0.5859375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.6498605444433931, 'global_step': 300}
+2026-08-09 18:31:54,805 INFO epoch=1 step=310/485 loss=1.701228 grad_norm=5.4805 lr=[3.849156015341246e-07, 3.849156015341246e-07, 1.924578007670623e-07, 1.924578007670623e-07, 3.849156015341246e-08, 3.849156015341246e-08]
+2026-08-09 18:32:06,650 INFO epoch=1 step=320/485 loss=1.859334 grad_norm=8.2533 lr=[3.567324506364632e-07, 3.567324506364632e-07, 1.783662253182316e-07, 1.783662253182316e-07, 3.567324506364632e-08, 3.567324506364632e-08]
+2026-08-09 18:32:14,909 INFO epoch=1 step=330/485 loss=1.724572 grad_norm=5.3029 lr=[3.294504022698924e-07, 3.294504022698924e-07, 1.647252011349462e-07, 1.647252011349462e-07, 3.294504022698924e-08, 3.294504022698924e-08]
+2026-08-09 18:32:23,088 INFO epoch=1 step=340/485 loss=1.613260 grad_norm=5.4671 lr=[3.0319665793780646e-07, 3.0319665793780646e-07, 1.5159832896890323e-07, 1.5159832896890323e-07, 3.0319665793780646e-08, 3.0319665793780646e-08]
+2026-08-09 18:32:31,218 INFO epoch=1 step=350/485 loss=1.704866 grad_norm=5.2009 lr=[2.7809362471550746e-07, 2.7809362471550746e-07, 1.3904681235775373e-07, 1.3904681235775373e-07, 2.7809362471550747e-08, 2.7809362471550747e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:34:03,439 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.34375, 'p95_words': 29, 'length_18_24_ratio': 0.59375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.6383566618753798, 'global_step': 350}
+2026-08-09 18:34:15,890 INFO epoch=1 step=360/485 loss=1.772347 grad_norm=5.2631 lr=[2.542583445319123e-07, 2.542583445319123e-07, 1.2712917226595616e-07, 1.2712917226595616e-07, 2.542583445319123e-08, 2.542583445319123e-08]
+2026-08-09 18:34:24,165 INFO epoch=1 step=370/485 loss=1.808428 grad_norm=5.4600 lr=[2.3180194846605364e-07, 2.3180194846605364e-07, 1.1590097423302682e-07, 1.1590097423302682e-07, 2.3180194846605363e-08, 2.3180194846605363e-08]
+2026-08-09 18:34:32,602 INFO epoch=1 step=380/485 loss=1.446169 grad_norm=5.3472 lr=[2.1082913860268764e-07, 2.1082913860268764e-07, 1.0541456930134382e-07, 1.0541456930134382e-07, 2.1082913860268763e-08, 2.1082913860268763e-08]
+2026-08-09 18:34:43,216 INFO epoch=1 step=390/485 loss=1.641099 grad_norm=5.9274 lr=[1.9143769986284297e-07, 1.9143769986284297e-07, 9.571884993142148e-08, 9.571884993142148e-08, 1.91437699862843e-08, 1.91437699862843e-08]
+2026-08-09 18:34:51,281 INFO epoch=1 step=400/485 loss=1.929076 grad_norm=6.2500 lr=[1.737180440853802e-07, 1.737180440853802e-07, 8.68590220426901e-08, 8.68590220426901e-08, 1.737180440853802e-08, 1.737180440853802e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:36:24,302 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.2890625, 'p95_words': 29, 'length_18_24_ratio': 0.59375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.6303484355410722, 'global_step': 400}
+2026-08-09 18:36:39,237 INFO epoch=1 step=410/485 loss=1.897333 grad_norm=5.2882 lr=[1.577527884852619e-07, 1.577527884852619e-07, 7.887639424263094e-08, 7.887639424263094e-08, 1.5775278848526187e-08, 1.5775278848526187e-08]
+2026-08-09 18:36:47,454 INFO epoch=1 step=420/485 loss=1.941693 grad_norm=5.4753 lr=[1.4361637045396027e-07, 1.4361637045396027e-07, 7.180818522698013e-08, 7.180818522698013e-08, 1.4361637045396028e-08, 1.4361637045396028e-08]
+2026-08-09 18:36:55,805 INFO epoch=1 step=430/485 loss=2.102834 grad_norm=5.4214 lr=[1.3137470049797508e-07, 1.3137470049797508e-07, 6.568735024898754e-08, 6.568735024898754e-08, 1.3137470049797508e-08, 1.3137470049797508e-08]
+2026-08-09 18:37:03,783 INFO epoch=1 step=440/485 loss=1.723242 grad_norm=4.9908 lr=[1.2108485493362764e-07, 1.2108485493362764e-07, 6.054242746681382e-08, 6.054242746681382e-08, 1.2108485493362763e-08, 1.2108485493362763e-08]
+2026-08-09 18:37:11,780 INFO epoch=1 step=450/485 loss=1.270671 grad_norm=7.0668 lr=[1.1279480977092634e-07, 1.1279480977092634e-07, 5.639740488546317e-08, 5.639740488546317e-08, 1.1279480977092635e-08, 1.1279480977092635e-08]
+/data1/work/MichaelYu/miniconda3/envs/florence/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:453: UserWarning: `num_beams` is set to 1. However, `early_stopping` is set to `True` -- this flag is only used in beam-based generation modes. You should set `num_beams>1` or unset `early_stopping`.
+  warnings.warn(
+2026-08-09 18:38:45,248 INFO dev metrics: {'samples': 128, 'empty_outputs': 0, 'average_words': 22.234375, 'p95_words': 29, 'length_18_24_ratio': 0.5859375, 'single_sentence_ratio': 1.0, 'subject_start_ratio': 1.0, 'dev_loss': 1.627020957078518, 'global_step': 450}
+2026-08-09 18:38:56,536 INFO epoch=1 step=460/485 loss=1.540977 grad_norm=5.1122 lr=[1.0654321702726141e-07, 1.0654321702726141e-07, 5.3271608513630704e-08, 5.3271608513630704e-08, 1.0654321702726141e-08, 1.0654321702726141e-08]
+2026-08-09 18:39:08,502 INFO epoch=1 step=470/485 loss=1.542040 grad_norm=5.3785 lr=[1.0235922451385733e-07, 1.0235922451385733e-07, 5.1179612256928665e-08, 5.1179612256928665e-08, 1.0235922451385733e-08, 1.0235922451385733e-08]
+2026-08-09 18:39:16,876 INFO epoch=1 step=480/485 loss=1.694559 grad_norm=5.5648 lr=[1.0026233993522169e-07, 1.0026233993522169e-07, 5.0131169967610845e-08, 5.0131169967610845e-08, 1.002623399352217e-08, 1.002623399352217e-08]
+2026-08-09 18:39:23,386 INFO training stopped at optimizer step 485

@@ -1,0 +1,28 @@
+{
+  "bootstrap_replicates": 2000,
+  "candidates": [
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final",
+      "name": "v4b_sft"
+    },
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_qwen4b/final",
+      "name": "qwen_rl"
+    },
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_lexical/final",
+      "name": "lexical_rl"
+    }
+  ],
+  "gt_attributes": "/data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl",
+  "gt_attributes_sha256": "d95a678714f43c47fad0b8fbbffe84af438cf025d34438acb1a7d5b9d221b0e7",
+  "input_dir": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/evaluation_frozen_20260812",
+  "judge": {
+    "base_url": "http://127.0.0.1:6098/v1",
+    "model": "Qwen3.5-4B",
+    "workers": 64
+  },
+  "purpose": "qwen_attributes GT + list-aware scorer; corrections of the frozen evaluation",
+  "rescore": true,
+  "seed": 20260720
+}

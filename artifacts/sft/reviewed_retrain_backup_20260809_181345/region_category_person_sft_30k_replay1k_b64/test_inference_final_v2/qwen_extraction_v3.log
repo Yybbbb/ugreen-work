@@ -1,0 +1,11 @@
+{
+  "input": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/predictions.jsonl",
+  "output": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_replay1k_b64/test_inference_final_v2/qwen_attribute_extraction_v3.jsonl",
+  "model": "Qwen36-35b-caption",
+  "base_url": "http://127.0.0.1:6097/v1",
+  "batch_size": 4,
+  "workers": 16,
+  "submitted": 2484,
+  "completed": 2484,
+  "errors": 12
+}

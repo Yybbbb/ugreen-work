@@ -1,0 +1,44 @@
+{
+  "bootstrap_replicates": 2000,
+  "candidates": [
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final",
+      "name": "v4b_sft",
+      "predictions": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/test_inference_final/predictions.jsonl"
+    },
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_qwen4b/final",
+      "name": "qwen_rl",
+      "predictions": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/evaluation/qwen_rl/inference/predictions.jsonl"
+    },
+    {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_lexical/final",
+      "name": "lexical_rl",
+      "predictions": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/evaluation/lexical_rl/inference/predictions.jsonl"
+    }
+  ],
+  "expected_samples": 4328,
+  "extractor": {
+    "base_url": "http://127.0.0.1:6097/v1",
+    "batch_size": 4,
+    "max_tokens": 2048,
+    "model": "Qwen3.6-27B-FP8",
+    "workers": 32
+  },
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 64,
+    "num_beams": 1
+  },
+  "judge": {
+    "base_url": "http://127.0.0.1:6098/v1",
+    "model": "Qwen3.5-4B",
+    "workers": 64
+  },
+  "max_samples": 0,
+  "retries": 2,
+  "seed": 20260720,
+  "test_data": "/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl",
+  "test_sha256": "4beeb8dfd29917ffa787a0f84c30f3f3be77d82a1e172d23d61c11c7db82772c",
+  "timeout": 180.0
+}

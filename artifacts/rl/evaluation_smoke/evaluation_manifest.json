@@ -1,0 +1,34 @@
+{
+  "test_data": "/data1/work/MichaelYu/florence-attibute/data/prepared/test.jsonl",
+  "test_sha256": "4beeb8dfd29917ffa787a0f84c30f3f3be77d82a1e172d23d61c11c7db82772c",
+  "samples": 4,
+  "max_samples": 4,
+  "extractor": {
+    "base_url": "http://127.0.0.1:6097/v1",
+    "model": "Qwen3.6-27B-FP8"
+  },
+  "judge": {
+    "base_url": "http://127.0.0.1:6098/v1",
+    "model": "Qwen3.5-4B"
+  },
+  "generation": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 64
+  },
+  "candidates": [
+    {
+      "name": "v4b_sft",
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final"
+    },
+    {
+      "name": "qwen_rl",
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final"
+    },
+    {
+      "name": "lexical_rl",
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final"
+    }
+  ],
+  "status": "complete"
+}

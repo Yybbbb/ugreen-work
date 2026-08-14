@@ -1,0 +1,3 @@
+
+[2026-08-07T07:17:46.273761+00:00] START /data1/work/MichaelYu/miniconda3/envs/florence/bin/python /data1/work/MichaelYu/florence-attibute/scripts/update_v4_training_runs.py --project-root /data1/work/MichaelYu/florence-attibute
+/data1/work/MichaelYu/florence-attibute/docs/FLORENCE_TRAINING_RUNS.md

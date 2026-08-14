@@ -1,0 +1,11 @@
+{
+  "average_words": 21.625,
+  "dev_loss": 1.5957842876831227,
+  "empty_outputs": 0,
+  "global_step": 500,
+  "length_18_24_ratio": 0.609375,
+  "p95_words": 29,
+  "samples": 128,
+  "single_sentence_ratio": 1.0,
+  "subject_start_ratio": 1.0
+}

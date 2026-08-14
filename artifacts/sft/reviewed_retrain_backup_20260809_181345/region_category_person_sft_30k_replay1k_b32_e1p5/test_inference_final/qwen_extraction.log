@@ -1,0 +1,11 @@
+{
+  "input": "artifacts/sft/region_category_person_sft_30k_replay1k_b32_e1p5/test_inference_final/predictions.jsonl",
+  "output": "artifacts/sft/region_category_person_sft_30k_replay1k_b32_e1p5/test_inference_final/qwen_attribute_extraction.jsonl",
+  "model": "Qwen36-35b-caption",
+  "base_url": "http://127.0.0.1:6097/v1",
+  "batch_size": 4,
+  "workers": 16,
+  "submitted": 4328,
+  "completed": 4328,
+  "errors": 4
+}

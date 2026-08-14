@@ -1,0 +1,165 @@
+{
+  "samples": 4328,
+  "input_lines": 4328,
+  "duplicate_lines": 0,
+  "extractor_failures": 0,
+  "micro": {
+    "precision": 0.7181176117010619,
+    "recall": 0.6534560951708106,
+    "f1": 0.6842626510911975
+  },
+  "soft_micro": {
+    "precision": 0.7929318099474378,
+    "recall": 0.7215337931033345,
+    "f1": 0.7555498062830374
+  },
+  "macro_field_f1": 0.5482084337137536,
+  "mean_field_exact": 0.6534560951708106,
+  "known_attributes": 43879,
+  "unknown_slots": 38401,
+  "unknown_extra_count": 6171,
+  "unknown_extra_rate": 0.16069894013176741,
+  "caption": {
+    "average_words": 21.00369685767098,
+    "p95_words": 29,
+    "length_18_24_ratio": 0.5540665434380776,
+    "empty_ratio": 0.0,
+    "single_sentence_ratio": 1.0,
+    "subject_start_ratio": 1.0,
+    "background_keyword_ratio": 0.0013863216266173752,
+    "special_token_ratio": 0.0
+  },
+  "per_field": {
+    "age_group": {
+      "precision": 0.8277641277641278,
+      "recall": 0.8277641277641278,
+      "f1": 0.8277641277641278,
+      "known": 4070,
+      "exact": 0.8277641277641278
+    },
+    "gender": {
+      "precision": 0.902176834184359,
+      "recall": 0.9004828326180258,
+      "f1": 0.901329037454692,
+      "known": 3728,
+      "exact": 0.9004828326180258
+    },
+    "upper_garment.type": {
+      "precision": 0.5205511443250818,
+      "recall": 0.5180106902161283,
+      "f1": 0.5192778101339547,
+      "known": 4303,
+      "exact": 0.5180106902161283
+    },
+    "upper_garment.color": {
+      "precision": 0.5875322240449965,
+      "recall": 0.5820756907360112,
+      "f1": 0.5847912292978773,
+      "known": 4307,
+      "exact": 0.5820756907360112
+    },
+    "upper_garment.length": {
+      "precision": 0.7311015118790497,
+      "recall": 0.7103882476390346,
+      "f1": 0.7205960617349655,
+      "known": 3812,
+      "exact": 0.7103882476390346
+    },
+    "lower_garment.type": {
+      "precision": 0.8070484581497798,
+      "recall": 0.7740845070422535,
+      "f1": 0.7902228612508987,
+      "known": 3550,
+      "exact": 0.7740845070422535
+    },
+    "lower_garment.color": {
+      "precision": 0.5562408223201175,
+      "recall": 0.5314253647586981,
+      "f1": 0.5435500071746305,
+      "known": 3564,
+      "exact": 0.5314253647586981
+    },
+    "lower_garment.length": {
+      "precision": 0.9500624219725343,
+      "recall": 0.7453476983349657,
+      "f1": 0.8353457738748629,
+      "known": 2042,
+      "exact": 0.7453476983349657
+    },
+    "shoes.type": {
+      "precision": 0.6712074303405573,
+      "recall": 0.5174224343675418,
+      "f1": 0.584366576819407,
+      "known": 2095,
+      "exact": 0.5174224343675418
+    },
+    "shoes.color": {
+      "precision": 0.6666666666666666,
+      "recall": 0.5217794253938832,
+      "f1": 0.5853912139329348,
+      "known": 2158,
+      "exact": 0.5217794253938832
+    },
+    "head.accessories": {
+      "precision": 0.5921625544267054,
+      "recall": 0.3440134907251265,
+      "f1": 0.43520000000000003,
+      "known": 1186,
+      "exact": 0.3440134907251265
+    },
+    "head.hairstyle": {
+      "precision": 0.5826086956521739,
+      "recall": 0.13480885311871227,
+      "f1": 0.21895424836601304,
+      "known": 994,
+      "exact": 0.13480885311871227
+    },
+    "head.hair_color": {
+      "precision": 0.7673010380622838,
+      "recall": 0.7607204116638079,
+      "f1": 0.7639965546942291,
+      "known": 3498,
+      "exact": 0.7607204116638079
+    },
+    "head.hair_length": {
+      "precision": 0.9167785234899329,
+      "recall": 0.8855753646677471,
+      "f1": 0.9009068425391591,
+      "known": 3085,
+      "exact": 0.8855753646677471
+    },
+    "carried_items.handbag": {
+      "precision": 0.12121212121212122,
+      "recall": 0.06779661016949153,
+      "f1": 0.08695652173913045,
+      "known": 354,
+      "exact": 0.06779661016949153
+    },
+    "carried_items.backpack": {
+      "precision": 0.35625,
+      "recall": 0.18506493506493507,
+      "f1": 0.24358974358974358,
+      "known": 308,
+      "exact": 0.18506493506493507
+    },
+    "handheld_items.dangerous_item": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "known": 31,
+      "exact": 0.0
+    },
+    "handheld_items.mobile_phone": {
+      "precision": 0.47435897435897434,
+      "recall": 0.24776785714285715,
+      "f1": 0.32551319648093846,
+      "known": 448,
+      "exact": 0.24776785714285715
+    }
+  },
+  "gt_basis": "qwen_extracted_from_gt_caption",
+  "gt_file": "/data1/work/MichaelYu/florence-attibute/data/prepared/test_qwen_attributes.jsonl",
+  "gt_field": "qwen_attributes",
+  "rows_used": 4328,
+  "rows_missing_gt": 0
+}

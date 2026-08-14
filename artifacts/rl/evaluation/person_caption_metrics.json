@@ -1,0 +1,523 @@
+{
+  "baseline": "v4b_sft",
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20260720,
+    "unit": "session"
+  },
+  "candidates": {
+    "lexical_rl": {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_lexical/final",
+      "metrics": {
+        "background_leakage_rate": 0.0006931608133086876,
+        "fabrication_ratio": 0.10805944245579781,
+        "invalid_output_rate": 0.0,
+        "joint_attribute_f1": 0.7729587470868358,
+        "length_18_24_ratio": 0.5316543438077634,
+        "lexical_macro_field_f1": 0.5992644710503786,
+        "lexical_micro_f1": 0.7458034874714593,
+        "lexical_precision": 0.7875705869972434,
+        "lexical_recall": 0.7082433367703704,
+        "mean_words": 20.84865988909427,
+        "qwen_micro_f1": 0.8001140067022121,
+        "qwen_precision": 0.8448793715647648,
+        "qwen_recall": 0.759853671340143,
+        "structure_pass_rate": 0.9819778188539742
+      }
+    },
+    "qwen_rl": {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/rl/region_category_person_scst_reviewed5981_qwen4b/final",
+      "metrics": {
+        "background_leakage_rate": 0.0006931608133086876,
+        "fabrication_ratio": 0.10632629441180967,
+        "invalid_output_rate": 0.0,
+        "joint_attribute_f1": 0.7693260420923713,
+        "length_18_24_ratio": 0.5256469500924215,
+        "lexical_macro_field_f1": 0.5945483242581919,
+        "lexical_micro_f1": 0.739996651095701,
+        "lexical_precision": 0.7833487665048007,
+        "lexical_recall": 0.7011912972821445,
+        "mean_words": 20.77010166358595,
+        "qwen_micro_f1": 0.7986554330890415,
+        "qwen_precision": 0.8454222254801349,
+        "qwen_recall": 0.7567914871278899,
+        "structure_pass_rate": 0.9822088724584104
+      }
+    },
+    "v4b_sft": {
+      "checkpoint": "/data1/work/MichaelYu/florence-attibute/artifacts/sft/region_category_person_sft_30k_person_only_b16_e3_lr125/final",
+      "metrics": {
+        "background_leakage_rate": 0.0006931608133086876,
+        "fabrication_ratio": 0.11072491473508135,
+        "invalid_output_rate": 0.0,
+        "joint_attribute_f1": 0.770889820934949,
+        "length_18_24_ratio": 0.4912199630314233,
+        "lexical_macro_field_f1": 0.5974276321940316,
+        "lexical_micro_f1": 0.7421847104199603,
+        "lexical_precision": 0.7855434835040278,
+        "lexical_recall": 0.7033620166827969,
+        "mean_words": 21.324630314232902,
+        "qwen_micro_f1": 0.7995949314499377,
+        "qwen_precision": 0.8463403610778589,
+        "qwen_recall": 0.7577429515081258,
+        "structure_pass_rate": 0.9822088724584104
+      }
+    }
+  },
+  "comparisons": {
+    "lexical_rl": {
+      "delta": {
+        "background_leakage_rate": 0.0,
+        "fabrication_ratio": -0.002665472279283543,
+        "invalid_output_rate": 0.0,
+        "joint_attribute_f1": 0.0020689261518868074,
+        "length_18_24_ratio": 0.04043438077634015,
+        "lexical_macro_field_f1": 0.0018368388563470006,
+        "lexical_micro_f1": 0.0036187770514990447,
+        "lexical_precision": 0.002027103493215554,
+        "lexical_recall": 0.004881320087573582,
+        "mean_words": -0.4759704251386303,
+        "qwen_micro_f1": 0.000519075252274459,
+        "qwen_precision": -0.0014609895130941464,
+        "qwen_recall": 0.0021107198320172715,
+        "structure_pass_rate": -0.00023105360443620437
+      },
+      "delta_ci95": {
+        "background_leakage_rate": [
+          0.0,
+          0.0
+        ],
+        "fabrication_ratio": [
+          -0.004266676430891023,
+          -0.0010940329740992503
+        ],
+        "invalid_output_rate": [
+          0.0,
+          0.0
+        ],
+        "joint_attribute_f1": [
+          0.0007013324753984724,
+          0.0034687812771291428
+        ],
+        "length_18_24_ratio": [
+          0.030527122184206477,
+          0.049765459666556
+        ],
+        "lexical_macro_field_f1": [
+          -0.00423401445905224,
+          0.010711018473101961
+        ],
+        "lexical_micro_f1": [
+          0.0018961348076257073,
+          0.005515652485614319
+        ],
+        "lexical_precision": [
+          0.00013944493102746868,
+          0.004247761223901952
+        ],
+        "lexical_recall": [
+          0.002999203370149875,
+          0.006781369246228931
+        ],
+        "mean_words": [
+          -0.5447264361021789,
+          -0.40413401538128757
+        ],
+        "qwen_micro_f1": [
+          -0.0007042118439985589,
+          0.0017987780473576445
+        ],
+        "qwen_precision": [
+          -0.0028024576456771896,
+          -0.00012396286027411955
+        ],
+        "qwen_recall": [
+          0.0005053455025187365,
+          0.003773621962935648
+        ],
+        "structure_pass_rate": [
+          -0.0007798843430670638,
+          0.0
+        ]
+      },
+      "eligible": true,
+      "failed_gates": [],
+      "field_deltas": [
+        {
+          "f1_delta": 0.07010582010582009,
+          "field": "handheld_items.dangerous_item",
+          "soft_fn_delta": -1.0,
+          "soft_fp_delta": 0.0,
+          "soft_tp_delta": 1.0
+        },
+        {
+          "f1_delta": -0.03417144784192594,
+          "field": "head.hairstyle",
+          "soft_fn_delta": 35.06666666666649,
+          "soft_fp_delta": 8.066666666666663,
+          "soft_tp_delta": -35.06666666666655
+        },
+        {
+          "f1_delta": -0.03299819529198014,
+          "field": "extra",
+          "soft_fn_delta": 6.25584415584413,
+          "soft_fp_delta": -1.7441558441558467,
+          "soft_tp_delta": -6.2558441558441515
+        },
+        {
+          "f1_delta": 0.018557558945908492,
+          "field": "head.hair_color",
+          "soft_fn_delta": -66.90000000000009,
+          "soft_fp_delta": -66.90000000000009,
+          "soft_tp_delta": 66.90000000000009
+        },
+        {
+          "f1_delta": 0.018146743893609596,
+          "field": "shoes.type",
+          "soft_fn_delta": -49.89999999999975,
+          "soft_fp_delta": -1.8999999999998636,
+          "soft_tp_delta": 49.90000000000032
+        },
+        {
+          "f1_delta": -0.015398979628760856,
+          "field": "carried_items.handbag",
+          "soft_fn_delta": 6.159714795008938,
+          "soft_fp_delta": -8.840285204991062,
+          "soft_tp_delta": -6.159714795008938
+        },
+        {
+          "f1_delta": 0.012121906478293032,
+          "field": "lower_garment.length",
+          "soft_fn_delta": -51.69999999999993,
+          "soft_fp_delta": 12.300000000000011,
+          "soft_tp_delta": 51.700000000000045
+        },
+        {
+          "f1_delta": -0.010344035934308327,
+          "field": "carried_items.backpack",
+          "soft_fn_delta": 3.904761904761898,
+          "soft_fp_delta": -3.095238095238088,
+          "soft_tp_delta": -3.904761904761912
+        },
+        {
+          "f1_delta": 0.00790570855375261,
+          "field": "lower_garment.color",
+          "soft_fn_delta": -30.866666666666788,
+          "soft_fp_delta": -22.866666666666106,
+          "soft_tp_delta": 30.866666666667697
+        },
+        {
+          "f1_delta": 0.005928646444823715,
+          "field": "upper_garment.color",
+          "soft_fn_delta": -27.369047619046796,
+          "soft_fp_delta": -22.369047619046455,
+          "soft_tp_delta": 27.369047619048615
+        },
+        {
+          "f1_delta": -0.005288565557775793,
+          "field": "handheld_items.mobile_phone",
+          "soft_fn_delta": 3.7857142857143344,
+          "soft_fp_delta": -13.214285714285694,
+          "soft_tp_delta": -3.7857142857142776
+        },
+        {
+          "f1_delta": -0.004250188550220302,
+          "field": "upper_garment.type",
+          "soft_fn_delta": 17.2999999999995,
+          "soft_fp_delta": 20.299999999999727,
+          "soft_tp_delta": -17.299999999999727
+        },
+        {
+          "f1_delta": -0.0026602570109063306,
+          "field": "head.accessories",
+          "soft_fn_delta": 3.9606060606059827,
+          "soft_fp_delta": -1.039393939393932,
+          "soft_tp_delta": -3.9606060606060964
+        },
+        {
+          "f1_delta": 0.0021562734662434746,
+          "field": "shoes.color",
+          "soft_fn_delta": -21.366666666666674,
+          "soft_fp_delta": 31.633333333333724,
+          "soft_tp_delta": 21.36666666666656
+        },
+        {
+          "f1_delta": 0.002147894566304598,
+          "field": "gender",
+          "soft_fn_delta": -15.799999999999883,
+          "soft_fp_delta": 0.20000000000000284,
+          "soft_tp_delta": 15.800000000000182
+        },
+        {
+          "f1_delta": 0.002021728392988198,
+          "field": "head.hair_length",
+          "soft_fn_delta": -24.5,
+          "soft_fp_delta": 18.5,
+          "soft_tp_delta": 24.5
+        },
+        {
+          "f1_delta": -0.0017006377391521887,
+          "field": "upper_garment.length",
+          "soft_fn_delta": 6.800000000000182,
+          "soft_fp_delta": 6.800000000000239,
+          "soft_tp_delta": -6.799999999999727
+        },
+        {
+          "f1_delta": 0.0014884935988206394,
+          "field": "age_group",
+          "soft_fn_delta": -10.400000000000205,
+          "soft_fp_delta": -0.40000000000009095,
+          "soft_tp_delta": 10.399999999999636
+        },
+        {
+          "f1_delta": 0.0011314713790583353,
+          "field": "lower_garment.type",
+          "soft_fn_delta": -6.60000000000025,
+          "soft_fp_delta": -0.599999999999909,
+          "soft_tp_delta": 6.600000000000364
+        }
+      ],
+      "win_tie_loss": {
+        "lexical": {
+          "loss": 579,
+          "tie": 3019,
+          "win": 730
+        },
+        "qwen_semantic": {
+          "loss": 535,
+          "tie": 3216,
+          "win": 577
+        }
+      }
+    },
+    "qwen_rl": {
+      "delta": {
+        "background_leakage_rate": 0.0,
+        "fabrication_ratio": -0.004398620323271679,
+        "invalid_output_rate": 0.0,
+        "joint_attribute_f1": -0.0015637788425776344,
+        "length_18_24_ratio": 0.03442698706099817,
+        "lexical_macro_field_f1": -0.002879307935839681,
+        "lexical_micro_f1": -0.0021880593242592505,
+        "lexical_precision": -0.002194716999227131,
+        "lexical_recall": -0.0021707194006523878,
+        "mean_words": -0.5545286506469509,
+        "qwen_micro_f1": -0.0009394983608961294,
+        "qwen_precision": -0.0009181355977240235,
+        "qwen_recall": -0.0009514643802358558,
+        "structure_pass_rate": 0.0
+      },
+      "delta_ci95": {
+        "background_leakage_rate": [
+          0.0,
+          0.0
+        ],
+        "fabrication_ratio": [
+          -0.005974121115361955,
+          -0.002761419648370001
+        ],
+        "invalid_output_rate": [
+          0.0,
+          0.0
+        ],
+        "joint_attribute_f1": [
+          -0.002773547162891535,
+          -0.0003429179168382492
+        ],
+        "length_18_24_ratio": [
+          0.02448141335963245,
+          0.044462268929335386
+        ],
+        "lexical_macro_field_f1": [
+          -0.008934859696307411,
+          0.005914242314638312
+        ],
+        "lexical_micro_f1": [
+          -0.003559743983579769,
+          -0.0007881354314436404
+        ],
+        "lexical_precision": [
+          -0.0035539755493954636,
+          -0.0008461991761808238
+        ],
+        "lexical_recall": [
+          -0.0038725646384511732,
+          -0.0004429931305890347
+        ],
+        "mean_words": [
+          -0.6251870892222561,
+          -0.4798923120118968
+        ],
+        "qwen_micro_f1": [
+          -0.00213750033741269,
+          0.0003213749883249429
+        ],
+        "qwen_precision": [
+          -0.0020742413087922297,
+          0.00028725444947261237
+        ],
+        "qwen_recall": [
+          -0.002543259547408072,
+          0.0007824755495621444
+        ],
+        "structure_pass_rate": [
+          0.0,
+          0.0
+        ]
+      },
+      "eligible": true,
+      "failed_gates": [],
+      "field_deltas": [
+        {
+          "f1_delta": 0.07010582010582009,
+          "field": "handheld_items.dangerous_item",
+          "soft_fn_delta": -1.0,
+          "soft_fp_delta": 0.0,
+          "soft_tp_delta": 1.0
+        },
+        {
+          "f1_delta": -0.03922016815077359,
+          "field": "extra",
+          "soft_fn_delta": 7.347474747474763,
+          "soft_fp_delta": -1.6525252525252547,
+          "soft_tp_delta": -7.347474747474742
+        },
+        {
+          "f1_delta": -0.019705772402919375,
+          "field": "carried_items.backpack",
+          "soft_fn_delta": 6.8523809523809405,
+          "soft_fp_delta": -4.147619047619045,
+          "soft_tp_delta": -6.852380952380983
+        },
+        {
+          "f1_delta": -0.018963878041166338,
+          "field": "head.hairstyle",
+          "soft_fn_delta": 16.96666666666647,
+          "soft_fp_delta": 14.96666666666664,
+          "soft_tp_delta": -16.966666666666583
+        },
+        {
+          "f1_delta": -0.012443904343533152,
+          "field": "handheld_items.mobile_phone",
+          "soft_fn_delta": 7.085714285714289,
+          "soft_fp_delta": -12.914285714285683,
+          "soft_tp_delta": -7.085714285714289
+        },
+        {
+          "f1_delta": 0.011706318063247845,
+          "field": "shoes.type",
+          "soft_fn_delta": -26.899999999999636,
+          "soft_fp_delta": -12.899999999999864,
+          "soft_tp_delta": 26.90000000000009
+        },
+        {
+          "f1_delta": -0.010229117911674634,
+          "field": "carried_items.handbag",
+          "soft_fn_delta": 3.8159918512859576,
+          "soft_fp_delta": -4.1840081487139855,
+          "soft_tp_delta": -3.815991851285972
+        },
+        {
+          "f1_delta": -0.00963453871617137,
+          "field": "head.accessories",
+          "soft_fn_delta": 10.898701298701326,
+          "soft_fp_delta": 3.898701298701269,
+          "soft_tp_delta": -10.898701298701326
+        },
+        {
+          "f1_delta": -0.007177945342856096,
+          "field": "upper_garment.color",
+          "soft_fn_delta": 28.976190476188776,
+          "soft_fp_delta": 33.976190476189004,
+          "soft_tp_delta": -28.976190476189004
+        },
+        {
+          "f1_delta": -0.006472665080213824,
+          "field": "lower_garment.color",
+          "soft_fn_delta": 22.099999999999227,
+          "soft_fp_delta": 25.099999999998772,
+          "soft_tp_delta": -22.100000000000364
+        },
+        {
+          "f1_delta": -0.005661530425698613,
+          "field": "lower_garment.length",
+          "soft_fn_delta": 12.0,
+          "soft_fp_delta": 13.0,
+          "soft_tp_delta": -12.0
+        },
+        {
+          "f1_delta": -0.0038037628678864177,
+          "field": "shoes.color",
+          "soft_fn_delta": 4.1666666666667425,
+          "soft_fp_delta": 15.1666666666668,
+          "soft_tp_delta": -4.1666666666667425
+        },
+        {
+          "f1_delta": 0.0031427031758654023,
+          "field": "age_group",
+          "soft_fn_delta": -17.60000000000025,
+          "soft_fp_delta": -6.600000000000136,
+          "soft_tp_delta": 17.599999999999454
+        },
+        {
+          "f1_delta": -0.0030807204839677915,
+          "field": "upper_garment.type",
+          "soft_fn_delta": 11.93333333333294,
+          "soft_fp_delta": 15.933333333333167,
+          "soft_tp_delta": -11.933333333333849
+        },
+        {
+          "f1_delta": -0.002441573841559075,
+          "field": "head.hair_color",
+          "soft_fn_delta": 10.099999999999909,
+          "soft_fp_delta": 5.099999999999909,
+          "soft_tp_delta": -10.099999999999909
+        },
+        {
+          "f1_delta": -0.00175928311917517,
+          "field": "upper_garment.length",
+          "soft_fn_delta": 11.500000000000114,
+          "soft_fp_delta": 1.5000000000001705,
+          "soft_tp_delta": -11.5
+        },
+        {
+          "f1_delta": 0.0016818708149130002,
+          "field": "gender",
+          "soft_fn_delta": -12.599999999999923,
+          "soft_fp_delta": 0.4000000000000057,
+          "soft_tp_delta": 12.600000000000364
+        },
+        {
+          "f1_delta": -0.000860605975968487,
+          "field": "head.hair_length",
+          "soft_fn_delta": 4.0,
+          "soft_fp_delta": 1.0,
+          "soft_tp_delta": -4.0
+        },
+        {
+          "f1_delta": 0.00011190376276415392,
+          "field": "lower_garment.type",
+          "soft_fn_delta": -0.4000000000003183,
+          "soft_fp_delta": -0.39999999999997726,
+          "soft_tp_delta": 0.4000000000005457
+        }
+      ],
+      "win_tie_loss": {
+        "lexical": {
+          "loss": 601,
+          "tie": 3220,
+          "win": 507
+        },
+        "qwen_semantic": {
+          "loss": 522,
+          "tie": 3321,
+          "win": 485
+        }
+      }
+    }
+  },
+  "recommendation": {
+    "candidate": "v4b_sft",
+    "reason": "No eligible RL checkpoint has a clear paired improvement over V4B."
+  }
+}

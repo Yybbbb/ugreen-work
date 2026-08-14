@@ -1,0 +1,15 @@
+2026-08-10 14:37:05,894 INFO reward service preflight passed: [{'role': 'extractor', 'base_url': 'http://127.0.0.1:6097/v1', 'model': 'Qwen3.6-27B-FP8', 'probe': {'model': 'Qwen3.6-27B-FP8', 'content': 'OK'}}, {'role': 'judge', 'base_url': 'http://127.0.0.1:6098/v1', 'model': 'Qwen3.5-4B', 'probe': {'model': 'Qwen3.5-4B', 'content': 'OK'}}]
+2026-08-10 14:37:19,324 WARNING Missing checkpoint keys after tied-weight load: ['language_model.model.encoder.embed_tokens.weight', 'language_model.model.decoder.embed_tokens.weight', 'language_model.lm_head.weight']
+2026-08-10 14:37:19,558 INFO RL parameter groups: {'vision': {'tensors': 400, 'parameters': 90368000}, 'projection': {'tensors': 5, 'parameters': 839168}, 'language': {'tensors': 259, 'parameters': 140206848}}
+2026-08-10 14:37:19,575 INFO RL config: train=5981 dev=2000 global_batch=8 steps=748 alpha=0.10->0.50 matcher=qwen extractor=Qwen3.6-27B-FP8 judge=Qwen3.5-4B
+2026-08-10 14:38:19,427 INFO epoch=1 step=1/748 ce=1.3835 scst=-1.0494 alpha=0.100 r_s=0.318 r_g=0.388 advantage=-0.070 grad=12.2452
+2026-08-10 14:45:32,454 INFO epoch=1 step=10/748 ce=1.5280 scst=-0.8979 alpha=0.105 r_s=0.122 r_g=0.148 advantage=-0.026 grad=22.3976
+2026-08-10 14:53:11,233 INFO epoch=1 step=20/748 ce=1.4033 scst=-2.7762 alpha=0.110 r_s=0.365 r_g=0.420 advantage=-0.055 grad=13.2186
+2026-08-10 15:00:59,036 INFO epoch=1 step=30/748 ce=1.1409 scst=-0.1658 alpha=0.116 r_s=0.274 r_g=0.282 advantage=-0.007 grad=16.6174
+2026-08-10 15:08:43,013 INFO epoch=1 step=40/748 ce=1.5433 scst=-7.4747 alpha=0.121 r_s=0.237 r_g=0.451 advantage=-0.214 grad=17.8525
+2026-08-10 15:16:23,765 INFO epoch=1 step=50/748 ce=1.4248 scst=-3.1255 alpha=0.126 r_s=0.219 r_g=0.310 advantage=-0.091 grad=24.1356
+2026-08-10 15:24:07,794 INFO epoch=1 step=60/748 ce=1.2121 scst=-0.3999 alpha=0.132 r_s=0.367 r_g=0.390 advantage=-0.023 grad=15.1914
+2026-08-10 15:31:34,270 INFO epoch=1 step=70/748 ce=1.7362 scst=0.3385 alpha=0.137 r_s=0.342 r_g=0.320 advantage=0.022 grad=13.5541
+2026-08-10 15:39:19,601 INFO epoch=1 step=80/748 ce=1.1349 scst=-1.9305 alpha=0.142 r_s=0.297 r_g=0.421 advantage=-0.124 grad=18.0880
+2026-08-10 15:46:47,464 INFO epoch=1 step=90/748 ce=1.3321 scst=-0.0618 alpha=0.148 r_s=0.302 r_g=0.306 advantage=-0.004 grad=14.9532
+2026-08-10 15:54:06,696 INFO epoch=1 step=100/748 ce=1.3391 scst=0.2557 alpha=0.153 r_s=0.452 r_g=0.426 advantage=0.025 grad=17.6512
